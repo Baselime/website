@@ -5,6 +5,7 @@
       @close="toggleDialogModal"
       :title="dialogTitle"
       :message="dialogMessage"
+      :id="dialogId"
       :action="dialogAction"
     />
     <JoinBetaModal
@@ -45,6 +46,7 @@ export default Vue.extend({
       showJoinBetaModal: false,
       dialogTitle: 'A title',
       dialogMessage: 'A message',
+      dialogId: 'AN id',
     }
   },
   methods: {
@@ -67,6 +69,7 @@ export default Vue.extend({
     },
     setDialog(data: any) {
       this.dialogTitle = data.title
+      this.dialogId = data.id
       this.dialogMessage = data.message
       this.toggleDialogModal(true)
     },

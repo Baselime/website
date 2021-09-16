@@ -22,6 +22,8 @@ import Loader from 'vue-spinner/src/PulseLoader.vue'
 //@ts-ignore
 import RightArrow from 'vue-material-design-icons/ArrowRight.vue'
 
+import mixpanel from '@/plugins/mixpanel'
+
 export default Vue.extend({
   components: { Loader, RightArrow },
   props: {
@@ -45,10 +47,19 @@ export default Vue.extend({
       type: Boolean,
       required: false,
     },
+    event: {
+      type: String,
+      required: true,
+    },
+    eventProperties: {
+      type: Object,
+      required: true,
+    },
   },
   methods: {
     action() {
-      // // @ts-ignore
+      mixpanel.track(this.event, this.eventProperties);
+      // @ts-ignore
       // this.$mixpanel.track('Sign Up', {
       //   source: "Pat's affiliate site",
       //   'Opted out of email': true,

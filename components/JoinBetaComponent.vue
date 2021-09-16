@@ -38,6 +38,8 @@
       <primary-button
         :text="'Join Private Beta'"
         :loading="loading"
+        :event="'join-beta'"
+        :eventProperties="{ company }"
         @action="joinBeta"
       />
     </div>
@@ -90,6 +92,7 @@ export default Vue.extend({
         )
       } catch (error) {
         EventBus.$emit('dialog', {
+          id: "join-beta-error",
           title: 'Error',
           message:
             'Whoops there was an error signing you up for our private beta. Please retry.',
@@ -98,6 +101,7 @@ export default Vue.extend({
         return
       }
       EventBus.$emit('dialog', {
+        id: "join-beta-success",
         title: 'Subscribed!',
         message:
           "Thanks for joining our private beta. We will be in touch shortly to introduce you to what we've been working on.",

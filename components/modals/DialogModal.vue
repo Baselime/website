@@ -14,7 +14,12 @@
           {{ message }}
         </div>
         <div class="button-container">
-          <PrimaryButton :text="'Continue'" @action="doIt"/>
+          <PrimaryButton
+            :text="'Continue'"
+            @action="doIt"
+            :event="'close-dialog-modal'"
+            :eventProperties="{ id }"
+          />
         </div>
       </div>
     </div>
@@ -33,6 +38,10 @@ export default Vue.extend({
     PrimaryButton,
   },
   props: {
+    id: {
+      type: String,
+      required: true,
+    },
     title: {
       type: String,
       required: true,

@@ -36,7 +36,7 @@
       <div class="newsletter">
         <div>
           <p class="title">Join our monthly newsletter</p>
-          <NewsletterForm />
+          <NewsletterForm :origin="'footer'" />
         </div>
       </div>
 

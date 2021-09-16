@@ -123,7 +123,7 @@ export default Vue.extend({
       }
 
       @media screen and (max-width: 890px) {
-        margin: 0;
+        margin: 0 0 15px 0;
       }
     }
   }

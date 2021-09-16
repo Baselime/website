@@ -9,6 +9,8 @@
         style="display: inline-block; height: 30px; padding: 3px 20px"
         :text="'Close'"
         :secondary="true"
+        :event="'close-cookie-banner'"
+        :eventProperties="{}"
         @action="close"
       />
     </div>

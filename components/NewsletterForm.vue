@@ -12,6 +12,8 @@
         :text="'Subscribe'"
         :loading="loading"
         @action="subscribe"
+        :event="'subscribe-newsletter'"
+        :eventProperties="{ origin }"
       />
     </div>
   </form>
@@ -24,6 +26,12 @@ import { isEmail } from '~/utils/utils'
 import { EventBus } from '~/event-bus'
 
 export default Vue.extend({
+  props: {
+    origin: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
     return {
       email: '',
@@ -47,6 +55,7 @@ export default Vue.extend({
         )
       } catch (error) {
         EventBus.$emit('dialog', {
+          id: "subscriber-newsletter-error",
           title: 'Error',
           message:
             'Whoops there was an error creating your subscription. Please retry.',
@@ -55,6 +64,7 @@ export default Vue.extend({
         return
       }
       EventBus.$emit('dialog', {
+        id: "subscriber-newsletter-success",
         title: 'Subscribed!',
         message: 'Thanks for subscribing to our newsletter.',
       })

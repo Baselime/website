@@ -15,6 +15,8 @@
               <primary-button
                 :text="'Join Private Beta'"
                 @action="displayJoinBetaModal()"
+                :event="'open-join-beta-modal'"
+                :eventProperties="{ origin: 'home-page' }"
               />
             </div>
             <div>
@@ -23,6 +25,8 @@
                 :secondary="true"
                 :inline="true"
                 :url="'https://calendly.com/boristane/30min'"
+                :event="'book-demo'"
+                :eventProperties="{ origin: 'home-page' }"
               />
             </div>
           </div>
@@ -51,6 +55,8 @@
                 :text="'Why Observability as Code?'"
                 :inline="true"
                 :url="'/blog/why-observability-as-code'"
+                :event="'visit-why-observability-as-code'"
+                :eventProperties="{ origin: 'home-page' }"
               />
             </div>
           </div>
@@ -131,6 +137,8 @@
                 :text="'What are SLOs?'"
                 :inline="true"
                 :url="'/blog/what-are-slos'"
+                :event="'visit-what-are-slos'"
+                :eventProperties="{ origin: 'home-page' }"
               />
             </div>
           </div>

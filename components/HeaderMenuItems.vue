@@ -10,7 +10,12 @@
       <NuxtLink to="/blog" class="item">Blog</NuxtLink>
     </div>
     <div class="button-container">
-      <primary-button :text="buttonText" @action="joinBeta" />
+      <primary-button
+        :text="buttonText"
+        @action="joinBeta"
+        :event="'open-join-beta-modal'"
+        :eventProperties="{ origin: 'header' }"
+      />
     </div>
   </div>
 </template>
