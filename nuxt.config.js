@@ -46,6 +46,21 @@ export default {
         heap.load("825948806");`,
         charset: 'utf-8',
       },
+      {
+        vmid: "googletagmanager",
+        src: "https://www.googletagmanager.com/gtag/js?id=G-YYKEPXKRQ1",
+        async: true,
+      },
+      {
+        vmid: "gtag",
+        type: "text/javascript",
+        innerHTML: ` window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'G-YYKEPXKRQ1');`,
+        charset: 'utf-8',
+      },
     ],
     __dangerouslyDisableSanitizers: ["script"]
   },

@@ -60,7 +60,7 @@ export default Vue.extend({
           value: 3,
           title: 'Scale with your architecture',
           description:
-            'Start for free when you have less than 100,000 transactions per month, and linearly grow as your architecture and user base grows.',
+            'Start for free when you have less than 100,000 transactions per month, and linearly grow as your architecture and userbase grows.',
         },
       ],
     }
@@ -82,6 +82,12 @@ export default Vue.extend({
       width: 100%;
       max-width: 1272px;
       margin: auto;
+    }
+
+    &.heading {
+      .inner {
+        padding: 60px 30px 120px 30px;
+      }
     }
 
     &.steps {

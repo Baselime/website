@@ -58,12 +58,7 @@ export default Vue.extend({
   },
   methods: {
     action() {
-      mixpanel.track(this.event, this.eventProperties);
-      // @ts-ignore
-      // this.$mixpanel.track('Sign Up', {
-      //   source: "Pat's affiliate site",
-      //   'Opted out of email': true,
-      // })
+      mixpanel.track(this.event, this.eventProperties)
       this.$emit('action')
     },
   },
