@@ -15,7 +15,7 @@
             <p>
               This is why we build Baselime. Our mission is to help your team
               adopt serverless with the confidence to troubleshoot defects in
-              minutes, not hours, through the power of Observability as Code.
+              minutes, not hours, through the power of observability.
             </p>
           </div>
         </div>

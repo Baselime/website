@@ -12,6 +12,10 @@
         <div>
           <div>
             <div class="price">
+              <div>
+                <div class="starts-at" v-if="plan.isStartsAt">Starts at</div>
+                <div class="starts-at" style="height: 1px" v-else></div>
+              </div>
               <div v-if="typeof plan.price === 'number'">
                 ${{ plan.price }} <span class="per-month">/month</span>
               </div>
@@ -163,6 +167,12 @@ export default Vue.extend({
           font-size: 2.5em;
           color: $green;
           font-weight: bold;
+          .starts-at {
+            font-size: 1rem;
+            color: $grey;
+            height: 0;
+            margin-bottom: 15px;
+          }
           .per-month {
             font-size: 1.5rem;
             color: $grey;
@@ -171,7 +181,7 @@ export default Vue.extend({
           }
           .sales {
             font-size: 2rem;
-            margin: 25px 0 6px 0;
+            margin: 25px 0 14px 0;
           }
         }
 

@@ -35,6 +35,7 @@ export default Vue.extend({
           for: 'Ideal for teams with production workloads, doing less than 10 million transactions per month.',
           price: 80,
           popular: true,
+          isStartsAt: true,
         },
         {
           name: 'Enterprise',
