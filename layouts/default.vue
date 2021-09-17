@@ -9,6 +9,7 @@
       :action="dialogAction"
     />
     <JoinBetaModal
+      :tier="tier"
       v-if="showJoinBetaModal"
       @close="toggleJoinBetaModal(false)"
     />
@@ -47,6 +48,7 @@ export default Vue.extend({
       dialogTitle: 'A title',
       dialogMessage: 'A message',
       dialogId: 'AN id',
+      tier: null,
     }
   },
   methods: {
@@ -73,10 +75,14 @@ export default Vue.extend({
       this.dialogMessage = data.message
       this.toggleDialogModal(true)
     },
+    setJoinBetaModal(data: any) {
+      this.tier = data?.tier
+      this.toggleJoinBetaModal(true)
+    },
   },
   created() {
     EventBus.$on('dialog', this.setDialog)
-    EventBus.$on('display-join-beta-modal', () => this.toggleJoinBetaModal(true))
+    EventBus.$on('display-join-beta-modal', this.setJoinBetaModal)
   },
 })
 </script>

@@ -39,7 +39,7 @@
         :text="'Join Private Beta'"
         :loading="loading"
         :event="'join-beta'"
-        :eventProperties="{ company }"
+        :eventProperties="{ company, tier }"
         @action="joinBeta"
       />
     </div>
@@ -55,6 +55,12 @@ import { isEmail } from '~/utils/utils'
 export default Vue.extend({
   components: {
     PrimaryButton,
+  },
+  props: {
+    tier: {
+      type: Number,
+      required: false,
+    }
   },
   data() {
     return {
@@ -84,6 +90,7 @@ export default Vue.extend({
         surname: this.surname,
         company: this.company,
         email: this.email,
+        tier: this.tier,
       }
       try {
         await this.$axios.post(

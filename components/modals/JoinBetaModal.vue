@@ -7,7 +7,7 @@
       <div class="c-container" @click.prevent.stop>
         <div>
           <h3>Join our Private Beta today</h3>
-          <JoinBetaComponent @complete="close" />
+          <JoinBetaComponent :tier="tier" @complete="close" />
         </div>
       </div>
     </div>
@@ -21,6 +21,12 @@ import CloseIcon from 'vue-material-design-icons/Close.vue'
 import JoinBetaComponent from '@/components/JoinBetaComponent.vue'
 
 export default Vue.extend({
+  props: {
+    tier: {
+      type: Number,
+      required: false,
+    }
+  },
   components: {
     CloseIcon,
     JoinBetaComponent,

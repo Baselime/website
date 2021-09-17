@@ -1,0 +1,100 @@
+[
+  {
+    "category": "Features",
+    "items": [
+      {
+        "name": "Team members",
+        "plans": {
+          "0": "1",
+          "1": "Unlimited",
+          "2": "Unlimited"
+        }
+      },
+      {
+        "name": "Number of services",
+        "plans": {
+          "0": "Unlimited",
+          "1": "Unlimited",
+          "2": "Unlimited"
+        }
+      },
+      {
+        "name": "Observability transactions (monthly)",
+        "plans": {
+          "0": "100,000",
+          "1": "10 million",
+          "2": "Unlimited"
+        }
+      },
+      {
+        "name": "Additional observability transactions",
+        "plans": {
+          "0": "-",
+          "1": "$80/million/month",
+          "2": "Contact Sales"
+        }
+      },
+      {
+        "name": "Data retention",
+        "plans": {
+          "0": "14-days",
+          "1": "60-days",
+          "2": "Contact Sales"
+        }
+      },
+      {
+        "name": "Service Level Objectives",
+        "plans": {
+          "0": "-",
+          "1": "✔️",
+          "2": "✔️"
+        }
+      },
+      {
+        "name": "Alerts destinations",
+        "plans": {
+          "0": "Slack",
+          "1": "Slack, email, webhook, Lambda, SNS",
+          "2": "All"
+        }
+      },
+      {
+        "name": "Single sign-on (SSO)",
+        "plans": {
+          "0": "-",
+          "1": "-",
+          "2": "✔️"
+        }
+      }
+    ]
+  },
+  {
+    "category": "Support",
+    "items": [
+      {
+        "name": "Technical Support",
+        "plans": {
+          "0": "Slack community",
+          "1": "Chat and email",
+          "2": "Priority chat and email support, private organisation Slack channel"
+        }
+      },
+      {
+        "name": "Support response time",
+        "plans": {
+          "0": "-",
+          "1": "Within 24 hours",
+          "2": "Within 1 hour"
+        }
+      },
+      {
+        "name": "Dedicated success manager",
+        "plans": {
+          "0": "-",
+          "1": "-",
+          "2": "✔️"
+        }
+      }
+    ]
+  }
+]
