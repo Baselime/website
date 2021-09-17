@@ -61,6 +61,12 @@ export default {
         gtag('config', 'G-YYKEPXKRQ1');`,
         charset: 'utf-8',
       },
+      {
+        vmid: "crisp",
+        type: "text/javascript",
+        innerHTML: `window.$crisp=[];window.CRISP_WEBSITE_ID="d0cc7f6f-3abb-43bb-a5e9-c1efc10ae33b";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();`,
+        charset: "utf-8",
+      },
     ],
     __dangerouslyDisableSanitizers: ["script"]
   },
