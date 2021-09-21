@@ -41,7 +41,7 @@ export default Vue.extend({
   }) {
     const articles = (
       await $content('articles').sortBy('date', 'desc').fetch()
-    ).filter((article: IContentDocument) => article.author.id === params.author)
+    ).filter((article: IContentDocument) => article.author.id === params.author && article.published)
 
     const authorData = await $content(`authors`, params.author).fetch()
 

@@ -83,7 +83,7 @@ export default Vue.extend({
     const articles = (
       await $content(`articles`).sortBy('date', 'asc').fetch()
     )
-      .filter((article) => article.slug !== params.slug)
+      .filter((article) => article.slug !== params.slug && article.published)
       .slice(0, 3)
 
     return { article, articles, author }

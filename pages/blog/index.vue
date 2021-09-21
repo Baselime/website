@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { contentFunc } from '@nuxt/content/types/content'
+import { contentFunc, IContentDocument } from '@nuxt/content/types/content'
 
 import Vue from 'vue'
 import ArticleCard from '~/components/ArticleCard.vue'
@@ -23,11 +23,23 @@ import getSiteMetadata from '~/utils/getSiteMetadata'
 
 export default Vue.extend({
   async asyncData({ $content }: { $content: contentFunc }) {
-    const articles = await $content('articles')
-      .only(['title', 'description', 'cover', 'slug', 'author', "date", 'featured'])
+    const data = await $content('articles')
+      .only([
+        'title',
+        'description',
+        'cover',
+        'slug',
+        'author',
+        'date',
+        'featured',
+        'published',
+      ])
       .sortBy('date', 'desc')
       .fetch()
 
+    const articles = data.filter(
+      (article: IContentDocument) => article.published
+    )
     return { articles }
   },
   head() {

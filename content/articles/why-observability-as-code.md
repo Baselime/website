@@ -5,6 +5,7 @@ cover: why-observability-as-code.jpg
 alt: Why Observability as Code
 featured: true
 date: 2021-09-15
+published: true
 author:
   id: boris-tane
   name: Boris Tane

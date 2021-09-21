@@ -5,6 +5,7 @@ cover: what-are-slos.jpg
 alt: What are SLAs, SLOs and SLIs?
 featured: true
 date: 2021-09-16
+published: true
 author:
   id: boris-tane
   name: Boris Tane
