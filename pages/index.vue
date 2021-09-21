@@ -388,10 +388,12 @@ section {
   text-align: center;
   h2 {
     margin: 0 0 15px 0;
+    line-height: 2.4rem;
   }
   h3 {
     font-weight: normal;
     font-size: 1.4rem;
+    line-height: 1.8rem;
   }
   .inner {
     max-width: 1212px;
