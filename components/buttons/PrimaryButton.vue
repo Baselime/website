@@ -58,8 +58,13 @@ export default Vue.extend({
   },
   methods: {
     action() {
-      mixpanel.track(this.event, this.eventProperties)
-      this.$emit('action')
+      try {
+        mixpanel.track(this.event, this.eventProperties);
+      } catch (err) {
+        console.log(err)
+      } finally {
+        this.$emit('action')
+      }
     },
   },
   data() {
