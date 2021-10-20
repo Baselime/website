@@ -1,5 +1,8 @@
 <template>
   <header class="sticky" :class="{ shadow }">
+    <div class="announcement">
+      🎉 We're hiring! Read more about our <a href="https://baselime.notion.site/baselime/Baselime-Job-Board-c83ec59a57114a98bee1ae927afad421">opened positions</a>!
+    </div>
     <div class="header">
       <div class="logo-container">
         <NuxtLink to="/">
@@ -56,6 +59,17 @@ export default Vue.extend({
 header {
   background: $mainBackground;
   border-top: 2px solid $green;
+  .announcement {
+    text-align: center;
+    padding: 10px;
+    background: $green;
+    color: $white;
+    font-weight: bold;
+    a {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
   &.sticky {
     position: fixed;
     z-index: 50;
@@ -66,6 +80,7 @@ header {
   }
   &.shadow {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    top: -44px;
   }
   .header {
     font-weight: bold;
