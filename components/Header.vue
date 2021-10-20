@@ -1,7 +1,7 @@
 <template>
   <header class="sticky" :class="{ shadow }">
     <div class="announcement">
-      🎉 We're hiring! Read more about our <a href="https://baselime.notion.site/baselime/Baselime-Job-Board-c83ec59a57114a98bee1ae927afad421">opened positions</a>!
+      🎉 We're hiring! Read more about our <a href="https://baselime.notion.site/baselime/Baselime-Job-Board-c83ec59a57114a98bee1ae927afad421">open positions</a>!
     </div>
     <div class="header">
       <div class="logo-container">
