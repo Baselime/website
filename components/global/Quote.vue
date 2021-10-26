@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p><slot name="info-box">default</slot></p>
+    <p><slot name="quote">default</slot></p>
   </div>
 </template>
 
@@ -8,15 +8,12 @@
 @import '@/assets/scss/_variables.scss';
 
 div {
-  background: $lightBlue;
-  border-radius: 15px;
-  padding: 30px;
-  color: $white;
+  padding: 0 0 0 30px;
   margin: 0 0 30px 0;
-  font-weight: bold;
+  border-left: 5px solid $green;
+  font-style: italic;
   p {
     margin: 0 !important;
-    padding: 0 !important;
   }
 }
 </style>

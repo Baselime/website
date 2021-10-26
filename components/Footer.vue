@@ -28,7 +28,7 @@
             <div class="item-container">
               <NuxtLink to="/about" class="item">About</NuxtLink>
               <NuxtLink to="/blog" class="item">Blog</NuxtLink>
-              <a class="item" href="https://baselime.notion.site/baselime/Baselime-Job-Board-c83ec59a57114a98bee1ae927afad421">Career</a>
+              <a class="item" href="https://baselime.notion.site/baselime/Baselime-Job-Board-c83ec59a57114a98bee1ae927afad421">Careers</a>
             </div>
           </div>
         </div>

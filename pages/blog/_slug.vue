@@ -36,7 +36,7 @@
         </div>
       </div>
       <section class="inner">
-        <img :src="`/images/blog-covers/${article.cover}`" :alt="article.alt" />
+        <img class="cover" :src="`/images/blog-covers/${article.cover}`" :alt="article.alt" />
         <nuxt-content :document="article" />
       </section>
     </div>
@@ -79,10 +79,7 @@ export default Vue.extend({
     const article = await $content(`articles`, params.slug).fetch()
     const author = await $content(`authors`, article.author.id).fetch()
 
-
-    const articles = (
-      await $content(`articles`).sortBy('date', 'asc').fetch()
-    )
+    const articles = (await $content(`articles`).sortBy('date', 'asc').fetch())
       .filter((article) => article.slug !== params.slug && article.published)
       .slice(0, 3)
 
@@ -164,8 +161,12 @@ export default Vue.extend({
       this.tweetIt(tweet, url)
     },
     shareViaEmail() {
-      const subject = encodeURIComponent(`${this.article.title} - Baselime Blog`)
-      const body = encodeURIComponent(`Check out this blog post on the Baselime Blog - ${this.url}`)
+      const subject = encodeURIComponent(
+        `${this.article.title} - Baselime Blog`
+      )
+      const body = encodeURIComponent(
+        `Check out this blog post on the Baselime Blog - ${this.url}`
+      )
       window.open(`mailto:?subject=${subject}&body=${body}`)
     },
     shareOnWhatsApp() {
@@ -271,9 +272,11 @@ article {
       img {
         border-radius: 15px;
         margin: 0 0 60px 0;
+        width: 100%;
+        max-height: 580px;
+        object-fit: cover;
       }
       ::v-deep {
-
         a {
           text-decoration: none;
           color: $green;
@@ -283,11 +286,23 @@ article {
             border-bottom: 2px solid $green;
           }
         }
+        h2 {
+          margin: 6rem 0 3rem 0;
+        }
 
         pre,
         p {
           margin: 0 0 30px 0;
-          border-radius: 15px;
+        }
+
+        pre {
+          border-radius: 5px;
+
+          code {
+            color: $e4;
+            background: none;
+            padding: 0;
+          }
         }
 
         em {
@@ -301,6 +316,33 @@ article {
           display: inline-block;
           &:before {
             content: none;
+          }
+        }
+
+        code {
+          color: $red;
+          background: $e4;
+          padding: 3px 6px;
+          border-radius: 3px;
+        }
+
+        table {
+          width: 100%;
+          max-width: 960px;
+          margin: 30px 0;
+
+          thead,
+          tbody {
+            tr {
+              border-top: 2px solid $e4;
+              border-bottom: 1px solid #fff;
+            }
+
+            td,
+            th {
+              text-align: left;
+              padding: 10px;
+            }
           }
         }
 

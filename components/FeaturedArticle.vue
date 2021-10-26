@@ -76,7 +76,8 @@ export default Vue.extend({
     }
 
     img {
-      width: 500px;
+      width: 100%;
+      max-height: 600px;
       object-fit: cover;
       border-radius: 15px;
     }
