@@ -1,7 +1,7 @@
 Parameters:
   S3BucketNameParameter:
     Type: String
-    Default: baselime-io
+    Default: baselime.io
     Description: Baselime website
 
 Resources:
