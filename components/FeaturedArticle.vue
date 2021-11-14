@@ -77,7 +77,7 @@ export default Vue.extend({
 
     img {
       width: 100%;
-      max-height: 600px;
+      max-height: 400px;
       object-fit: cover;
       border-radius: 15px;
     }
@@ -90,6 +90,7 @@ export default Vue.extend({
         display: inline;
         color: $green;
         border-bottom: 2px solid transparent;
+        font-size: 2.5rem;
 
         &:hover {
           border-bottom: 2px solid $green;

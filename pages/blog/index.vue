@@ -1,8 +1,14 @@
 <template>
   <div>
-    <BlogTitle />
     <featured-article :article="articles.find((a) => a.featured)" />
-    <Separator :text="'All articles'" />
+    <div class="like">
+      <h3 style="font-weight: bold">
+        You like writing about serverless and observability?
+      </h3>
+      <p>
+        Contribute content on the Baselime Blog. Contact us at <a href="mailto:writing@baselime.io">writing@baselime.io</a>
+      </p>
+    </div>
     <section class="blog-articles-container">
       <ul>
         <li v-for="article of articles" :key="article.slug">
@@ -10,6 +16,7 @@
         </li>
       </ul>
     </section>
+    <BlogTitle />
   </div>
 </template>
 
@@ -64,10 +71,16 @@ export default Vue.extend({
 <style lang="scss" scoped>
 @import '@/assets/scss/_variables.scss';
 
+.like {
+  margin: auto;
+  text-align: center;
+  padding: 60px;
+  background: $blue;
+  color: $white;
+}
 .blog-articles-container {
   background: $mainBackground;
   ul {
-    max-width: 1212px;
     margin: 0 auto;
     padding: 120px 0;
     display: flex;
@@ -75,7 +88,7 @@ export default Vue.extend({
     justify-content: center;
     li {
       margin: 0 15px 30px 15px;
-      width: 372px;
+      width: 420px;
     }
   }
 }

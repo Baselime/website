@@ -24,6 +24,7 @@ export default Vue.extend({
   padding: 30px;
   div {
     max-width: 1212px;
+    text-align: center;
     color: $white;
     font-size: 1.6rem;
     margin: auto;

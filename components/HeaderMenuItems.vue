@@ -16,6 +16,7 @@
         @action="joinBeta"
         :event="'open-join-beta-modal'"
         :eventProperties="{ origin: 'header' }"
+        :small="true"
       />
     </div>
   </div>
@@ -90,7 +91,7 @@ export default Vue.extend({
     }
   }
   .button-container {
-    width: 150px;
+    width: 120px;
     margin-left: 15px;
     @media screen and (max-width: 890px) {
       width: 100%;

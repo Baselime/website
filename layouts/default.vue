@@ -90,7 +90,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 @import '@/assets/scss/_variables.scss';
 .main {
-  margin-top: 70px;
+  margin-top: 120px;
   color: $darkBlue;
   background: $white;
   @media screen and (max-width: 890px) {

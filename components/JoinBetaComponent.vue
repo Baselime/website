@@ -41,6 +41,7 @@
         :event="'join-beta'"
         :eventProperties="{ company, tier }"
         @action="joinBeta"
+        :shadow="true"
       />
     </div>
   </form>
@@ -60,7 +61,7 @@ export default Vue.extend({
     tier: {
       type: Number,
       required: false,
-    }
+    },
   },
   data() {
     return {
@@ -99,7 +100,7 @@ export default Vue.extend({
         )
       } catch (error) {
         EventBus.$emit('dialog', {
-          id: "join-beta-error",
+          id: 'join-beta-error',
           title: 'Error',
           message:
             'Whoops there was an error signing you up for our private beta. Please retry.',
@@ -108,7 +109,7 @@ export default Vue.extend({
         return
       }
       EventBus.$emit('dialog', {
-        id: "join-beta-success",
+        id: 'join-beta-success',
         title: 'Subscribed!',
         message:
           "Thanks for joining our private beta. We will be in touch shortly to introduce you to what we've been working on.",

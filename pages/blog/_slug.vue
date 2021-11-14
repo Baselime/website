@@ -41,7 +41,7 @@
       </section>
     </div>
 
-    <Separator :text="'More articles'" />
+    <Separator :text="'More from the blog'" />
 
     <section class="blog-articles-container">
       <ul>
@@ -361,7 +361,6 @@ article {
   .blog-articles-container {
     background: $mainBackground;
     ul {
-      max-width: 1212px;
       margin: 0 auto;
       padding: 120px 0;
       display: flex;
@@ -369,7 +368,7 @@ article {
       justify-content: center;
       li {
         margin: 0 15px 30px 15px;
-        width: 372px;
+        width: 420px;
       }
     }
   }

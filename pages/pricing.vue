@@ -2,14 +2,19 @@
   <main class="pricing">
     <section class="heading">
       <div class="inner">
-        <h1>Simple pricing that scales with your serverless architecure</h1>
+        <h1>Plans that suit your scale</h1>
+        <p>
+          No per service, per account or per seat pricing. Pay for the number of
+          transactions your systems handle.
+        </p>
+        <p>
+          Your cloud bill is already complex enough, you don't need more
+          accounting nightmares. We give you a straightforward pricing, with no
+          hidden fees. We're commited to transparency in pricing.
+        </p>
       </div>
     </section>
-    <section class="steps">
-      <div class="inner">
-        <Step v-for="(step, i) in steps" :key="i" :step="step" class="item" />
-      </div>
-    </section>
+
     <section class="pricing-table">
       <PricingTable :plans="plans" style="margin: auto" />
     </section>
@@ -44,26 +49,6 @@ export default Vue.extend({
           price: 'Contact Sales',
         },
       ],
-      steps: [
-        {
-          value: 1,
-          title: 'No BS pricing limits',
-          description:
-            'No per service, per account or per seat pricing. Pay for the number of transactions your systems handle.',
-        },
-        {
-          value: 2,
-          title: 'No hidden fees',
-          description:
-            "Your cloud bill is already complex enough, you don't need more accounting nightmares. We give you a straightforward pricing, with no hidden fees. We're commited to transparency in pricing.",
-        },
-        {
-          value: 3,
-          title: 'Scale with your architecture',
-          description:
-            'Start for free when you have less than 100,000 transactions per month, and linearly grow as your architecture and userbase grows.',
-        },
-      ],
     }
   },
   components: {
@@ -83,11 +68,12 @@ export default Vue.extend({
       width: 100%;
       max-width: 1272px;
       margin: auto;
+      text-align: center;
     }
 
     &.heading {
       .inner {
-        padding: 60px 30px 120px 30px;
+        padding: 60px 180px;
       }
     }
 

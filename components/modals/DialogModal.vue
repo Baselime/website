@@ -19,6 +19,7 @@
             @action="doIt"
             :event="'close-dialog-modal'"
             :eventProperties="{ id }"
+            :shadow="true"
           />
         </div>
       </div>

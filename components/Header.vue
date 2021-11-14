@@ -1,7 +1,7 @@
 <template>
   <header class="sticky" :class="{ shadow }">
     <div class="announcement">
-      🎉 We're hiring! Read more about our <a href="https://baselime.notion.site/baselime/Baselime-Job-Board-c83ec59a57114a98bee1ae927afad421">open positions</a>!
+      🎉 We're hiring! View our <a href="https://baselime.notion.site/baselime/Baselime-Job-Board-c83ec59a57114a98bee1ae927afad421">open positions</a>!
     </div>
     <div class="header">
       <div class="logo-container">
@@ -59,6 +59,7 @@ export default Vue.extend({
 header {
   background: $mainBackground;
   border-top: 2px solid $green;
+  border-bottom: 1px solid $e4;
   .announcement {
     text-align: center;
     padding: 10px;
@@ -87,7 +88,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1212px;
     margin: auto;
     padding: 10px 30px;
 

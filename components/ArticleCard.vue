@@ -83,10 +83,12 @@ export default Vue.extend({
 
     .date {
       font-size: 0.8em;
+      color: $grey;
+      margin-bottom: 5px;
     }
 
     .description {
-      color: $darkBlue;
+      color: $grey;
     }
 
     h3 {

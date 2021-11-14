@@ -1,5 +1,5 @@
 <template>
-  <button class="button" :class="{ secondary, inline }" @click="action">
+  <button class="button" :class="{ secondary, inline, shadow, small }" @click="action">
     <loader v-if="loading" :loading="loading" :color="'#fcfcfc'" />
     <div v-else>
       <a class="inner" :href="url" v-if="inline">
@@ -30,6 +30,14 @@ export default Vue.extend({
     text: {
       type: String,
       required: true,
+    },
+    shadow: {
+      type: Boolean,
+      required: false,
+    },
+    small: {
+      type: Boolean,
+      required: false,
     },
     secondary: {
       type: Boolean,
@@ -77,14 +85,19 @@ export default Vue.extend({
 @import '@/assets/scss/_variables.scss';
 .button {
   padding: 12px 24px;
-  border-radius: 6px;
+  border-radius: 15px;
   background: $green;
   cursor: pointer;
   color: $white;
   transition: 0.15s;
   font-weight: bold;
   width: 100%;
-  box-shadow: 0 2px 12px 0 rgba($green, 0.5);
+  &.small {
+    padding: 9px;
+  }
+  &.shadow {
+    box-shadow: 0 2px 12px 0 rgba($green, 0.5);
+  }
   &.secondary {
     background: $white;
     border: 1px solid $green;

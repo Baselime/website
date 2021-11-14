@@ -6,7 +6,9 @@
         Join our monthly newsletter and stay ahead of the curve on serverless
         observability
       </p>
-      <newsletter-form :origin="'blog-home-page'" />
+      <div class="newsletter-container">
+        <newsletter-form :origin="'blog-home-page'" />
+      </div>
     </div>
   </div>
 </template>
@@ -33,16 +35,22 @@ export default Vue.extend({
     max-width: 1272px;
     margin: auto;
     padding: 120px 30px;
+    text-align: center;
 
     @media screen and (max-width: 890px) {
       padding: 60px 30px;
+    }
+
+    .newsletter-container {
+      max-width: 500px;
+      margin: auto;
     }
 
     h1 {
       color: $darkBlue;
     }
     p {
-      margin: 30px 0 5px 0;
+      margin: 30px 0 30px 0;
     }
   }
 }
