@@ -270,7 +270,7 @@ article {
     .inner {
       width: 100%;
       img {
-        border-radius: 15px;
+        border-radius: 4px;
         margin: 0 0 60px 0;
         width: 100%;
         max-height: 580px;
@@ -296,7 +296,7 @@ article {
         }
 
         pre {
-          border-radius: 5px;
+          border-radius: 4px;
 
           code {
             color: $e4;
@@ -323,7 +323,7 @@ article {
           color: $red;
           background: $e4;
           padding: 3px 6px;
-          border-radius: 3px;
+          border-radius: 4px;
         }
 
         table {

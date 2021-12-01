@@ -9,7 +9,7 @@
 
 div {
   background: $lightBlue;
-  border-radius: 15px;
+  border-radius: 4px;
   padding: 30px;
   color: $white;
   margin: 0 0 30px 0;

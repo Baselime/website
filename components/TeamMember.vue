@@ -46,13 +46,13 @@ export default Vue.extend({
 
 .member {
   background: $mainBackground;
-  border-radius: 15px;
+  border-radius: 4px;
   text-align: left;
   border: 1px solid $e4;
 
   img {
     width: 100%;
-    border-radius: 15px 15px 0 0;
+    border-radius: 4px 4px 0 0;
     height: 350px;
     object-fit: cover;
   }

@@ -51,7 +51,7 @@ export default Vue.extend({
       margin: auto;
       padding: 30px;
       background: $mainBackground;
-      border-radius: 15px;
+      border-radius: 4px;
     }
   }
 }

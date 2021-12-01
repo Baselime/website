@@ -22,7 +22,7 @@ export default Vue.extend({
 @import '@/assets/scss/_variables.scss';
 
 .achievement {
-  border-radius: 15px;
+  border-radius: 4px;
   padding: 30px;
   color: $white;
   text-align: left;

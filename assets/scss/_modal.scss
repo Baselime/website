@@ -16,7 +16,7 @@
     max-width: 600px;
     background: $mainBackground;
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 4px;
     box-shadow: 0 40px 60px 0 rgba(7, 54, 12, 0.1);
     z-index: 999;
 
@@ -26,7 +26,7 @@
       right: 5px;
       cursor: pointer;
       transition: 0.15s;
-      border-radius: 15px;
+      border-radius: 4px;
       width: 30px;
       height: 30px;
       padding-left: 3px;
@@ -43,7 +43,7 @@
     .c-container {
       background-color: darken($mainBackground, 2%) ;
       padding: 30px;
-      border-radius: 15px;
+      border-radius: 4px;
     }
 
     h3 {

@@ -85,7 +85,7 @@ export default Vue.extend({
 @import '@/assets/scss/_variables.scss';
 .button {
   padding: 12px 24px;
-  border-radius: 15px;
+  border-radius: 4px;
   background: $green;
   cursor: pointer;
   color: $white;

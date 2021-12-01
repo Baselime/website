@@ -113,7 +113,7 @@ section {
       max-width: 602px;
       width: 100%;
       img {
-        border-radius: 15px;
+        border-radius: 4px;
         position: relative;
         height: 550px;
         width: 100%;

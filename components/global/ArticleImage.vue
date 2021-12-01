@@ -51,7 +51,7 @@ export default {
   text-align: center;
   color: $grey;
   img {
-    border-radius: 15px;
+    border-radius: 4px;
     margin: 0 0 5px 0;
   }
   a {

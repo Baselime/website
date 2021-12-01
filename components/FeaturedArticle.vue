@@ -79,7 +79,7 @@ export default Vue.extend({
       width: 100%;
       max-height: 400px;
       object-fit: cover;
-      border-radius: 15px;
+      border-radius: 4px;
     }
 
     .details {

@@ -25,7 +25,7 @@ export default Vue.extend({
 
 .step {
   background: $white;
-  border-radius: 15px;
+  border-radius: 4px;
   padding: 20px 30px 30px 30px;
   text-align: left;
   display: flex;

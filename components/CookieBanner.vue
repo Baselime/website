@@ -52,7 +52,7 @@ export default Vue.extend({
   justify-content: space-between;
   position: fixed;
   padding: 15px;
-  border-radius: 5px;
+  border-radius: 4px;
   bottom: 0;
   margin: 30px;
   opacity: 1;

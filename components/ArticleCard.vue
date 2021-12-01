@@ -57,13 +57,13 @@ export default Vue.extend({
   transition: 0.15s;
   background: $white;
   box-sizing: border-box;
-  border-radius: 15px;
+  border-radius: 4px;
 
   height: 100%;
   width: 100%;
 
   border: 1px solid $e4;
-  border-radius: 15px;
+  border-radius: 4px;
   overflow: hidden;
 
   object {
@@ -71,7 +71,7 @@ export default Vue.extend({
     img {
       width: 100%;
       object-fit: cover;
-      border-radius: 15px 15px 0 0;
+      border-radius: 4px 4px 0 0;
 
       height: 250px;
       transition: 0.15s;
