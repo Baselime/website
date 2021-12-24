@@ -1,6 +1,6 @@
 const type = "website";
 const url = `https://baselime.io`;
-const title = "Baselime - Serverless Observability";
+const title = "Baselime - Observability for Serverless";
 const description = "Observability solution for serverless.";
 const mainImage = "/images/og.png";
 

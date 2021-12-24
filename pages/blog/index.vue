@@ -52,7 +52,7 @@ export default Vue.extend({
   head() {
     const metaData = {
       title: `Baselime Blog`,
-      description: `Articles about serverless observability`,
+      description: `Articles about observability for serverless`,
       url: `https://baselime.io/blog/`,
     }
     const meta = getSiteMetadata(metaData)

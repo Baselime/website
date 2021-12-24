@@ -1,7 +1,7 @@
 <template>
   <div class="pre-footer-container">
     <div class="pre-footer">
-      <h1>Help us build the future of serverless observability</h1>
+      <h1>Help us build the future of observability for serverless</h1>
       <div class="join-beta-container">
         <JoinBetaComponent />
       </div>
