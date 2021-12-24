@@ -7,6 +7,11 @@
     </div>
     <div>
       <NuxtLink to="/about" class="item">About</NuxtLink>
+      <NuxtLink to="/careers" class="item">
+        
+          <span>Careers</span>
+          <span class="marker"></span>
+        </NuxtLink>
       <NuxtLink to="/pricing" class="item">Pricing</NuxtLink>
       <NuxtLink to="/blog" class="item">Blog</NuxtLink>
     </div>
@@ -61,6 +66,16 @@ export default Vue.extend({
   align-items: center;
   justify-content: center;
   font-weight: bold;
+
+  .marker {
+    width: 8px;
+    height: 8px;
+    background: $red;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    top: -5px;
+  }
   &.vertical {
     display: block;
     .item {

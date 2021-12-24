@@ -1,6 +1,6 @@
 <template>
   <header class="sticky" :class="{ shadow }">
-    <div class="announcement">
+    <div class="announcement" v-if="false">
       🎉 We're hiring! View our <a href="https://baselime.notion.site/baselime/Baselime-Job-Board-c83ec59a57114a98bee1ae927afad421">open positions</a>!
     </div>
     <div class="header">
@@ -81,7 +81,7 @@ header {
   }
   &.shadow {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-    top: -44px;
+    // top: -44px;
   }
   .header {
     font-weight: bold;
