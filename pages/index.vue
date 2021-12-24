@@ -4,10 +4,12 @@
       <div class="inner">
         <div class="details">
           <div>
-            <h1>Eliminate chaos from your serverless architecture</h1>
+            <h1>Developer-first observability for serverless</h1>
             <p class="sub-header">
-              Your stack doesn't have to be chaotic. Baselime makes it easy to
-              identify and troubleshoot defects in your serverless architecture.
+              Adopt Observability as Code to eliminate chaos from your
+              serverless architecture. Baselime makes it easy to collaborate,
+              identify, and troubleshoot defects in your serverless
+              architecture.
             </p>
           </div>
           <div class="buttons-container">
@@ -103,15 +105,6 @@
               </p>
             </div>
           </div>
-          <!-- <div class="buttons-container">
-            <div>
-              <primary-button
-                :text="'More about observability'"
-                :inline="true"
-                :url="'/blog/what-is-observability'"
-              />
-            </div>
-          </div> -->
         </div>
         <div class="image-container">
           <img src="@/assets/images/stack.svg" alt="" />
@@ -120,6 +113,46 @@
     </section>
 
     <section class="observability-3">
+      <div class="inner">
+        <div class="details">
+          <div>
+            <h2>Collaborate with your team</h2>
+            <div class="sub-header">
+              <p>
+                Identifying and fixing issues in modern software infrastructure
+                is a team sport. We share stack traces, copy/paste logs, reference docs,
+                etc... all in chat tools. We can do better.
+              </p>
+              <p>
+                Baselime is the collaboration platform where your team can debug
+                serverless applications.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="@/assets/images/collaboration.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="steps">
+      <h2>Observability for serverless applications made simple</h2>
+      <h3>Boost your team productivity</h3>
+
+      <div class="inner">
+        <Step v-for="(step, i) in steps" :key="i" :step="step" class="item" />
+      </div>
+    </section>
+
+    <!-- <section class="integrations">
+      <h2>Integrate with your everyday tools</h2>
+      <div class="inner">
+        <img src="@/assets/images/integrations.png" alt="" />
+      </div>
+    </section> -->
+
+    <section class="observability-4 reverse">
       <div class="inner">
         <div class="details">
           <div>
@@ -145,49 +178,6 @@
         </div>
         <div class="image-container">
           <img src="@/assets/images/alert-fatigue.svg" alt="" />
-        </div>
-      </div>
-    </section>
-
-    <section class="steps">
-      <h2>Observability for serverless applications made simple</h2>
-      <h3>Boost your team productivity</h3>
-
-      <div class="inner">
-        <Step v-for="(step, i) in steps" :key="i" :step="step" class="item" />
-      </div>
-    </section>
-
-    <section class="integrations">
-      <h2>Integrate with your everyday tools</h2>
-      <div class="inner">
-        <img src="@/assets/images/integrations.png" alt="" />
-      </div>
-    </section>
-
-    <section class="observability-4 reverse">
-      <div class="inner">
-        <div class="details">
-          <div>
-            <h2>Serverless-specific metrics and insights</h2>
-            <p class="sub-header">
-              Serverless architectures come with a lot of "gotchas". Baselime
-              surfaces the key metrics of your serverless architecture and helps
-              your team easily identify performance issues.
-            </p>
-          </div>
-          <!-- <div class="buttons-container">
-            <div>
-              <primary-button
-                :text="'Serverless insights'"
-                :inline="true"
-                :url="'/blog/serverless-insights'"
-              />
-            </div>
-          </div> -->
-        </div>
-        <div class="image-container">
-          <img src="@/assets/images/serverless.svg" alt="" />
         </div>
       </div>
     </section>
@@ -240,13 +230,13 @@ export default Vue.extend({
           value: 1,
           title: 'Get started in minutes',
           description:
-            'Instrumenting your serverless stack for observability is easy. Baselime integrates with your systems using Lambda Layers.',
+            'Instrumenting your serverless stack for observability is easy. Baselime integrates with your systems using CloudFormation and OpenTelemetry.',
         },
         {
           value: 2,
           title: 'Always bet on code',
           description:
-            "You have already adopted Infrastructure as Code, but your observability configurations are all done clicking around dashboards. It's time to transition to Observability as Code, get a single source of truth for your observability configurations.",
+            "You have already adopted Infrastructure as Code, but your observability configurations are all done clicking around dashboards. It's time to transition to Observability as Code, make observability a first class citizen of your development life cycle.",
         },
         {
           value: 3,
@@ -256,9 +246,9 @@ export default Vue.extend({
         },
         {
           value: 4,
-          title: 'Manage change effortlessly',
+          title: 'Observability is multiplayer',
           description:
-            'Baselime automatically detects critical changes in your infrastructure and highlights the affected services. Stop guessing when debugging production defects and proceed with more confidence.',
+            'Fixing production defects and outages require a lot of collaboration, knowledge sharing and cooperation. Stop pasting logs in Slack collaborate from within your observability platform, Baselime.',
         },
       ],
     }
