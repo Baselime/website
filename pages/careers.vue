@@ -91,6 +91,7 @@ import Vue from 'vue'
 import CareersValue from '@/components/CareersValue.vue'
 import CareersBenefit from '@/components/CareersBenefit.vue'
 import CareersPosition from '@/components/CareersPosition.vue'
+import getSiteMetadata from '~/utils/getSiteMetadata'
 
 export default Vue.extend({
   data() {
@@ -173,6 +174,18 @@ export default Vue.extend({
     CareersValue,
     CareersBenefit,
     CareersPosition,
+  },
+  head() {
+    const metaData = {
+      title: `Join the team - Baselime`,
+      description: `Careers at Baselime`,
+      url: `https://baselime.io/careers/`,
+    }
+    const meta = getSiteMetadata(metaData)
+    return {
+      title: metaData.title,
+      meta: [...meta],
+    }
   },
 })
 </script>
