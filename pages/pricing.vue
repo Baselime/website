@@ -5,7 +5,7 @@
         <h1>Plans that suit your scale</h1>
         <p>
           No per service, per account or per seat pricing. Pay for the number of
-          transactions your systems handle.
+          events your systems handle.
         </p>
         <p>
           Your cloud bill is already complex enough, you don't need more
@@ -37,7 +37,7 @@ export default Vue.extend({
         {
           name: 'Team',
           tier: 1,
-          for: 'Ideal for teams with production workloads, doing less than 10 million transactions per month.',
+          for: 'Ideal for teams with production workloads, doing less than 10 million events per month.',
           price: 80,
           popular: true,
           isStartsAt: true,
@@ -45,7 +45,7 @@ export default Vue.extend({
         {
           name: 'Enterprise',
           tier: 2,
-          for: 'Custom pricing for organisations w/ more than 10 million transactions per month.',
+          for: 'Custom pricing for organisations w/ more than 10 million events per month.',
           price: 'Contact Sales',
         },
       ],

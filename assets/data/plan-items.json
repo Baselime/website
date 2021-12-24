@@ -19,7 +19,7 @@
         }
       },
       {
-        "name": "Observability transactions (monthly)",
+        "name": "Observability events (monthly)",
         "plans": {
           "0": "100,000",
           "1": "10 million",
@@ -27,7 +27,7 @@
         }
       },
       {
-        "name": "Additional observability transactions",
+        "name": "Additional observability events",
         "plans": {
           "0": "-",
           "1": "$80/million/month",
