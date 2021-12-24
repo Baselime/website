@@ -8,7 +8,7 @@
             <p></p>
             <p>
               Serverless adoption is growing at an exponential rate, yet the
-              tooling around serverless architectures is not evolving as fast.
+              tooling around serverless is not evolving as fast.
               The software we rely on everyday is getting more complex, more
               fragile and less understandable, even by the brilliant developers
               who built it.

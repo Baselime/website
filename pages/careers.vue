@@ -5,7 +5,7 @@
         <h1>Join the team</h1>
         <p>
           We're defining the future of observability for serverless
-          architectures
+          applications
         </p>
         <div class="image-container">
           <img src="@/assets/images/careers.png" alt="" />

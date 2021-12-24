@@ -7,9 +7,9 @@
             <h1>Developer-first observability for serverless</h1>
             <p class="sub-header">
               Adopt Observability as Code to eliminate chaos from your
-              serverless architecture. Baselime makes it easy to collaborate,
-              identify, and troubleshoot defects in your serverless
-              architecture.
+              serverless applications. Baselime makes it easy for your team to
+              identify and troubleshoot defects in your serverless
+              applications.
             </p>
           </div>
           <div class="buttons-container">
@@ -95,7 +95,7 @@
             <div class="sub-header">
               <p>
                 Identifying bottlenecks and resolving incidents in your
-                serverless architecture should not be a pain. Stop aimlessly
+                serverless applications should not be a pain. Stop aimlessly
                 firefighting when there's an outage. Spot the affected services
                 and identify the root cause in minutes, not hours.
               </p>
@@ -207,7 +207,7 @@ export default Vue.extend({
           value: '60%',
           title: 'Reduced Mean Time To Recovery',
           description:
-            'Recover from incidents faster. Use structured events to find issues deep in your serverless architecture.',
+            'Recover from incidents faster. Use wide structured events to find issues deep in your serverless applications.',
           color: '#F94E1E',
         },
         {

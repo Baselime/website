@@ -23,7 +23,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "Observability solution for serverless architectures.",
+          "Observability solution for serverless applications.",
       },
       { property: "og:image:width", content: "740" },
       { property: "og:image:height", content: "300" },
