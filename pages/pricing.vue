@@ -74,6 +74,9 @@ export default Vue.extend({
     &.heading {
       .inner {
         padding: 60px 180px;
+        @media screen and (max-width: 890px) {
+          padding: 60px 30px;
+        }
       }
     }
 
