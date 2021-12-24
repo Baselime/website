@@ -53,9 +53,9 @@
         <div class="details">
           No positions available that suit you? Send your expression of interest
           in joining us to
-          <a href="mailto:careers@baselime.io">careers@baselime.io</a> Great teams are
-          made up of people with different experiences, characteristics and
-          traits. We welcome everyone to apply.
+          <a href="mailto:careers@baselime.io">careers@baselime.io</a> Great
+          teams are made up of people with different experiences,
+          characteristics and traits. We welcome everyone to apply.
         </div>
       </div>
     </section>
@@ -252,14 +252,14 @@ export default Vue.extend({
         }
         .details {
           margin: 30px 0 0 0;
-                a {
-        color: $green;
-        border-bottom: 2px solid transparent;
-        transition: 0.15s;
-        &:hover {
-          border-bottom: 2px solid $green;
-        }
-      }
+          a {
+            color: $green;
+            border-bottom: 2px solid transparent;
+            transition: 0.15s;
+            &:hover {
+              border-bottom: 2px solid $green;
+            }
+          }
         }
       }
     }

@@ -3,21 +3,25 @@
     <section class="heading">
       <div class="inner">
         <div class="details">
-          <h1>We help your team succeed with serverless</h1>
+          <h1>About us</h1>
           <div class="sub-header">
+            <p></p>
             <p>
               Serverless adoption is growing at an exponential rate, yet the
               tooling around serverless architectures is not evolving as fast.
-              It takes hours to resolve incidents or identify issues. Getting a
-              deep understanding of production systems in highly distributed,
-              event-driven architectures should not be this hard.
+              The software we rely on everyday is getting more complex, more
+              fragile and less understandable, even by the brilliant developers
+              who built it.
             </p>
             <p>
-              This is why we build Baselime. Our mission is to help your team
-              adopt serverless with the confidence to troubleshoot defects in
-              minutes, not hours, through the power of observability.
+              We at Baselime are re-imagining how developers build and maintain
+              their serverless applications. We believe in empowering every
+              software engineering team to gain a deeper understanding of their
+              systems such that they can troubleshoot and resolve defects in
+              minutes, not hours.
             </p>
           </div>
+          <div class="hiring">We're remote first, and we are hiring!</div>
         </div>
         <div class="image-container">
           <img src="@/assets/images/about.jpg" alt="" />
@@ -27,7 +31,7 @@
 
     <section class="team">
       <div class="inner">
-        <h2>Our Team</h2>
+        <h2>Meet the Team</h2>
         <h3>
           We are a team of engineers passionate about making it easier to deeply
           understand serverless architures
@@ -39,6 +43,9 @@
             :member="member"
             class="item"
           />
+        </div>
+        <div class="hiring">
+          <NuxtLink to="/careers" class="item"> Join the Baselime Team </NuxtLink>
         </div>
       </div>
     </section>
@@ -107,6 +114,11 @@ section {
         max-width: unset;
         margin: 0 0 30px 0;
       }
+
+      .hiring {
+        margin-top: 30px;
+        font-weight: bold;
+      }
     }
 
     .image-container {
@@ -148,11 +160,26 @@ section {
       margin: 60px auto 0 auto;
       flex-wrap: wrap;
       .item {
-        width: 350px;
+        width: 192px;
         margin: 15px;
         @media screen and (max-width: 550px) {
           width: 100%;
           margin: 15px 0 15px 0;
+        }
+      }
+    }
+
+    .hiring {
+      margin-top: 30px;
+      .item {
+        color: $green;
+        border-bottom: 2px solid transparent;
+        transition: 0.15s;
+        font-weight: bold;
+        font-size: 1.2rem;
+
+        &:hover {
+          border-bottom: 2px solid $green;
         }
       }
     }

@@ -6,7 +6,6 @@
     <div class="inner">
       <div class="name">{{ member.name }}</div>
       <div class="position">{{ member.position }}</div>
-      <!-- <div>{{ member.description }}</div> -->
       <div class="socials">
         <div>
           <a :href="member.linkedin" v-if="member.linkedin">
@@ -48,25 +47,23 @@ export default Vue.extend({
   background: $mainBackground;
   border-radius: 4px;
   text-align: left;
-  border: 1px solid $e4;
 
   img {
     width: 100%;
     border-radius: 4px 4px 0 0;
-    height: 350px;
+    height: 192px;
     object-fit: cover;
   }
 
   .inner {
-    padding: 30px;
+    padding: 15px;
     .name {
-      font-size: 1.8em;
+      font-size: 1.4em;
       font-weight: bold;
       font-family: 'Urbanist', sans-serif;
     }
     .position {
-    // font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     line-height: 1;
     margin: 0px 0 15px 0;
   }
@@ -80,6 +77,7 @@ export default Vue.extend({
     a {
       padding-right: 10px;
       transition: 0.15s;
+      color: $grey;
       &:hover {
         color: $green;
       }
