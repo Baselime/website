@@ -38,7 +38,7 @@
         "name": "Data retention",
         "plans": {
           "0": "14-days",
-          "1": "60-days",
+          "1": "30-days",
           "2": "Contact Sales"
         }
       },
