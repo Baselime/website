@@ -53,7 +53,7 @@
         <div class="details">
           No positions available that suit you? Send your expression of interest
           in joining us to
-          <a href="mailto:careers@baselime.io">careers@baselime.io</a> Great
+          <a href="mailto:careers@baselime.io">careers@baselime.io</a>. High-performing
           teams are made up of people with different experiences,
           characteristics and traits. We welcome everyone to apply.
         </div>
@@ -256,7 +256,6 @@ export default Vue.extend({
     &.positions {
       background: $paper;
       .inner {
-        max-width: 900px;
         .items {
           margin-top: 30px;
           .item {
@@ -287,7 +286,7 @@ export default Vue.extend({
         .item {
           display: block;
           max-width: 230px;
-          max-height: 95px;
+          max-height: 60px;
           width: auto;
           height: auto;
           margin: 30px 30px;

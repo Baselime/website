@@ -1,21 +1,43 @@
 <template>
-  <a class="position" :href="position.url">
+  <div class="position">
     <div class="inner">
-      <div class="title">{{ position.title }}</div>
-      <div class="details">
-        {{ position.location }}, {{ position.remuneration }}
+      <div>
+        <div class="title">{{ position.title }}</div>
+        <div class="details">
+          {{ position.location }}, {{ position.remuneration }}
+        </div>
+      </div>
+      <div class="button-container">
+        <primary-button
+          :text="'Learn More'"
+          :event="'careers-position-learn-more'"
+          :eventProperties="{ position: position.title }"
+          :shadow="false"
+          :url="position.url"
+          @action="openUrl(position.url)"
+        />
       </div>
     </div>
-  </a>
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
+
 export default Vue.extend({
   props: {
     position: {
       type: Object,
       required: true,
+    },
+  },
+  components: {
+    PrimaryButton,
+  },
+  methods: {
+    openUrl(url: string) {
+      window.open(url)
     },
   },
 })
@@ -31,16 +53,12 @@ export default Vue.extend({
   display: flex;
   background: $white;
 
-  &:hover {
-    .inner {
-      .title {
-        border-bottom: 2px solid $green;
-      }
-    }
-  }
-
   .inner {
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     .title {
       font-weight: bold;
       line-height: 1;
