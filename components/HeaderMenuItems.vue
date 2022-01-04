@@ -6,12 +6,12 @@
       </NuxtLink>
     </div>
     <div>
+      <a href="https://docs.baselime.io" class="item">Docs</a>
       <NuxtLink to="/about" class="item">About</NuxtLink>
       <NuxtLink to="/careers" class="item">
-        
-          <span>Careers</span>
-          <span class="marker"></span>
-        </NuxtLink>
+        <span>Careers</span>
+        <span class="marker"></span>
+      </NuxtLink>
       <NuxtLink to="/pricing" class="item">Pricing</NuxtLink>
       <NuxtLink to="/blog" class="item">Blog</NuxtLink>
     </div>

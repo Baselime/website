@@ -6,9 +6,9 @@
           <div>
             <h1>Developer-first observability for serverless</h1>
             <p class="sub-header">
-              Adopt Observability as Code to eliminate chaos from your
-              serverless applications. Baselime makes it easy for your team to
-              identify and troubleshoot defects in your serverless
+              Baselime is an Observability as Code platform based on
+              OpenTelemetry that makes it easy for your team to resolve
+              incidents and performance bottlenecks in your serverless
               applications.
             </p>
           </div>
@@ -45,9 +45,9 @@
           <div>
             <h2>Adopt Observability as Code</h2>
             <p class="sub-header">
-              Ensure your observability configurations are repeatable and
-              consistent across environments. Integrate your observability in
-              your Continuous Deployment pipelines, documents your dashboard and
+              Adopt Observability as Code to eliminate chaos from your
+              serverless applications. Integrate observability in your
+              Continuous Deployment pipelines, documents your dashboard and
               alerts, and increase your team velocity.
             </p>
           </div>
@@ -120,8 +120,8 @@
             <div class="sub-header">
               <p>
                 Identifying and fixing issues in modern software infrastructure
-                is a team sport. We share stack traces, copy/paste logs, reference docs,
-                etc... all in chat tools. We can do better.
+                is a team sport. We share stack traces, copy/paste logs,
+                reference docs, etc... all in chat tools. We can do better.
               </p>
               <p>
                 Baselime is the collaboration platform where your team can debug
