@@ -47,6 +47,7 @@
             © {{ year }} Baselime, All rights reserved
           </div>
           <NuxtLink to="/privacy" class="item">Privacy Policy</NuxtLink>
+          <NuxtLink to="/terms" class="item">Terms of Service</NuxtLink>
         </div>
         <div class="socials">
           <div>
@@ -173,7 +174,7 @@ footer {
       justify-content: space-between;
       .inner {
         display: flex;
-        width: 40%;
+        width: 50%;
         justify-content: space-between;
         flex-wrap: wrap;
       }

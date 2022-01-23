@@ -92,7 +92,6 @@ export default Vue.extend({
 .main {
   margin-top: 120px;
   color: $darkBlue;
-  background: $white;
   @media screen and (max-width: 890px) {
     margin-top: 50px;
   }
