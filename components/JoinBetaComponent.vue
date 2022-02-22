@@ -6,6 +6,7 @@
         v-model.trim="forename"
         type="text"
         placeholder="First Name*"
+        ref="forename"
         required
       />
       <input
@@ -60,6 +61,10 @@ export default Vue.extend({
   props: {
     tier: {
       type: Number,
+      required: false,
+    },
+    focus: {
+      type: Boolean,
       required: false,
     },
   },
@@ -124,6 +129,12 @@ export default Vue.extend({
       this.email = ''
       this.company = ''
     },
+  },
+  mounted() {
+    if (this.focus) {
+      // @ts-ignore
+      this.$refs.forename.focus()
+    }
   },
 })
 </script>

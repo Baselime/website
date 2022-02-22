@@ -7,7 +7,7 @@
       <div class="c-container" @click.prevent.stop>
         <div>
           <h3>Join our Private Beta today</h3>
-          <JoinBetaComponent :tier="tier" @complete="close" />
+          <JoinBetaComponent :tier="tier" :focus="true" @complete="close" />
         </div>
       </div>
     </div>

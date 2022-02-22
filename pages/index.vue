@@ -39,6 +39,13 @@
       </div>
     </section>
 
+    <section class="teaser">
+      <div class="image-container" @click="displayVideoModal()">
+        <img src="@/assets/images/teaser.png" alt="" />
+        <div class="play-btn"></div>
+      </div>
+    </section>
+
     <section class="observability">
       <div class="inner">
         <div class="details">
@@ -257,6 +264,9 @@ export default Vue.extend({
     displayJoinBetaModal() {
       EventBus.$emit('display-join-beta-modal')
     },
+    displayVideoModal() {
+      EventBus.$emit('display-video-modal')
+    },
   },
 })
 </script>
@@ -366,6 +376,117 @@ section {
       @media screen and (max-width: 890px) {
         position: inherit;
         max-width: unset;
+      }
+    }
+  }
+}
+
+.teaser {
+  background: $darkBlue;
+  margin-top: 120px;
+  .image-container {
+    max-width: 1400px;
+    margin: auto;
+    margin-top: -250px;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      img {
+        filter: drop-shadow(0 0 0.85rem $green);
+      }
+    }
+    img {
+      filter: drop-shadow(0 0 0.75rem rgb(131, 130, 130)) grayscale(50%);
+      transition: 0.15s;
+    }
+
+    .play-btn {
+      width: 100px;
+      height: 100px;
+      background: radial-gradient($green 60%, rgba(255, 255, 255, 1) 62%);
+      border-radius: 50%;
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      z-index: 10;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      box-shadow: 0px 0px 25px 3px $green;
+    }
+
+    /* triangle */
+    .play-btn::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translateX(-40%) translateY(-50%);
+      transform: translateX(-40%) translateY(-50%);
+      transform-origin: center center;
+      width: 0;
+      height: 0;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 25px solid #fff;
+      z-index: 100;
+      -webkit-transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    /* pulse wave */
+    .play-btn:before {
+      content: '';
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      -webkit-animation-delay: 0s;
+      animation-delay: 0s;
+      -webkit-animation: pulsate1 2s;
+      animation: pulsate1 2s;
+      -webkit-animation-direction: forwards;
+      animation-direction: forwards;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: steps;
+      animation-timing-function: steps;
+      opacity: 1;
+      border-radius: 50%;
+      border: 5px solid rgba(255, 255, 255, 0.75);
+      top: -25%;
+      left: -25%;
+      background: rgba(198, 16, 0, 0);
+    }
+
+    @-webkit-keyframes pulsate1 {
+      0% {
+        -webkit-transform: scale(0.6);
+        transform: scale(0.6);
+        opacity: 1;
+        box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75),
+          0px 0px 25px 10px rgba(255, 255, 255, 0.75);
+      }
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0;
+        box-shadow: none;
+      }
+    }
+
+    @keyframes pulsate1 {
+      0% {
+        -webkit-transform: scale(0.6);
+        transform: scale(0.6);
+        opacity: 1;
+        box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75),
+          0px 0px 25px 10px rgba(255, 255, 255, 0.75);
+      }
+      100% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1);
+        opacity: 0;
+        box-shadow: none;
       }
     }
   }

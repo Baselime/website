@@ -13,6 +13,7 @@
       v-if="showJoinBetaModal"
       @close="toggleJoinBetaModal(false)"
     />
+    <VideoModal v-if="showVideoModal" @close="toggleVideoModal(false)" />
     <Header />
     <Sidebar>
       <HeaderMenuItems :vertical="true" />
@@ -31,6 +32,7 @@
 import Sidebar from '@/components/burger-menu/Sidebar.vue'
 import DialogModal from '@/components/modals/DialogModal.vue'
 import JoinBetaModal from '@/components/modals/JoinBetaModal.vue'
+import VideoModal from '@/components/modals/VideoModal.vue'
 
 import Vue from 'vue'
 import { EventBus } from '@/event-bus'
@@ -40,11 +42,13 @@ export default Vue.extend({
     Sidebar,
     JoinBetaModal,
     DialogModal,
+    VideoModal,
   },
   data() {
     return {
       showDialogModal: false,
       showJoinBetaModal: false,
+      showVideoModal: false,
       dialogTitle: 'A title',
       dialogMessage: 'A message',
       dialogId: 'AN id',
@@ -69,6 +73,13 @@ export default Vue.extend({
       }
       this.showJoinBetaModal = !this.showJoinBetaModal
     },
+    toggleVideoModal(val?: boolean) {
+      if (typeof val === 'boolean') {
+        this.showVideoModal = val
+        return
+      }
+      this.showVideoModal = !this.showVideoModal
+    },
     setDialog(data: any) {
       this.dialogTitle = data.title
       this.dialogId = data.id
@@ -79,10 +90,14 @@ export default Vue.extend({
       this.tier = data?.tier
       this.toggleJoinBetaModal(true)
     },
+    setVideoModal() {
+      this.toggleVideoModal(true)
+    },
   },
   created() {
     EventBus.$on('dialog', this.setDialog)
     EventBus.$on('display-join-beta-modal', this.setJoinBetaModal)
+    EventBus.$on('display-video-modal', this.setVideoModal)
   },
 })
 </script>
