@@ -207,7 +207,7 @@ export default Vue.extend({
           value: '4x',
           title: 'Improved configuration consistency',
           description:
-            'Standardise the setup of your alerts and dashboard with Observability as Code.',
+            'Standardise the setup of your queries, alerts and dashboards with Observability as Code.',
           color: '#1A6AE3',
         },
         {
