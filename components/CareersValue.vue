@@ -5,7 +5,7 @@
     </div>
     <div class="inner">
       <div class="title">{{ value.title }}</div>
-      <div>{{ value.description }}</div>
+      <!-- <div>{{ value.description }}</div> -->
     </div>
   </div>
 </template>

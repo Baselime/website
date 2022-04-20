@@ -2,7 +2,7 @@
   <div class="position">
     <div class="inner">
       <div>
-        <div class="title">{{ position.title }}</div>
+        <a :href="position.url" class="title">{{ position.title }}</a>
         <div class="details">
           {{ position.location }}, {{ position.remuneration }}
         </div>
