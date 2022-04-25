@@ -21,7 +21,9 @@
               minutes, not hours.
             </p>
           </div>
-          <div class="hiring">We're remote first, and we are hiring!</div>
+          <div class="hiring">We're remote first, and <a
+              href="https://baselime.notion.site/Baselime-Careers-c83ec59a57114a98bee1ae927afad421">we are hiring!</a>
+          </div>
         </div>
         <div class="image-container">
           <img src="@/assets/images/about.jpg" alt="" />
@@ -37,12 +39,7 @@
           understand serverless architures
         </h3>
         <div class="container">
-          <TeamMember
-            v-for="(member, i) in members"
-            :key="i"
-            :member="member"
-            class="item"
-          />
+          <TeamMember v-for="(member, i) in members" :key="i" :member="member" class="item" />
         </div>
         <div class="hiring">
           <NuxtLink to="/careers" class="item"> Join the Baselime Team </NuxtLink>
@@ -70,6 +67,13 @@ export default Vue.extend({
           linkedin: 'https://www.linkedin.com/in/boristane/',
           twitter: 'https://twitter.com/BorisTane',
         },
+        {
+          name: 'Max Diamond',
+          position: 'Software Engineer',
+          image: '/images/max.jpeg',
+          linkedin: 'https://www.linkedin.com/in/max-diamond-09ba9719a/',
+          twitter: 'https://twitter.com/Dmdboi',
+        },
       ],
     }
   },
@@ -90,6 +94,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 @import '@/assets/scss/_variables.scss';
+
 section {
   .inner {
     width: 100%;
@@ -118,12 +123,23 @@ section {
       .hiring {
         margin-top: 30px;
         font-weight: bold;
+
+        a {
+          color: $green;
+          border-bottom: 2px solid transparent;
+          transition: all 0.15s;
+
+          &:hover {
+            border-bottom: 2px solid $green;
+          }
+        }
       }
     }
 
     .image-container {
       max-width: 602px;
       width: 100%;
+
       img {
         border-radius: 4px;
         position: relative;
@@ -141,27 +157,33 @@ section {
 
 .team {
   background: $white;
+
   .inner {
     text-align: center;
     display: block;
+
     h2 {
       margin: 0 0 15px 0;
       line-height: 2.4rem;
     }
+
     h3 {
       font-weight: normal;
       font-size: 1.4rem;
       line-height: 1.8rem;
     }
+
     .container {
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 60px auto 0 auto;
       flex-wrap: wrap;
+
       .item {
         width: 192px;
         margin: 15px;
+
         @media screen and (max-width: 550px) {
           width: 100%;
           margin: 15px 0 15px 0;
@@ -171,6 +193,7 @@ section {
 
     .hiring {
       margin-top: 30px;
+
       .item {
         color: $green;
         border-bottom: 2px solid transparent;
