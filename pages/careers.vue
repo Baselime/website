@@ -28,6 +28,7 @@
           <div class="button-container">
             <primary-button :text="'Read the handbook'"
               :url="'https://baselime.notion.site/Baselime-Handbook-66d1511e134e4523b3a192fc2b4a6169'"
+              @action="openUrl('https://baselime.notion.site/Baselime-Handbook-66d1511e134e4523b3a192fc2b4a6169')"
               :event="'read-handbook'" :eventProperties="{ origin: 'careers-page' }" />
           </div>
         </div>
@@ -171,10 +172,28 @@ export default Vue.extend({
       ],
       positions: [
         {
-          title: 'Full-Stack Software Engineer (Multiple)',
+          title: 'Software Engineer (Full-stack)',
           location: 'Remote, within the UK',
           remuneration: '£60k-£80k + equity',
-          url: 'https://baselime.notion.site/Full-Stack-Software-Engineer-c6b937dad7594059a7662dbc45e0f88f',
+          url: 'https://baselime.notion.site/Software-Engineer-Full-stack-c6b937dad7594059a7662dbc45e0f88f',
+        },
+        {
+          title: 'Software Engineer (Front-end)',
+          location: 'Remote, within the UK',
+          remuneration: '£60k-£80k + equity',
+          url: 'https://baselime.notion.site/Software-Engineer-Front-end-7bce84e54e30428dacfad803c2932eec',
+        },
+        {
+          title: 'Product Designer',
+          location: 'Remote, within the UK',
+          remuneration: '£40k-£50k + equity',
+          url: 'https://baselime.notion.site/Product-Designer-728ad45f0cef4c5c9e5aade0d12abed9',
+        },
+        {
+          title: 'Product Manager',
+          location: 'Remote, within the UK',
+          remuneration: '£60k-£70k + equity',
+          url: 'https://baselime.notion.site/Product-Manager-bd4b519e15384f93857e950a6c5e200b',
         },
       ],
     }
@@ -197,6 +216,11 @@ export default Vue.extend({
       meta: [...meta],
     }
   },
+  methods: {
+    openUrl(url: string) {
+      window.open(url)
+    },
+  }
 })
 </script>
 
