@@ -36,7 +36,7 @@
         <h2>Meet the Team</h2>
         <h3>
           We are a team of engineers passionate about making it easier to deeply
-          understand serverless architures
+          understand serverless architecture
         </h3>
         <div class="container">
           <TeamMember v-for="(member, i) in members" :key="i" :member="member" class="item" />
