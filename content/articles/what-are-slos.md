@@ -85,7 +85,7 @@ Engineering teams can use their error budgets to roll out new features, redising
 
 It is important to not over-complicate SLOs. A few SLIs and associated SLOs are generally sufficient to accurately represent the performance of a service against user expectations. SLOs, alerts and error budgets should be restricted to aspects of the level of service which are critical to the user experience. Unnecessarily complex or overabundant SLOs lead to alert fatigue and make it harder for engineering teams to cut through the noise and focus on signal.
 
-We'd love to hear your thougts on SLAs, SLOs and SLIs, and if you're interested in applying those principles to serverless architectures, we'd love to have you [try our beta](https://baselime.io).
+We'd love to hear your thoughts on SLAs, SLOs and SLIs, and if you're interested in applying those principles to serverless architectures, we'd love to have you [try our beta](https://baselime.io).
 
 Photo by <a href="https://unsplash.com/@maxostwalt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Max Ostwalt</a> on <a href="https://unsplash.com/s/photos/lighthouse?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   

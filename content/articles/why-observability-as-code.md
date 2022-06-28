@@ -19,9 +19,9 @@ Organisations that adopt micro-services architectures and serverless generally b
 ## Observability
 According to [Wikipedia](https://en.wikipedia.org/wiki/Observability), Observability is "a measure of how well internal states of a system can be inferred from knowledge of its external outputs.". In the case of software architectures, observability means having the ability to understand how your systems and code behave, to identify bottlenecks and defects, and to understand why it's happening; all without adding anything to the systems. This is generally achieved with the help of structured events, logs, metrics and distributed traces. 
 
-Consequently, it is extrememly important to reliably be able to visualise the system outputs, and to be alerted when unexpected behaviour emerges. Configuring visualisation dashboards and alerts has traditionally been done through Graphical User Interfaces (ClickOps). As a result:
+Consequently, it is extremely important to reliably be able to visualise the system outputs, and to be alerted when unexpected behaviour emerges. Configuring visualisation dashboards and alerts has traditionally been done through Graphical User Interfaces (ClickOps). As a result:
 
-- configurations are not repeatable across environements;
+- configurations are not repeatable across environments;
 - it is impossible to reliably test observability configurations;
 - lack of consistency across teams;
 - mistakes are near-impossible to spot;
@@ -32,11 +32,11 @@ These pitfalls are solved by treating observability configurations as code.
 
 ## Observability as Code
 
-Observability as Code adapts the principles of Infrastructure as Code to observabiity configurations. Dashboards and alerts are configured and automated through Continuous Deployment pipelines, are source-controlled, and are repeatable across teams and environments.
+Observability as Code adapts the principles of Infrastructure as Code to observability configurations. Dashboards and alerts are configured and automated through Continuous Deployment pipelines, are source-controlled, and are repeatable across teams and environments.
 
 With Observability as Code, teams can adopt the best practices from software engineering to collaborate and iterate on observability configurations.
 
-We'd love to hear your thougts on Observability as Code, and if you're interested in applying those principles to serverless architectures, we'd love to have you [try our beta](https://baselime.io).
+We'd love to hear your thoughts on Observability as Code, and if you're interested in applying those principles to serverless architectures, we'd love to have you [try our beta](https://baselime.io).
 
 Photo by <a href="https://unsplash.com/@thisisengineering?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">ThisisEngineering RAEng</a> on <a href="https://unsplash.com/s/photos/software-engineer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
