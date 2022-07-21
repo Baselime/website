@@ -6,6 +6,7 @@
         v-model="snippet"
         :highlight="highlighter"
         :readonly="true"
+        lineNumbers
       ></prism-editor>
     </div>
   </div>

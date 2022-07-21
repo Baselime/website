@@ -236,16 +236,16 @@
     </div>
 
     <!-- Baselime Yaml (Desktop) -->
-    <div v-if="!showMobileEditor" class="flex py-16">
+    <div class="flex py-16">
       <div class="relative py-16 mx-auto">
         <div>
           <img
             src="@/assets/vectors/blue.png"
-            class="mx-auto -mt-5 hidden md:visible"
+            class="mx-auto -mt-5"
           />
           <img
             src="@/assets/vectors/green.png"
-            class="ml-32 -mt-16 hidden md:visible"
+            class="ml-32 -mt-16"
           />
         </div>
         <div
@@ -265,7 +265,7 @@
               .baselime.yaml
             </div>
           </div>
-          <!-- <CodeEditor /> -->
+          <CodeEditor />
         </div>
       </div>
     </div>
@@ -402,7 +402,7 @@
 </template>
 
 <script lang="ts">
-// import CodeEditor from "@/components/CodeEditor.vue";
+import CodeEditor from "../components/CodeEditor.vue";
 import { EventBus } from '../event-bus'
 
 export default {
@@ -485,7 +485,7 @@ export default {
     }
   },
   components: {
-    // CodeEditor,
+    CodeEditor,
   },
   methods: {
     joinBeta() {
