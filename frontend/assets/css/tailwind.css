@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Urbanist&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply urbanist tracking-wide font-bold text-darkBlue;
+}
+
+p {
+  @apply roboto font-normal;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.urbanist {
+  font-family: "Urbanist", sans-serif;
+}
+
+.base-transition {
+    @apply transition duration-200 ease-in
+}
