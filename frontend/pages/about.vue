@@ -307,7 +307,7 @@ import Vue from 'vue'
 
 import JoinBeta from '../components/JoinBeta.vue'
 
-export default Vue.extend({
+export default {
   data() {
     return {
       team: [
@@ -412,5 +412,5 @@ export default Vue.extend({
       }
     },
   },
-})
+};
 </script>

@@ -2,7 +2,7 @@
   <div id="cookieConsent" :class="{ closed }">
     <p style="margin: 0 30px 0 0">
       🍪 By browsing this website you are agreeing to our
-      <router-link to="/privacy" target="_blank">cookies policy</router-link>.
+      <NuxtLink to="/privacy" target="_blank">cookies policy</NuxtLink>.
     </p>
     <div>
       <button

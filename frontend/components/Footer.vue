@@ -22,12 +22,12 @@
               </h3>
               <ul role="list" class="mt-4 space-y-4">
                 <li v-for="item in navigation.overview" :key="item.name">
-                  <router-link
+                  <NuxtLink
                     :to="item.to"
                     class="text-base text-white opacity-50 hover:opacity-100 hover:cursor-pointer base-transition"
                   >
                     {{ item.name }}
-                  </router-link>
+                  </NuxtLink>
                 </li>
               </ul>
             </div>
@@ -37,12 +37,12 @@
               </h3>
               <ul role="list" class="mt-4 space-y-4">
                 <li v-for="item in navigation.company" :key="item.name">
-                  <router-link
+                  <NuxtLink
                     :to="item.to"
                     class="text-base text-white opacity-50 hover:opacity-100 hover:cursor-pointer base-transition"
                   >
                     {{ item.name }}
-                  </router-link>
+                  </NuxtLink>
                 </li>
               </ul>
             </div>

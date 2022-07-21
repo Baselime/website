@@ -42,7 +42,7 @@
         <div
           class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center"
         >
-          <img class="w-full" src="@/assets/images/baselime-cli.webp" alt="" />
+          <img class="w-full" src="@/assets/images/header.svg" alt="" />
         </div>
       </div>
     </main>
@@ -117,8 +117,10 @@
             <span
               class="mt-1 block text-3xl font-extrabold sm:text-3xl xl:text-4xl text-center"
             >
-              <span class="text-white tracking-wide urbanist">Start with</span>
-              <span class="text-yellow-500 tracking-wide urbanist">
+              <span class="text-white tracking-normal urbanist"
+                >Start with</span
+              >
+              <span class="text-yellow-500 tracking-normal urbanist">
                 Observability as Code</span
               >
             </span>
@@ -237,8 +239,14 @@
     <div v-if="!showMobileEditor" class="flex py-16">
       <div class="relative py-16 mx-auto">
         <div>
-          <img src="@/assets/vectors/blue.png" class="mx-auto -mt-5 hidden md:visible" />
-          <img src="@/assets/vectors/green.png" class="ml-32 -mt-16  hidden md:visible" />
+          <img
+            src="@/assets/vectors/blue.png"
+            class="mx-auto -mt-5 hidden md:visible"
+          />
+          <img
+            src="@/assets/vectors/green.png"
+            class="ml-32 -mt-16 hidden md:visible"
+          />
         </div>
         <div
           class="absolute top-28 mt-10 w-[75%] left-24 bg-[#F7F6F3] rounded-3xl overflow-clip"
@@ -310,7 +318,7 @@
               <div
                 class="flex-shrink-0 inline-flex rounded-full border border-white overflow-clip h-10 w-10"
               >
-                <img class="w-full h-full" :src="imgSrc(person.image)" alt="" />
+                <img class="w-full h-full object-cover" :src="imgSrc(person.image)" alt="" />
               </div>
               <div class="ml-4">
                 <div class="font-medium text-white">{{ person.name }}</div>

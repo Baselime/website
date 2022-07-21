@@ -1,10 +1,15 @@
 <template>
-  <NuxtLink
-    :to="`/blog/author/${author.name.split(' ').join('-').toLowerCase()}`"
-  >
+  <div>
     <div class="author" :class="{ light, position }">
-      <img :src="`/images/authors/${author.image}`" :alt="author.name" />
-
+      <div
+        class="flex-shrink-0 inline-flex rounded-full border border-white overflow-clip h-10 w-10"
+      >
+        <img
+          class="w-full h-full object-cover"
+          :src="imgSrc(`team/${author.image}`)"
+          alt=""
+        />
+      </div>
       <div>
         <div class="name">{{ author.name }}</div>
         <div class="position" v-if="position">
@@ -12,7 +17,7 @@
         </div>
       </div>
     </div>
-  </NuxtLink>
+  </div>
 </template>
 
 <script lang="ts">
@@ -34,6 +39,18 @@ export default Vue.extend({
     },
   },
   components: {},
+  methods: {
+    imgSrc(src: string): string | null {
+      try {
+        console.log()
+        // @ts-ignore
+        return require(`@/assets/images/${src}`)
+      } catch (error) {
+        console.log(error)
+        return null
+      }
+    },
+  },
 })
 </script>
 

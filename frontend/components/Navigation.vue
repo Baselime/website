@@ -7,14 +7,14 @@
       >
         <div class="flex items-center flex-1">
           <div class="flex items-center justify-between w-full md:w-auto">
-            <router-link to="/">
+            <NuxtLink to="/">
               <span class="sr-only">Baselime</span>
               <img
                 class="h-6 w-auto sm:h-8"
                 src="@/assets/images/logo-wide.svg"
                 alt=""
               />
-            </router-link>
+            </NuxtLink>
             <div class="-mr-2 flex items-center md:hidden">
               <button
                 @click="openNavbar = true"
@@ -39,13 +39,13 @@
             </div>
           </div>
           <div class="hidden md:block md:ml-10 md:space-x-12">
-            <router-link
+            <NuxtLink
               v-for="item in navigation"
               :key="item.name"
               :to="item.to"
               exact-active-class="opacity-100"
               class="font-semibold text-base text-darkBlue opacity-50 hover:opacity-100 roboto base-transition"
-              >{{ item.name }}</router-link
+              >{{ item.name }}</NuxtLink
             >
           </div>
         </div>
@@ -79,9 +79,9 @@
             class="rounded-xl shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden"
           >
             <div class="px-5 pt-4 flex items-center justify-between">
-              <router-link to="/">
+              <NuxtLink to="/">
                 <img class="h-8 w-auto" src="@/assets/images/logo.svg" alt="" />
-              </router-link>
+              </NuxtLink>
               <div class="-mr-2">
                 <button
                   @click="openNavbar = !openNavbar"
