@@ -60,7 +60,7 @@
               <button
                 @click="joinBeta"
                 type="submit"
-                class="px-6 py-3 border-2 border-baseGreen text-base font-medium rounded-xl text-white bg-baseGreen shadow-md w-full shadow-green-700 hover:-translate-y-0.5 base-transition"
+                class="px-6 py-3 border-2 border-baseGreen text-base font-medium rounded text-white bg-baseGreen shadow-md w-full shadow-green-700 hover:-translate-y-0.5 base-transition"
               >
                 <div class="relative items-center text-center">
                   <Spinner
@@ -168,10 +168,73 @@ export default Vue.extend({
 </script>
 <style lang="scss" scoped>
 @import '@/assets/scss/_variables.scss';
+
 #join-beta {
   h3 {
     text-align: center;
     margin-bottom: 30px;
+  }
+}
+
+form {
+  label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+  }
+
+  .input {
+    display: block;
+    width: 100%;
+    outline: 0;
+
+    margin: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    border: none;
+    border: 1px solid $e4;
+    padding: 10px;
+    outline: none;
+    resize: none;
+    color: inherit;
+    font-size: 16px;
+    background: $white;
+    transition: all 0.15s;
+
+    border-radius: 4px;
+
+    &:focus {
+      border: 1px solid $green;
+    }
+
+    &:active {
+      border: 1px solid $green;
+    }
+  }
+
+  textarea {
+    resize: none;
+    border: 1px solid $e4;
+    border-radius: 4px;
+    outline: 0;
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background: $white;
+    &::placeholder {
+      color: $grey;
+    }
+
+    &:focus {
+      border: 1px solid $green;
+    }
+
+    &:active {
+      border: 1px solid $green;
+    }
   }
 }
 

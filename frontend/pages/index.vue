@@ -177,7 +177,7 @@
                       class="inline-flex items-center rounded-2xl h-16 w-16 justify-center mt-6"
                     >
                       <img
-                        :src="`vectors/icons/${feature.icon}`"
+                        :src="imgSrc(`vectors/icons/${feature.icon}`)"
                         class="h-8 w-8 text-white"
                         aria-hidden="true"
                       />
@@ -237,8 +237,8 @@
     <div v-if="!showMobileEditor" class="flex py-16">
       <div class="relative py-16 mx-auto">
         <div>
-          <img src="@/assets/vectors/blue.png" class="mx-auto -mt-5" />
-          <img src="@/assets/vectors/green.png" class="ml-32 -mt-16" />
+          <img src="@/assets/vectors/blue.png" class="mx-auto -mt-5 hidden md:visible" />
+          <img src="@/assets/vectors/green.png" class="ml-32 -mt-16  hidden md:visible" />
         </div>
         <div
           class="absolute top-28 mt-10 w-[75%] left-24 bg-[#F7F6F3] rounded-3xl overflow-clip"
@@ -263,7 +263,7 @@
     </div>
 
     <!-- Baselime Yaml (Mobile) -->
-    <div v-else>
+    <!-- <div v-else>
       <div
         class="w-[95%] mx-auto bg-[#F7F6F3] rounded-3xl overflow-clip"
         style="
@@ -281,9 +281,9 @@
             .baselime.yaml
           </div>
         </div>
-        <!-- <CodeEditor /> -->
+        <CodeEditor />
       </div>
-    </div>
+    </div> -->
 
     <!-- Testimonials section -->
     <div class="flex py-16 max-w-6xl mx-auto">
@@ -295,10 +295,10 @@
           v-for="person in testimonials"
           :key="person.name"
         >
-          <div class="bg-white px-5 py-4 overflow-clip rounded-t-xl">
+          <div class="bg-white px-5 py-6 overflow-clip rounded-t-xl">
             <img
-              class="h-10"
-              :src="`/images/logos/${person.logo}`"
+              class="h-6"
+              :src="imgSrc(`images/logos/${person.logo}`)"
               :alt="person.company"
             />
           </div>
@@ -310,7 +310,7 @@
               <div
                 class="flex-shrink-0 inline-flex rounded-full border border-white overflow-clip h-10 w-10"
               >
-                <img class="w-full h-full" :src="person.image" alt="" />
+                <img class="w-full h-full" :src="imgSrc(person.image)" alt="" />
               </div>
               <div class="ml-4">
                 <div class="font-medium text-white">{{ person.name }}</div>
@@ -451,7 +451,8 @@ export default {
           position: 'Head of Engineering',
           quote:
             'All the developers in our team love Baselime. They are now pro-active about observability and find answers to questions in the blink of an eye.',
-          image: '',
+          logo: 'hometree.png',
+          image: 'images/alejandro-inestal.jpg',
         },
         {
           name: 'Alex Bilbie',
@@ -459,7 +460,8 @@ export default {
           position: 'CTO',
           quote:
             'Baselime and Observability as Code offer a compelling solution to the observability challenges introduced by serverless architecture.',
-          image: '',
+          logo: 'mesgai.svg',
+          image: 'images/alex-bilbie.jpg',
         },
         {
           name: 'Lewis Putz',
@@ -467,7 +469,8 @@ export default {
           position: 'Senior Software Engineer',
           quote:
             'Baselime stops me from having to worry that the observability dashboards and alerts of my applications are out of sync with my application code. It’s a game-changer.',
-          image: '',
+          logo: 'seatfrog.png',
+          image: 'images/lewis-putz.jpeg',
         },
       ],
       showMobileEditor: false,
@@ -483,7 +486,7 @@ export default {
     imgSrc(src: string): string | null {
       try {
         // @ts-ignore
-        return `/assets/${src}`
+        return require(`/assets/${src}`)
       } catch (error) {
         return null
       }

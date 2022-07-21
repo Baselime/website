@@ -12,49 +12,49 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import yaml from "yaml";
-import { applicationObservabilityAsCode } from "@/utils/obs-as-code/builders";
+import Vue from 'vue'
+import yaml from 'yaml'
+import { applicationObservabilityAsCode } from '../utils/obs-as-code/builders'
 
-import { PrismEditor } from "vue-prism-editor";
-import "vue-prism-editor/dist/prismeditor.min.css"; // import the styles somewhere
+import { PrismEditor } from 'vue-prism-editor'
+import 'vue-prism-editor/dist/prismeditor.min.css' // import the styles somewhere
 
 // import highlighting library (you can use any library you want just return html string)
 // @ts-ignore
-import Prism from "prismjs/components/prism-core";
-import "prismjs/components/prism-clike";
-import "prismjs/components/prism-javascript";
-import "prismjs/components/prism-yaml";
-import "prismjs/themes/prism-coy.css"; // import syntax highlighting styles
+import { highlight, languages } from 'prismjs/components/prism-core'
+import 'prismjs/components/prism-clike'
+import 'prismjs/components/prism-javascript'
+import 'prismjs/components/prism-yaml'
+import 'prismjs/themes/prism-coy.css' // import syntax highlighting styles
 
 export default Vue.extend({
   data() {
     return {
-      snippet: "",
-    };
+      snippet: '',
+    }
   },
   components: {
     PrismEditor,
   },
   methods: {
     generateYamlString: function (): string {
-      const doc = new yaml.Document();
+      const doc = new yaml.Document()
       // @ts-ignore
-      doc.contents = applicationObservabilityAsCode();
-      return doc.toString();
+      doc.contents = applicationObservabilityAsCode()
+      return doc.toString()
     },
     highlighter: function (code: string) {
-      return Prism.highlight(code, Prism.languages.yaml); //returns html
+      return highlight(code, languages['yaml']) //returns html
     },
   },
   async mounted() {
-    this.snippet = await this.generateYamlString();
+    this.snippet = await this.generateYamlString()
   },
-});
+})
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/_variables.scss";
+@import '@/assets/scss/_variables.scss';
 /* required class */
 .my-editor {
   /* we dont use `language-` classes anymore so thats why we need to add background and text color manually */
