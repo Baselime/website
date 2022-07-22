@@ -265,7 +265,6 @@
               .baselime.yaml
             </div>
           </div>
-          <CodeEditor />
         </div>
       </div>
     </div>
@@ -289,7 +288,6 @@
             .baselime.yaml
           </div>
         </div>
-        <CodeEditor />
       </div>
     </div> -->
 
@@ -402,7 +400,6 @@
 </template>
 
 <script lang="ts">
-import CodeEditor from "../components/CodeEditor.vue";
 import { EventBus } from '../event-bus'
 
 export default {
@@ -485,7 +482,6 @@ export default {
     }
   },
   components: {
-    CodeEditor,
   },
   methods: {
     joinBeta() {
