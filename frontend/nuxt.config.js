@@ -5,8 +5,8 @@ const meta = getSiteMetadata()
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  ssr: false,
   target: 'static',
+  ssr: true,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
