@@ -5,7 +5,11 @@
 @tailwind utilities;
 
 .testimonials-slider {
-  animation: cards 30s linear both infinite;
+  animation: cards 40s linear both infinite;
+}
+
+.banner-slider {
+  animation: cards 120s linear both infinite;
 }
 
 @keyframes cards {

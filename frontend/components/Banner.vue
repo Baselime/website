@@ -1,9 +1,9 @@
 <template>
   <div class="w-full bg-baseGreen">
     <div
-      class="max-w-7xl mx-auto py-2 text-center text-white font-semibold px-6"
+      class="max-w-5xl mx-auto py-2 text-center text-white font-semibold px-6 banner-slider"
     >
-      {{ text[0] }}
+      <span class="mx-24" v-for="(text, index) in texts" :key="index">{{ text }}</span>
     </div>
   </div>
 </template>
@@ -12,7 +12,7 @@
 export default {
   data() {
     return {
-      text: ['Some random text'],
+      texts: ['Some random text', 'Some more random text'],
     }
   },
 }

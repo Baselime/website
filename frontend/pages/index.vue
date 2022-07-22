@@ -298,10 +298,48 @@
 
     <!-- Testimonials section -->
     <div class="flex mt-32 py-16 mb-24 mx-auto">
-      <div class="flex flex-wrap md:flex-nowrap mx-auto px-6">
+      <div
+        class="flex flex-wrap md:flex-nowrap mx-auto px-6"
+        v-if="!showMobileEditor"
+      >
         <div
           class="rounded-xl w-full my-3 testimonials"
-          v-for="person in testimonials"
+          v-for="person in duplicate(testimonials, 3)"
+          :key="person.name"
+        >
+          <div
+            class="px-6 bg-[#14234B] rounded-xl border border-gray-200 mx-3 my-3 md:w-96 h-64"
+          >
+            <div class="text-white py-6 h-48">
+              {{ person.quote }}
+            </div>
+            <div class="flex items-center">
+              <div
+                class="flex-shrink-0 inline-flex rounded-full border border-white overflow-clip h-10 w-10"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  :src="imgSrc(person.image)"
+                  alt=""
+                />
+              </div>
+              <div class="ml-4">
+                <div class="font-medium text-white">{{ person.name }}</div>
+                <div class="text-gray-300 text-sm">
+                  {{ person.position }} at {{ person.company }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-wrap md:flex-nowrap mx-auto px-6"
+        v-if="showMobileEditor"
+      >
+        <div
+          class="rounded-xl w-full my-3 testimonials"
+          v-for="person in splice(testimonials, 5)"
           :key="person.name"
         >
           <div
@@ -549,6 +587,12 @@ export default {
         if (this.width > 960)
           return (card.className += ' ' + 'testimonials-slider')
       })
+    },
+    splice(array, length) {
+      return [...array].splice(0, length)
+    },
+    duplicate(array) {
+      return [...array, ...array, ...array]
     },
   },
 }

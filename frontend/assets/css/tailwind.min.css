@@ -849,6 +849,16 @@ select{
   margin-bottom: 1.5rem;
 }
 
+.mx-16{
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.mx-24{
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
 .mt-0\.5{
   margin-top: 0.125rem;
 }
@@ -1171,6 +1181,10 @@ select{
 
 .max-w-lg{
   max-width: 32rem;
+}
+
+.max-w-5xl{
+  max-width: 64rem;
 }
 
 .flex-1{
@@ -1975,8 +1989,13 @@ select{
 }
 
 .testimonials-slider {
-  -webkit-animation: cards 30s linear both infinite;
-          animation: cards 30s linear both infinite;
+  -webkit-animation: cards 40s linear both infinite;
+          animation: cards 40s linear both infinite;
+}
+
+.banner-slider {
+  -webkit-animation: cards 120s linear both infinite;
+          animation: cards 120s linear both infinite;
 }
 
 @-webkit-keyframes cards {
