@@ -17,7 +17,7 @@
           </div>
           <div class="">
             <div>
-              <h3 class="text-lg font-bold leading-7 text-white tracking-wider">
+              <h3 class="text-lg font-bold leading-7 text-white">
                 Overview
               </h3>
               <ul role="list" class="mt-4 space-y-4">
@@ -32,7 +32,7 @@
               </ul>
             </div>
             <div class="mt-12">
-              <h3 class="text-lg font-bold leading-7 text-white tracking-wider">
+              <h3 class="text-lg font-bold leading-7 text-white">
                 Company
               </h3>
               <ul role="list" class="mt-4 space-y-4">
@@ -49,7 +49,7 @@
           </div>
         </div>
         <div class="mt-8 xl:mt-0">
-          <h3 class="text-sm font-semibold text-white tracking-wider">
+          <h3 class="text-lg font-bold leading-7 text-white">
             Join our monthly newsletter
           </h3>
           <newsletter-form />
@@ -110,7 +110,7 @@ export default Vue.extend({
         company: [
           { name: 'About', to: '/about' },
           { name: 'Blog', to: '/blog' },
-          { name: 'Careers', to: '/careers' },
+          // { name: 'Careers', to: '/careers' },
         ],
         social: [
           //   {

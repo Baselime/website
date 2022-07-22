@@ -142,7 +142,7 @@ export default Vue.extend({
         { name: 'About', to: '/about' },
         { name: 'Blog', to: '/blog' },
         { name: 'Pricing', to: '/pricing' },
-        { name: 'Careers', to: '/careers' },
+        // { name: 'Careers', to: '/careers' },
       ],
       openNavbar: false,
     }

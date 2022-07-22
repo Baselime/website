@@ -19,7 +19,7 @@
       </a>
       <div class="c-container" @click.prevent.stop>
         <div>
-          <h3>Join our Private Beta today</h3>
+          <h3 class="text-lg font-bold">Join our Private Beta today</h3>
           <form @submit.prevent class="join-beta">
             <div class="name-container">
               <input
@@ -60,7 +60,7 @@
               <button
                 @click="joinBeta"
                 type="submit"
-                class="px-6 py-3 border-2 border-baseGreen text-base font-medium rounded text-white bg-baseGreen shadow-md w-full shadow-green-700 hover:-translate-y-0.5 base-transition"
+                class="px-6 py-3 border-2 border-baseGreen text-base font-medium rounded text-white bg-baseGreen w-full shadow-green-700 hover:-translate-y-0.5 base-transition"
               >
                 <div class="relative items-center text-center">
                   <Spinner

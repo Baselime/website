@@ -3,7 +3,7 @@
     <!-- Header -->
     <div>
       <main class="mx-auto max-w-7xl px-4 mt-16 sm:mt-24 sm:px-6">
-        <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+        <div class="lg:flex lg:justify-between">
           <div
             class="text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left"
           >
@@ -17,8 +17,7 @@
             <p
               class="mt-6 md:text-xl md:mr-12 text-darkBlue opacity-50 md:leading-8 tracking-normal"
             >
-              Baselime makes it easy to integrate observability in your
-              serverless development lifecycle.
+              Escape the chaos of managing your observability resources through graphical-user-interfaces, discover the powers of Observability as Code, and increase your team velocity.
             </p>
             <div
               class="mt-8 sm:text-center lg:text-left flex flex-wrap justify-center lg:justify-start"
@@ -36,7 +35,7 @@
               <a
                 href="https://calendly.com/boristane/30min"
                 type="submit"
-                class="md:ml-0 xl:ml-4 text-center mt-3 px-6 py-3 text-base font-medium rounded-2xl text-gray-600 bg-white border-2 border-gray-500 shadow-sm w-96 md:w-64 hover:-translate-y-0.5 base-transition"
+                class="md:ml-0 md:ml-4 text-center mt-3 px-6 py-3 text-base font-medium rounded-2xl text-gray-600 bg-white border-2 border-gray-500 shadow-sm w-96 md:w-64 hover:-translate-y-0.5 base-transition"
               >
                 Speak with an engineer
               </a>
@@ -44,6 +43,7 @@
           </div>
           <div
             class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center"
+            style="max-width: 490px"
           >
             <img class="w-full" src="@/assets/images/header.svg" alt="" />
           </div>
@@ -339,8 +339,8 @@
       >
         <div
           class="rounded-xl w-full my-3 testimonials"
-          v-for="person in splice(testimonials, 5)"
-          :key="person.name"
+          v-for="(person, index) in splice(testimonials, 5)"
+          :key="index"
         >
           <div
             class="px-6 bg-[#14234B] rounded-xl border border-gray-200 mx-3 my-3 md:w-96 h-64"
@@ -394,14 +394,14 @@
           <button
             @click="joinBeta"
             type="submit"
-            class="mt-3 px-6 py-3 border-2 border-baseGreen text-base font-medium rounded-xl text-white bg-baseGreen shadow-sm w-96 md:w-auto hover:-translate-y-0.5 base-transition"
+            class="mt-3 px-6 py-3 border-2 border-baseGreen text-base font-medium rounded-xl text-white bg-baseGreen shadow-sm md:w-auto sm:w-auto hover:-translate-y-0.5 base-transition"
           >
             Explore Baselime Templates
           </button>
           <button
             @click="joinBeta"
             type="submit"
-            class="md:ml-0 xl:ml-4 mt-3 px-6 py-3 text-base font-medium rounded-xl text-gray-600 bg-white border-2 border-gray-500 shadow-sm w-96 md:w-64 hover:-translate-y-0.5 base-transition"
+            class="md:ml-0 xl:ml-4 mt-3 px-6 py-3 text-base font-medium rounded-xl text-gray-600 bg-white border-2 border-gray-500 shadow-sm md:w-64 sm:w-auto hover:-translate-y-0.5 base-transition"
           >
             Join our Waiting List
           </button>
@@ -496,6 +496,15 @@ export default {
       ],
       testimonials: [
         {
+          name: 'Lewis Putz',
+          company: 'Seatfrog',
+          position: 'Senior Software Engineer',
+          quote:
+            'With Baselime I don\'t have to worry about keeping my observability dashboards and alerts in sync with my application code, because it happens on every deployment. It’s a game-changer.',
+          logo: 'seatfrog.png',
+          image: 'images/lewis-putz.jpeg',
+        },
+        {
           name: 'Alejandro Inestal',
           company: 'Hometree',
           position: 'Head of Engineering',
@@ -505,22 +514,22 @@ export default {
           image: 'images/alejandro-inestal.jpg',
         },
         {
+          name: 'Lauren Reeder',
+          company: 'Sequoia Capital',
+          position: 'Partner',
+          quote:
+            "Boris and the Baselime team built this product out of their own pain and lived experiences working with serverless systems to help make every engineer's job better, every day.",
+          logo: 'Sequoia.png',
+          image: 'images/lauren.jpg',
+        },
+        {
           name: 'Alex Bilbie',
           company: 'Mesg.ai',
           position: 'CTO',
           quote:
-            'Baselime and Observability as Code offer a compelling solution to the observability challenges introduced by serverless architecture.',
+            'Baselime and Observability as Code offer a compelling solution to the observability challenges introduced by serverless architectures.',
           logo: 'mesgai.svg',
           image: 'images/alex-bilbie.jpg',
-        },
-        {
-          name: 'Lewis Putz',
-          company: 'Seatfrog',
-          position: 'Senior Software Engineer',
-          quote:
-            'Baselime stops me from having to worry that the observability dashboards and alerts of my applications are out of sync with my application code. It’s a game-changer.',
-          logo: 'seatfrog.png',
-          image: 'images/lewis-putz.jpeg',
         },
         {
           name: 'Matt Holland',
@@ -530,15 +539,6 @@ export default {
             'Within minutes of connecting our accounts, Baselime had made observations that helped us improve performance efficiency and quality of the code within Seedata.io.',
           logo: 'seatfrog.png',
           image: 'images/matt.webp',
-        },
-        {
-          name: 'Lauren Reeder',
-          company: 'Sequoia Capital',
-          position: 'Partner',
-          quote:
-            "Boris and the Baselime team built this product out of their own pain and lived experiences working with serverless systems to help make every engineer's job better, every day.",
-          logo: 'Sequoia.png',
-          image: 'images/lauren.jpg',
         },
       ],
       showMobileEditor: false,
@@ -579,7 +579,7 @@ export default {
       // @ts-ignore
       this.width = window.innerWidth
       if (this.width < 960) return (this.showMobileEditor = true)
-      this.showMobileEditor = false
+      this.showMobileEditor = false;
     },
     addAnimationClass() {
       const cards = document.getElementsByClassName('testimonials')

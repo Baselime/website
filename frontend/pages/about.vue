@@ -137,13 +137,12 @@
         class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none text-center"
       >
         <h2
-          class="text-3xl font-extrabold tracking-wide text-darkBlue sm:text-4xl mb-8"
+          class="text-3xl font-extrabold text-darkBlue sm:text-4xl mb-8"
         >
-          We are hiring remote
+          We are building our team
         </h2>
         <p class="text-xl text-darkBlue opacity-50 max-w-2xl mx-6 md:mx-auto">
-          Baselime is a remote-first company. If working remotely is something
-          you like, feel free to check the different positions!
+          Do you want to change the way software is written in the future? Check out our open positions!
         </p>
       </div>
       <div
@@ -375,10 +374,11 @@ export default {
           linkedin: 'https://www.linkedin.com/in/olliepurdue',
         },
         {
-          name: 'Tim Kimball',
-          role: 'Head of Engineering at Many Pets',
-          image: 'Tim.jpg',
-          linkedin: 'https://www.linkedin.com/in/timothy-kimball-75443',
+          name: 'Joe Kinvi',
+          role: 'Partner at HoaQ Fund',
+          image: 'Joey.webp',
+          twitter: 'https://twitter.com/joekinvi',
+          linkedin: 'https://www.linkedin.com/in/joekinvi',
         },
         {
           name: 'David Gildeh',
@@ -388,11 +388,10 @@ export default {
           linkedin: 'https://www.linkedin.com/in/davidgildeh',
         },
         {
-          name: 'Joey Kinvi',
-          role: 'Partner at HoaQ',
-          image: 'Joey.webp',
-          twitter: 'https://twitter.com/joekinvi',
-          linkedin: 'https://www.linkedin.com/in/joekinvi',
+          name: 'Tim Kimball',
+          role: 'Head of Engineering at Many Pets',
+          image: 'Tim.jpg',
+          linkedin: 'https://www.linkedin.com/in/timothy-kimball-75443',
         },
       ],
     }
