@@ -297,7 +297,7 @@
     </div>
 
     <!-- Testimonials section -->
-    <div class="flex mt-32 py-16 mb-24 mx-auto">
+    <div class="flex mt-24 py-16 mb-0 mx-auto">
       <div
         class="flex flex-wrap md:flex-nowrap mx-auto px-6"
         v-if="!showMobileEditor"
