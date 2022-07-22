@@ -1,6 +1,6 @@
 import * as sst from "@serverless-stack/resources";
 import * as logs from "aws-cdk-lib/aws-logs";
-import Website from "./Website";
+import { StaticSite } from "./StaticSite";
 
 export default function main(app: sst.App): void {
   const stage = app.stage;
@@ -23,5 +23,5 @@ export default function main(app: sst.App): void {
     AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1",
   });
 
-  new Website(app, "website");
+  new StaticSite(app, "website-app");
 }
