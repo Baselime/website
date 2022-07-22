@@ -1,56 +1,60 @@
 <template>
-  <div>
+  <div class="overflow-x-hidden">
     <!-- Header -->
-    <main class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32">
-      <div class="lg:grid lg:grid-cols-12 lg:gap-8">
-        <div
-          class="text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left"
-        >
-          <h1>
-            <span
-              class="mt-1 block text-3xl md:text-[67px] leading-[1] font-bold tracking-wide urbanist"
-            >
-              Automate observability for your serverless stack
-            </span>
-          </h1>
-          <p
-            class="mt-6 md:text-xl md:mr-12 text-darkBlue opacity-50 leading-8 tracking-normal"
-          >
-            Baselime makes it easy to integrate observability in your serverless
-            development lifecycle.
-          </p>
+    <div>
+      <main class="mx-auto max-w-7xl px-4 mt-16 sm:mt-24 sm:px-6">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-8">
           <div
-            class="mt-8 sm:text-center lg:text-left flex flex-wrap justify-center lg:justify-start"
+            class="text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left"
           >
-            <button
-              type="submit"
-              class="mt-3 px-6 py-3 border-2 border-baseGreen text-base font-medium rounded-2xl text-white bg-baseGreen w-96 md:w-64 hover:-translate-y-0.5 base-transition"
-              style="filter: drop-shadow(4px 4px 14px rgba(50, 162, 100, 0.47))"
-              @click="joinBeta"
+            <h1>
+              <span
+                class="mt-1 block text-3xl md:text-[67px] leading-[1] font-bold tracking-normal urbanist"
+              >
+                Automate observability for your serverless stack
+              </span>
+            </h1>
+            <p
+              class="mt-6 md:text-xl md:mr-12 text-darkBlue opacity-50 md:leading-8 tracking-normal"
             >
-              Get started with Baselime
-            </button>
-            <a
-              href="https://calendly.com/boristane/30min"
-              type="submit"
-              class="xl:ml-4 text-center mt-3 px-6 py-3 text-base font-medium rounded-2xl text-gray-600 bg-white border-2 border-gray-500 shadow-sm w-96 md:w-64 hover:-translate-y-0.5 base-transition"
+              Baselime makes it easy to integrate observability in your
+              serverless development lifecycle.
+            </p>
+            <div
+              class="mt-8 sm:text-center lg:text-left flex flex-wrap justify-center lg:justify-start"
             >
-              Speak with an engineer
-            </a>
+              <button
+                type="submit"
+                class="mt-3 px-6 py-3 border-2 border-baseGreen text-base font-medium rounded-2xl text-white bg-baseGreen w-96 md:w-64 hover:-translate-y-0.5 base-transition"
+                style="
+                  filter: drop-shadow(4px 4px 14px rgba(50, 162, 100, 0.47));
+                "
+                @click="joinBeta"
+              >
+                Get started with Baselime
+              </button>
+              <a
+                href="https://calendly.com/boristane/30min"
+                type="submit"
+                class="md:ml-0 xl:ml-4 text-center mt-3 px-6 py-3 text-base font-medium rounded-2xl text-gray-600 bg-white border-2 border-gray-500 shadow-sm w-96 md:w-64 hover:-translate-y-0.5 base-transition"
+              >
+                Speak with an engineer
+              </a>
+            </div>
+          </div>
+          <div
+            class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center"
+          >
+            <img class="w-full" src="@/assets/images/header.svg" alt="" />
           </div>
         </div>
-        <div
-          class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center"
-        >
-          <img class="w-full" src="@/assets/images/header.svg" alt="" />
-        </div>
-      </div>
-    </main>
+      </main>
+    </div>
 
     <!-- Logo Cloud -->
-    <div class="bg-white mt-4">
+    <div class="mt-4">
       <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-        <h2 class="text-center font-bold text-3xl tracking-wider">
+        <h2 class="text-center font-bold text-3xl tracking-normal">
           Trusted by
         </h2>
         <div
@@ -104,7 +108,7 @@
     </div>
 
     <!-- Blue Container -->
-    <div class="bg-[#0A1233] pt-32 pb-48">
+    <div class="bg-[#0A1233] pt-32 pb-32">
       <div class="relative">
         <div class="absolute left-0 top-0 -mt-32 invisible lg:visible">
           <img
@@ -129,7 +133,7 @@
             class="my-12 text-xl text-center max-w-2xl mx-auto px-6 text-white opacity-50"
           >
             Observability as Code is a lean, iterative approach to adding
-            observability to your applications. Baselime allows you and your
+            observability to your applications. Baselime empowers you and your
             team to express observability as a declarative plan that can be
             shared amongst team members, treated as code, edited, reviewed, and
             version-controlled.
@@ -148,129 +152,129 @@
       </div>
     </div>
 
-    <!-- Features Grid -->
-    <div class="relative bg-white py-16 sm:py-24 lg:py-32">
-      <div
-        class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8"
-      >
-        <h2 class="mt-2 text-3xl font-extrabold sm:text-4xl urbanist">
-          Observe your entire stack
-        </h2>
-        <p
-          class="mx-auto mt-5 max-w-2xl text-xl text-darkBlue opacity-50 leading-8"
+    <div
+      class="bg-multiSplash"
+      style="background-repeat: no-repeat; background-size: cover"
+    >
+      <!-- Features Grid -->
+      <div class="relative py-16 sm:py-24 lg:py-32">
+        <div
+          class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8"
         >
-          Tame your operational complexity with developer-first observability
-          for serverless. From Lambda to CloudTrail via SQS, API Gateway, and
-          all your serverless services, we have your entire stack covered.
-        </p>
-        <div class="mt-12">
-          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div v-for="feature in features" :key="feature.name" class="p-6">
-              <div
-                class="flow-root rounded-xl bg-white px-6 pb-8 text-left h-full"
-                style="
-                  filter: drop-shadow(20px 24px 44px rgba(20, 29, 67, 0.06));
-                "
-              >
-                <div class="">
-                  <div>
-                    <span
-                      :class="feature.bg"
-                      class="inline-flex items-center rounded-2xl h-16 w-16 justify-center mt-6"
+          <h2 class="mt-2 text-3xl font-extrabold sm:text-4xl urbanist">
+            Observe your entire stack
+          </h2>
+          <p
+            class="mx-auto mt-5 max-w-2xl text-xl text-darkBlue opacity-50 leading-8"
+          >
+            Tame your operational complexity with developer-first observability
+            for serverless. From Lambda to CloudTrail via SQS, API Gateway, and
+            all your serverless services, we have your entire stack covered.
+          </p>
+          <div class="mt-12">
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <div v-for="feature in features" :key="feature.name" class="p-6">
+                <div
+                  class="flow-root rounded-xl bg-white px-6 pb-8 text-left h-full drop-shadow-4xl"
+                  style="
+                    filter: drop-shadow(20px 24px 44px rgba(19, 35, 60, 0.13));
+                  "
+                >
+                  <div class="">
+                    <div>
+                      <span
+                        :class="feature.bg"
+                        class="inline-flex items-center rounded-2xl h-16 w-16 justify-center mt-6"
+                      >
+                        <img
+                          :src="imgSrc(`vectors/icons/${feature.icon}`)"
+                          class="h-8 w-8 text-white"
+                          aria-hidden="true"
+                        />
+                      </span>
+                    </div>
+                    <h3 class="mt-6 text-2xl font-bold text-darkBlue">
+                      {{ feature.name }}
+                    </h3>
+                    <p
+                      class="mt-4 text-xl text-darkBlue font-normal opacity-50 leading-8 mr-4"
                     >
-                      <img
-                        :src="imgSrc(`vectors/icons/${feature.icon}`)"
-                        class="h-8 w-8 text-white"
-                        aria-hidden="true"
-                      />
-                    </span>
+                      {{ feature.description }}
+                    </p>
                   </div>
-                  <h3 class="mt-6 text-2xl font-bold text-darkBlue">
-                    {{ feature.name }}
-                  </h3>
-                  <p
-                    class="mt-4 text-xl text-darkBlue font-normal opacity-50 leading-8 mr-4"
-                  >
-                    {{ feature.description }}
-                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Avatar Circle -->
-    <div
-      class="flex flex-wrap md:flex-nowrap pt-8 pb-16 mx-auto max-w-7xl space-y-4 md:space-y-0 items-center"
-    >
-      <div class="w-full md:w-1/2">
-        <img src="@/assets/images/avatar-circle.webp" class="" />
-      </div>
-      <div class="w-full md:w-1/2 px-6 md:px-0">
-        <div
-          class="sm:text-center md:max-w-lg md:mx-auto lg:col-span-6 lg:text-left"
-        >
-          <h2>
-            <span
-              class="mt-1 block text-3xl font-extrabold sm:text-3xl xl:text-4xl"
-            >
-              <span class="block text-baseBlue">Community-powered</span>
-              <span class="block text-gray-900">observability plans</span>
-            </span>
-          </h2>
-          <p class="mt-6 text-darkBlue opacity-50 text-xl">
-            Baselime shifts observability left in your development lifecycle.
-            Our Observability as Code plans are curated by our serverless
-            experts and community, and available for your immediate use.
-          </p>
-          <p class="mt-6 text-darkBlue opacity-50 text-xl">
-            For things that are specific to your applications, build your own
-            plans that observe your apps, share them with your team, keep them
-            in your version control, and get a deeper understanding of your
-            applications behaviour.
-          </p>
+      <!-- Avatar Circle -->
+      <div
+        class="flex flex-wrap md:flex-nowrap pt-8 pb-16 mx-auto max-w-7xl space-y-4 md:space-y-0 items-center"
+      >
+        <div class="w-full px-6 md:w-1/2">
+          <img src="@/assets/images/avatar-circle.svg" class="" />
+        </div>
+        <div class="w-full md:w-1/2 px-6 md:px-0">
+          <div
+            class="sm:text-center md:max-w-lg md:mx-auto lg:col-span-6 lg:text-left"
+          >
+            <h2>
+              <span
+                class="mt-1 block text-3xl font-extrabold sm:text-3xl xl:text-4xl"
+              >
+                <span class="block text-baseBlue">Community-powered</span>
+                <span class="block text-gray-900">observability plans</span>
+              </span>
+            </h2>
+            <p class="mt-6 text-darkBlue opacity-50 text-xl">
+              Baselime shifts observability left in your development lifecycle.
+              Our Observability as Code plans are curated by our serverless
+              experts and community, and available for your immediate use.
+            </p>
+            <p class="mt-6 text-darkBlue opacity-50 text-xl">
+              For things that are specific to your applications, build your own
+              plans that observe your apps, share them with your team, keep them
+              in your version control, and get a deeper understanding of your
+              applications behaviour.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Baselime Yaml (Desktop) -->
-    <div class="flex py-16">
-      <div class="relative py-16 mx-auto">
-        <div>
-          <img
-            src="@/assets/vectors/blue.png"
-            class="mx-auto -mt-5"
-          />
-          <img
-            src="@/assets/vectors/green.png"
-            class="ml-32 -mt-16"
-          />
-        </div>
-        <div
-          class="absolute top-28 mt-10 w-[75%] left-24 bg-[#F7F6F3] rounded-3xl overflow-clip"
-          style="
-            border: 1px solid rgba(4, 9, 6, 0.2);
-            box-shadow: 31.3727px 31.3727px 53.3336px rgba(10, 18, 51, 0.1);
-          "
-        >
-          <div class="flex items-center mx-8">
-            <div class="flex space-x-2">
-              <div class="bg-[#585251] opacity-10 rounded-full w-4 h-4"></div>
-              <div class="bg-[#585251] opacity-10 rounded-full w-4 h-4"></div>
-              <div class="bg-[#585251] opacity-10 rounded-full w-4 h-4"></div>
+      <!-- Baselime Yaml (Desktop) -->
+      <div v-if="!showMobileEditor" class="flex py-16 bg-none">
+        <div class="relative py-16 mx-auto">
+          <div>
+            <img src="@/assets/vectors/blue.png" class="mx-auto -mt-5" />
+            <img src="@/assets/vectors/green.png" class="ml-32 -mt-16" />
+          </div>
+          <div
+            class="absolute top-28 mt-10 w-[75%] left-24 bg-[#F7F6F3] rounded-3xl overflow-clip"
+            style="
+              border: 1px solid rgba(4, 9, 6, 0.2);
+              box-shadow: 31.3727px 31.3727px 53.3336px rgba(10, 18, 51, 0.1);
+            "
+          >
+            <div class="flex items-center mx-8">
+              <div class="flex space-x-2">
+                <div class="bg-[#585251] opacity-10 rounded-full w-4 h-4"></div>
+                <div class="bg-[#585251] opacity-10 rounded-full w-4 h-4"></div>
+                <div class="bg-[#585251] opacity-10 rounded-full w-4 h-4"></div>
+              </div>
+              <div class="py-4 text-center text-darkBlue opacity-50 ml-56">
+                .baselime.yaml
+              </div>
             </div>
-            <div class="py-4 text-center text-darkBlue opacity-50 ml-56">
-              .baselime.yaml
-            </div>
+            <CodeEditor />
           </div>
         </div>
       </div>
     </div>
 
     <!-- Baselime Yaml (Mobile) -->
-    <!-- <div v-else>
+    <div v-if="showMobileEditor" class="px-6 w-full">
       <div
         class="w-[95%] mx-auto bg-[#F7F6F3] rounded-3xl overflow-clip"
         style="
@@ -288,35 +292,33 @@
             .baselime.yaml
           </div>
         </div>
+        <CodeEditor />
       </div>
-    </div> -->
+    </div>
 
     <!-- Testimonials section -->
-    <div class="flex py-16 max-w-6xl mx-auto">
-      <div
-        class="flex flex-wrap md:flex-nowrap mx-auto md:space-x-4 space-y-4 md:space-y-0 px-4 md:px-0"
-      >
+    <div class="flex mt-32 py-16 mb-24 mx-auto">
+      <div class="flex flex-wrap md:flex-nowrap mx-auto px-6">
         <div
-          class="rounded-xl w-full md:w-1/3 border border-gray-200"
+          class="rounded-xl w-full my-3 testimonials"
           v-for="person in testimonials"
           :key="person.name"
         >
-          <div class="bg-white px-5 py-6 overflow-clip rounded-t-xl">
-            <img
-              class="h-6"
-              :src="imgSrc(`images/logos/${person.logo}`)"
-              :alt="person.company"
-            />
-          </div>
-          <div class="px-6 bg-[#14234B] rounded-b-xl">
-            <div class="text-white py-6">
+          <div
+            class="px-6 bg-[#14234B] rounded-xl border border-gray-200 mx-3 my-3 md:w-96 h-64"
+          >
+            <div class="text-white py-6 h-48">
               {{ person.quote }}
             </div>
-            <div class="flex items-center pb-8">
+            <div class="flex items-center">
               <div
                 class="flex-shrink-0 inline-flex rounded-full border border-white overflow-clip h-10 w-10"
               >
-                <img class="w-full h-full object-cover" :src="imgSrc(person.image)" alt="" />
+                <img
+                  class="w-full h-full object-cover"
+                  :src="imgSrc(person.image)"
+                  alt=""
+                />
               </div>
               <div class="ml-4">
                 <div class="font-medium text-white">{{ person.name }}</div>
@@ -335,31 +337,33 @@
       class="flex flex-wrap py-32 max-w-6xl mx-auto items-center px-6 md:px-0"
     >
       <div class="w-full md:w-1/2">
-        <h2>
+        <h2 class="px-6 xl:px-0">
           <span
-            class="mt-1 block text-3xl tracking-wide font-extrabold sm:text-3xl xl:text-4xl text-left"
+            class="mt-1 block text-3xl tracking-normal font-extrabold sm:text-3xl xl:text-4xl text-left"
           >
             <span class="text-darkBlue">The future of</span>
             <span class="text-green-500"> observability for serverless</span>
             <span class="text-darkBlue"> is now</span>
           </span>
         </h2>
-        <p class="mt-6 max-w-lg text-xl text-gray-500">
+        <p class="mt-6 max-w-lg text-xl text-gray-500 px-6 xl:px-0">
           Get started with Baselime today and explore community created
           observability plans in the Baselime Marketplace.
         </p>
-        <div class="mt-6 sm:text-center lg:text-left md:space-x-4">
+        <div
+          class="mt-6 sm:text-center lg:text-left justify-center lg:justify-start px-6 xl:px-0"
+        >
           <button
             @click="joinBeta"
             type="submit"
-            class="mt-3 px-6 py-3 border-2 border-baseGreen text-base font-medium rounded-xl text-white bg-baseGreen shadow-sm w-full md:w-auto hover:-translate-y-0.5 base-transition"
+            class="mt-3 px-6 py-3 border-2 border-baseGreen text-base font-medium rounded-xl text-white bg-baseGreen shadow-sm w-96 md:w-auto hover:-translate-y-0.5 base-transition"
           >
             Explore Baselime Templates
           </button>
           <button
             @click="joinBeta"
             type="submit"
-            class="mt-3 px-6 py-3 text-base font-medium rounded-xl text-gray-600 bg-white border-2 border-gray-500 shadow-sm w-full md:w-64 hover:-translate-y-0.5 base-transition"
+            class="md:ml-0 xl:ml-4 mt-3 px-6 py-3 text-base font-medium rounded-xl text-gray-600 bg-white border-2 border-gray-500 shadow-sm w-96 md:w-64 hover:-translate-y-0.5 base-transition"
           >
             Join our Waiting List
           </button>
@@ -367,7 +371,9 @@
       </div>
       <div class="w-full md:w-1/2">
         <div class="pt-6 pl-6">
-          <div
+          <a
+            href="https://docs.baselime.io"
+            target="_blank"
             class="flow-root rounded-xl bg-white px-6 pb-8 text-left w-11/12"
             style="filter: drop-shadow(20px 24px 44px rgba(19, 35, 60, 0.13))"
           >
@@ -383,7 +389,7 @@
                   />
                 </span>
               </div>
-              <h3 class="mt-6 text-2xl font-bold tracking-wide text-darkBlue">
+              <h3 class="mt-6 text-2xl font-bold tracking-normal text-darkBlue">
                 Documentation
               </h3>
               <p class="mt-5 text-xl text-darkBlue opacity-50">
@@ -392,14 +398,15 @@
                 team and/or everyone on Baselime.
               </p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script lang="ts">
+<script>
+import CodeEditor from '../components/CodeEditor.vue'
 import { EventBus } from '../event-bus'
 
 export default {
@@ -477,17 +484,52 @@ export default {
           logo: 'seatfrog.png',
           image: 'images/lewis-putz.jpeg',
         },
+        {
+          name: 'Matt Holland',
+          company: 'Seedata.io',
+          position: 'CTO',
+          quote:
+            'Within minutes of connecting our accounts, Baselime had made observations that helped us improve performance efficiency and quality of the code within Seedata.io.',
+          logo: 'seatfrog.png',
+          image: 'images/matt.webp',
+        },
+        {
+          name: 'Lauren Reeder',
+          company: 'Sequoia Capital',
+          position: 'Partner',
+          quote:
+            "Boris and the Baselime team built this product out of their own pain and lived experiences working with serverless systems to help make every engineer's job better, every day.",
+          logo: 'Sequoia.png',
+          image: 'images/lauren.jpg',
+        },
       ],
       showMobileEditor: false,
+      width: 0,
     }
   },
   components: {
+    CodeEditor,
+  },
+  mounted() {
+    this.onResize()
+  },
+  created() {
+    if (process.client) {
+      window.addEventListener('resize', this.onResize)
+
+      window.addEventListener('scroll', this.addAnimationClass)
+    }
+  },
+  destroyed() {
+    if (process.client) {
+      window.removeEventListener('resize', this.onResize)
+    }
   },
   methods: {
     joinBeta() {
       EventBus.$emit('display-join-beta-modal')
     },
-    imgSrc(src: string): string | null {
+    imgSrc(src) {
       try {
         // @ts-ignore
         return require(`/assets/${src}`)
@@ -495,22 +537,19 @@ export default {
         return null
       }
     },
-  },
-  watch: {
-    // width: function () {
-    //   if (type === "sm" || type === "xs") {
-    //     this.showMobileEditor = true;
-    //   } else {
-    //     this.showMobileEditor = false;
-    //   }
-    // },
-  },
-  mounted() {
-    // if (type === "sm" || type === "xs") {
-    //   this.showMobileEditor = true;
-    // } else {
-    //   this.showMobileEditor = false;
-    // }
+    onResize() {
+      // @ts-ignore
+      this.width = window.innerWidth
+      if (this.width < 960) return (this.showMobileEditor = true)
+      this.showMobileEditor = false
+    },
+    addAnimationClass() {
+      const cards = document.getElementsByClassName('testimonials')
+      Array.prototype.forEach.call(cards, (card) => {
+        if (this.width > 960)
+          return (card.className += ' ' + 'testimonials-slider')
+      })
+    },
   },
 }
 </script>

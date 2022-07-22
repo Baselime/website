@@ -16,7 +16,7 @@
     </section>
     <section class="perks">
       <div class="inner">
-        <h2>Why Baselime?</h2>
+        <h2 class="text-4xl">Why Baselime?</h2>
         <div class="items">
           <CareersBenefit
             v-for="(perk, index) in perks"
@@ -27,9 +27,9 @@
           </CareersBenefit>
         </div>
         <div class="handbook">
-          <div>
+          <div class="pb-4">
             To give you a feel of what it's like to work at Baselime, we've
-            open-source our company hanbook.
+            open-source our company handbook.
           </div>
           <div class="button-container">
             <button
@@ -41,13 +41,7 @@
               type="submit"
               class="px-6 py-3 border-2 border-baseGreen text-base font-medium rounded-xl text-white bg-baseGreen shadow-md w-full shadow-green-700 hover:-translate-y-0.5 base-transition"
             >
-              <div class="relative items-center text-center">
-                <Spinner
-                  class="absolute top-0 mt-0.5 w-6 h-6 text-white mr-2"
-                  v-if="loading"
-                />
-                <span class="text-center">Read the handbook</span>
-              </div>
+              Read the handbook
             </button>
           </div>
         </div>
@@ -55,7 +49,7 @@
     </section>
     <section class="positions">
       <div class="inner">
-        <h2>Our open roles</h2>
+        <h2 class="text-4xl">Our open roles</h2>
         <div class="items">
           <CareersPosition
             v-for="(position, index) in positions"
@@ -63,10 +57,11 @@
             :position="position"
             class="item"
           />
-          <div class="all">
+          <div class="all mt-8">
             View all
             <a
               href="https://baselime.notion.site/Baselime-Careers-c83ec59a57114a98bee1ae927afad421"
+              target="_blank"
               >open roles</a
             >
           </div>
@@ -81,7 +76,7 @@
       </div>
     </section>
     <section class="values">
-      <h2>Our Values</h2>
+      <h2 class="text-4xl">Our Values</h2>
       <div class="items">
         <CareersValue
           v-for="(value, index) in values"
@@ -95,7 +90,7 @@
     </section>
     <section class="stack">
       <div class="inner">
-        <h2>Our Tech Stack</h2>
+        <h2 class="text-4xl">Our Tech Stack</h2>
         <div class="items">
           <img
             class="item"
@@ -268,7 +263,7 @@ export default Vue.extend({
 @import '@/assets/scss/_variables.scss';
 
 .careers {
-  background: $mainBackground;
+  background: white;
 
   section {
     text-align: center;

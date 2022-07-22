@@ -1,5 +1,5 @@
 <template>
-  <form class="grid grid-cols-6 gap-6 px-10" @submit.prevent="joinBeta">
+  <form class="grid grid-cols-6 gap-6 px-6 md:px-10" @submit.prevent="joinBeta">
     <div class="col-span-6 sm:col-span-3">
       <input
         type="text"

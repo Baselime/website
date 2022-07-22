@@ -2,7 +2,7 @@
   <article>
     <section class="header">
       <div class="inner">
-        <h1>{{ article.title }}</h1>
+        <h1 class="text-5xl">{{ article.title }}</h1>
         <div class="more-inner">
           <MiniAuthor
             :author="author"
@@ -192,7 +192,7 @@ export default Vue.extend({
 
 article {
   .header {
-    background: $mainBackground;
+    background: $white;
     padding: 120px;
     @media screen and (max-width: 550px) {
       padding: 60px 30px;

@@ -4,7 +4,7 @@
     <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
       <div class="xl:grid xl:grid-cols-3 xl:gap-8">
         <div class="grid grid-cols-2 gap-8 xl:col-span-2">
-          <div>
+          <div class="col-span-2 md:col-span-1">
             <img src="@/assets/images/logo-wide-2.svg" class="w-48" />
             <a
               href="https://github.com/Baselime/cli"

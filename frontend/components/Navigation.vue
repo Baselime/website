@@ -1,9 +1,11 @@
 <template>
-  <div class="pt-6 bg-white">
+  <div
+    class="pt-6"
+    :class="$route.path === '/pricing' ? 'bg-[#F7F6F3]' : 'bg-none'"
+  >
     <div>
       <nav
         class="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
-        aria-label="Global"
       >
         <div class="flex items-center flex-1">
           <div class="flex items-center justify-between w-full md:w-auto">
@@ -140,6 +142,7 @@ export default Vue.extend({
         { name: 'About', to: '/about' },
         { name: 'Blog', to: '/blog' },
         { name: 'Pricing', to: '/pricing' },
+        { name: 'Careers', to: '/careers' },
       ],
       openNavbar: false,
     }
@@ -151,6 +154,11 @@ export default Vue.extend({
     // @ts-ignore
     goTo: function (link) {
       return this.$router.push({ path: link })
+    },
+  },
+watch: {
+    async $route(to, from) {
+      this.openNavbar = false;
     },
   },
 })

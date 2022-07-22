@@ -1,18 +1,23 @@
 module.exports = {
-  mode: "jit",
+  mode: 'jit',
   content: [
-    "./components/**/*.{vue,js}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./nuxt.config.{js,ts}",
-    "./app.vue"
+    './components/**/*.{vue,js}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}',
+    './app.vue',
   ],
-  darkMode: "class", // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
+      backgroundImage: {
+        greenSplash: "url('@/assets/images/background-1@1x.png')",
+        multiSplash: "url('@/assets/images/background-2@1x.png')",
+      },
       dropShadow: {
-        '3xl': '31.3727px 31.3727px 53.3336px rgba(10, 18, 51, 0.1)'
+        '3xl': '31.3727px 31.3727px 53.3336px rgba(10, 18, 51, 0.1)',
+        '4xl': '20px 24px 44px rgba(20, 29, 67, 0.06)'
       },
       colors: {
         baseRed: '#F94E1E',
@@ -34,7 +39,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [
-    require('@tailwindcss/forms')
-  ],
-};
+  plugins: [require('@tailwindcss/forms')],
+}

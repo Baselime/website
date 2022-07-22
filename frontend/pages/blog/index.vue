@@ -2,7 +2,7 @@
   <div>
     <featured-article :article="articles.find((a) => a.featured)" />
     <div class="like">
-      <h3 style="font-weight: bold">
+      <h3 class="text-white text-2xl" style="font-weight: bold">
         You like writing about serverless and observability?
       </h3>
       <p>
@@ -16,7 +16,6 @@
         </li>
       </ul>
     </section>
-    <BlogTitle />
   </div>
 </template>
 
@@ -78,6 +77,7 @@ export default Vue.extend({
   background: $blue;
   color: $white;
 }
+
 .blog-articles-container {
   background: $mainBackground;
   ul {

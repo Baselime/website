@@ -9,25 +9,25 @@
           <thead>
             <tr>
               <th
-                class="pb-4 px-6 text-sm font-medium text-gray-900 text-left"
+                class="px-6 text-sm font-medium text-gray-900 text-left"
                 scope="col"
               >
                 <span class="sr-only">Feature by</span>
               </th>
               <th
-                class="w-1/4 pb-4 px-6 text-xl md:text-3xl leading-6 font-medium text-darkBlue text-center"
+                class="w-1/4 px-6 text-xl md:text-3xl leading-6 font-medium text-darkBlue text-center"
                 scope="col"
               >
                 Free
               </th>
               <th
-                class="w-1/4 pb-4 px-6 text-xl md:text-3xl leading-6 font-medium text-darkBlue text-center"
+                class="w-1/4 px-6 text-xl md:text-3xl leading-6 font-medium text-darkBlue text-center"
                 scope="col"
               >
                 Team
               </th>
               <th
-                class="w-1/4 pb-4 px-6 text-xl md:text-3xl leading-6 font-medium text-darkBlue text-center"
+                class="w-1/4 px-6 text-xl md:text-3xl leading-6 font-medium text-darkBlue text-center"
                 scope="col"
               >
                 Enterprise
@@ -37,34 +37,34 @@
           <tbody class="">
             <tr class="bg-white">
               <th
-                class="py-8 px-6 text-sm font-medium text-gray-900 text-left align-top"
+                class="px-6 text-sm font-medium text-gray-900 text-left align-top"
                 scope="row"
               ></th>
-              <td class="h-full py-6 px-6 align-top">
+              <td class="h-full px-6 align-top">
                 <div class="relative h-full table mx-auto">
                   <button
                     @click="joinBeta"
-                    class="my-6 md:px-6 py-3 text-sm md:text-base whitespace-nowrap font-medium rounded-2xl text-darkBlue bg-white border-2 border-darkBlue shadow-sm w-24 md:w-64 hover:-translate-y-0.5 base-transition"
+                    class="my-6 md:px-6 py-3 text-sm md:text-base whitespace-nowrap font-medium rounded-2xl text-darkBlue bg-white border-2 border-darkBlue shadow-sm w-24 sm:w-32 lg:w-48 hover:-translate-y-0.5 base-transition"
                   >
                     Join Beta
                   </button>
                 </div>
               </td>
-              <td class="h-full py-6 px-6 align-top">
+              <td class="h-full px-6 align-top">
                 <div class="relative h-full table mx-auto">
                   <button
                     @click="joinBeta"
-                    class="my-6 md:px-6 py-3 text-sm md:text-base whitespace-nowrap font-medium rounded-2xl text-white bg-baseGreen border-2 border-baseGreen shadow-sm w-24 md:w-64 hover:-translate-y-0.5 base-transition"
+                    class="my-6 md:px-6 py-3 text-sm md:text-base whitespace-nowrap font-medium rounded-2xl text-white bg-baseGreen border-2 border-baseGreen shadow-sm w-24 sm:w-32 lg:w-48 hover:-translate-y-0.5 base-transition"
                   >
                     Join Beta
                   </button>
                 </div>
               </td>
-              <td class="h-full py-6 px-6 align-top">
+              <td class="h-full px-6 align-top">
                 <div class="relative h-full table mx-auto">
                   <button
                     @click="joinBeta"
-                    class="my-6 md:px-6 py-3 text-sm md:text-base whitespace-nowrap font-medium rounded-2xl text-darkBlue bg-white border-2 border-darkBlue shadow-sm w-24 md:w-64 hover:-translate-y-0.5 base-transition"
+                    class="my-6 md:px-6 py-3 text-sm md:text-base whitespace-nowrap font-medium rounded-2xl text-darkBlue bg-white border-2 border-darkBlue shadow-sm w-24 sm:w-32 lg:w-48 hover:-translate-y-0.5 base-transition"
                   >
                     Contact Us
                   </button>
@@ -74,7 +74,7 @@
             <template v-for="section in sections">
               <tr class="">
                 <th
-                  class="bg-white pl-6 text-xl md:text-3xl font-medium text-darkBlue text-left py-8"
+                  class="bg-white pl-6 text-xl md:text-3xl font-medium text-darkBlue text-left pt-4 pb-8"
                   colspan="4"
                   scope="colgroup"
                 >

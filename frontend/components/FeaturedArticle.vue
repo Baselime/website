@@ -4,7 +4,7 @@
       <div class="details">
         <div class="featured">FEATURED ARTICLE</div>
         <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-          <h2>{{ article.title }}</h2>
+          <h2 class="sm:text-5xl">{{ article.title }}</h2>
         </NuxtLink>
         <p class="description">{{ article.description }}</p>
         <div v-if="!$fetchState.pending" class="author-container">
@@ -61,7 +61,7 @@ export default Vue.extend({
 @import '@/assets/scss/_variables.scss';
 
 .featured-article-container {
-  background: $white;
+
   padding: 90px 30px;
 
   .featured-article {
@@ -90,7 +90,7 @@ export default Vue.extend({
         display: inline;
         color: $green;
         border-bottom: 2px solid transparent;
-        font-size: 2.5rem;
+        font-size: 48px;
 
         &:hover {
           border-bottom: 2px solid $green;

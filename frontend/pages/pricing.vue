@@ -1,16 +1,14 @@
 <template>
   <div>
     <!-- Pricing -->
-    <div
-      class="py-6 pb-40 bg-gradient-to-b from-white via-[#F7F6F3] to-[#F7F6F3]"
-    >
-      <div class="mx-auto px-6 max-w-7xl sm:px-6 lg:px-8">
+    <div class="py-6 pt-24 pb-64 bg-[#F7F6F3]">
+      <div class="mx-auto px-6 max-w-7xl sm:px-6 lg:px-8 md:mb-12">
         <div class="space-y-12">
           <div
             class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none text-center mx-auto"
           >
             <h1
-              class="text-3xl font-extrabold tracking-wide sm:text-6xl mb-8 urbanist"
+              class="text-3xl font-extrabold tracking-normal sm:text-5xl mb-8 urbanist"
             >
               Plans that suit your scale
             </h1>
@@ -35,7 +33,7 @@
                   :class="
                     tier.text === 'white' ? 'text-white' : 'text-darkBlue'
                   "
-                  class="text-2xl font-semibold urbanist tracking-wide"
+                  class="text-2xl font-semibold urbanist tracking-normal"
                 >
                   {{ tier.name }}
                 </h3>
@@ -53,7 +51,7 @@
                     :class="
                       tier.text === 'white' ? 'text-white' : 'text-darkBlue'
                     "
-                    class="text-4xl font-extrabold tracking-wide urbanist"
+                    class="text-4xl font-extrabold tracking-normal urbanist"
                     ><span v-if="tier.price !== 'Let\'s Talk'">$</span
                     >{{ tier.price }}</span
                   >
@@ -152,18 +150,19 @@
     </div>
 
     <!-- CTA -->
-    <div class="px-6 mt-16">
+    <div class="px-6 mt-4">
       <div
-        class="rounded-[31px] shadow-xl max-w-4xl mx-auto p-6 bg-white z-20 -mt-40 mb-20"
+        class="rounded-[31px] max-w-4xl mx-auto p-6 bg-white z-20 -mt-40 mb-20"
+        style="box-shadow: 31.3727px 31.3727px 53.3336px rgba(10, 18, 51, 0.1)"
       >
         <div
-          class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none text-left"
+          class="space-y-5 sm:space-y-4 xl:max-w-none text-left"
         >
           <div class="flex flex-wrap md:flex-nowrap">
             <div class="w-full md:w-1/3">
               <img
                 src="@/assets/images/seatfrog-cto.png"
-                class="w-96 md:h-64 md:w-64"
+                class="w-96 mx-auto mb-8 md:mb-0 md:h-64 md:w-64"
               />
             </div>
             <div class="w-full md:w-2/3 px-6">

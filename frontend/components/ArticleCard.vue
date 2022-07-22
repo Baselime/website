@@ -92,6 +92,7 @@ export default Vue.extend({
     }
 
     h3 {
+      font-size: 20px;
       font-weight: bold;
       transition: 0.15s;
       display: inline;

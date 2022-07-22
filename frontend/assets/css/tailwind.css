@@ -1,15 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Urbanist&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&family=Urbanist:wght@600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.testimonials-slider {
+  animation: cards 30s linear both infinite;
+}
+
+@keyframes cards {
+  0% {
+    transform: translateX(80%);
+  }
+  100% {
+    transform: translateX(-400%);
+  }
+}
 
 h1,
 h2,
 h3,
 h4,
 h5 {
-  @apply urbanist tracking-wide font-bold text-darkBlue;
+  @apply urbanist font-bold text-darkBlue;
 }
 
 p {
@@ -17,13 +30,13 @@ p {
 }
 
 .roboto {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .urbanist {
-  font-family: "Urbanist", sans-serif;
+  font-family: 'Urbanist', sans-serif;
 }
 
 .base-transition {
-    @apply transition duration-200 ease-in
+  @apply transition duration-200 ease-in;
 }

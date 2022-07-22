@@ -1,16 +1,16 @@
 <template>
   <div>
     <!-- Header -->
-    <main class="mx-auto max-w-7xl px-4 mb-16 mt-16 sm:px-6 lg:py-16">
+    <main class="mx-auto max-w-7xl px-4 mb-16 sm:px-6 pt-24 pb-16">
       <div class="lg:grid lg:grid-cols-12 lg:gap-8">
         <div
           class="text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left"
         >
           <h1>
             <span
-              class="mt-1 block text-3xl tracking-wider font-extrabold sm:text-6xl urbanist"
+              class="mt-1 block text-3xl tracking-normal sm:text-5xl urbanist"
             >
-              <span class="block text-darkBlue">About us</span>
+              <span class="block text-darkBlue font-extrabold">About us</span>
             </span>
           </h1>
           <p
@@ -52,7 +52,7 @@
             class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none text-center mx-auto"
           >
             <h2
-              class="text-3xl font-extrabold tracking-wide sm:text-5xl mb-12 text-darkBlue"
+              class="text-3xl tracking-normal sm:text-5xl mb-12 text-darkBlue font-extrabold"
             >
               Meet the Team
             </h2>
@@ -70,7 +70,7 @@
                 <div class="w-full">
                   <img
                     class="w-full mx-auto"
-                    :src="`images/authors/${person.image}`"
+                    :src="imgSrc(`images/team/${person.image}`)"
                     alt=""
                   />
                 </div>
@@ -167,7 +167,7 @@
             class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none text-center mx-auto"
           >
             <h2
-              class="text-3xl font-extrabold tracking-tight sm:text-5xl mb-12"
+              class="text-3xl font-extrabold tracking-normal sm:text-5xl mb-12"
             >
               Meet our Investors
             </h2>
@@ -222,7 +222,7 @@
                         ? 'object-fit'
                         : 'object-cover h-full w-full'
                     "
-                    :src="`images/investors/${person.image}`"
+                    :src="imgSrc(`images/investors/${person.image}`)"
                     alt=""
                   />
                 </div>
@@ -284,13 +284,13 @@
     <div class="bg-[#040906]" aria-labelledby="footer-heading">
       <div class="max-w-7xl border-b border-gray-700 py-16 mx-auto">
         <div
-          class="max-w-xl mx-auto border-2 border-dashed border-gray-700 rounded-xl py-8"
+          class="max-w-xl mx-6 md:mx-auto border-2 border-dashed border-gray-700 rounded-xl py-8"
         >
           <div
             class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none text-center"
           >
             <h2
-              class="text-3xl font-extrabold tracking-tight sm:text-3xl mb-12 text-white px-12"
+              class="text-3xl font-extrabold tracking-tight sm:text-3xl mb-12 text-white px-4 md:px-12"
             >
               Help us build the future of observability for serverless
             </h2>
@@ -303,8 +303,6 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-
 import JoinBeta from '../components/JoinBeta.vue'
 
 export default {
@@ -406,11 +404,11 @@ export default {
     imgSrc: function (src: string): string | null {
       try {
         // @ts-ignore
-        return `/assets/${src}`
+        return require(`/assets/${src}`)
       } catch (error) {
         return null
       }
     },
   },
-};
+}
 </script>

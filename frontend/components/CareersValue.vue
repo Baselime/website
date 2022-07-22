@@ -4,7 +4,7 @@
       <slot></slot>
     </div>
     <div class="inner">
-      <div class="title">{{ value.title }}</div>
+      <div class="text-xl text-darkBlue font-bold urbanist">{{ value.title }}</div>
       <!-- <div>{{ value.description }}</div> -->
     </div>
   </div>
@@ -43,12 +43,7 @@ export default Vue.extend({
   }
   .inner {
     padding: 10px 0 0 0;
-    .title {
-      font-weight: bold;
-      line-height: 1;
-      font-size: 1.2rem;
-      margin: 5px 0 15px 0;
-    }
+
   }
 }
 </style>

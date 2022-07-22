@@ -1,13 +1,18 @@
 <template>
-  <div>
+  <div
+    :class="pages.includes($route.path) ? 'bg-greenSplash' : ''"
+    style="background-repeat: no-repeat; background-size: 100%"
+  >
     <JoinBetaModal
       :tier="tier"
       v-if="showJoinBetaModal"
       @close="toggleJoinBetaModal(false)"
     />
 
+    <Banner />
+
     <Navigation />
-    <div class="main">
+    <div>
       <Nuxt />
     </div>
     <Footer />
@@ -15,18 +20,19 @@
 </template>
 
 <script lang="ts">
-import DialogModal from '@/components/modals/DialogModal.vue'
-import JoinBetaModal from '@/components/modals/JoinBetaModal.vue'
-
 import Vue from 'vue'
-import { EventBus } from '@/event-bus'
-import Navigation from '~/components/Navigation.vue'
+import { EventBus } from '../event-bus'
+import Banner from '../components/Banner.vue'
+import Navigation from '../components/Navigation.vue'
+import DialogModal from '../components/modals/DialogModal.vue'
+import JoinBetaModal from '../components/modals/JoinBetaModal.vue'
 
 export default Vue.extend({
   components: {
     JoinBetaModal,
     DialogModal,
     Navigation,
+    Banner,
   },
   data() {
     return {
@@ -37,6 +43,7 @@ export default Vue.extend({
       dialogMessage: 'A message',
       dialogId: 'AN id',
       tier: null,
+      pages: ['/', '/about', '/blog'],
     }
   },
   methods: {
@@ -87,11 +94,4 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 @import '@/assets/scss/_variables.scss';
-.main {
-  margin-top: 120px;
-  color: $darkBlue;
-  @media screen and (max-width: 890px) {
-    margin-top: 50px;
-  }
-}
 </style>
