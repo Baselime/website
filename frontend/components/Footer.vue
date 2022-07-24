@@ -110,7 +110,7 @@ export default Vue.extend({
         company: [
           { name: 'About', to: '/about' },
           { name: 'Blog', to: '/blog' },
-          // { name: 'Careers', to: '/careers' },
+          { name: 'Careers', to: '/careers' },
         ],
         social: [
           //   {

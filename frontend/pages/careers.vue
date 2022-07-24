@@ -1,14 +1,21 @@
 <template>
   <main class="careers">
-    <section class="heading">
+    <section class="heading bg-[#F7F6F3]">
       <div class="inner">
-        <div class="details">
-          <h1>This is Baselime</h1>
-          <p class="sub-header">
-            We're redefining the future of observability for serverless
-            applications
-          </p>
-        </div>
+        <div
+            class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none text-center mx-auto"
+          >
+            <h1
+              class="text-3xl font-extrabold tracking-normal sm:text-5xl mb-8 urbanist"
+            >
+              This is Baselime
+            </h1>
+            <p
+              class="text-xl text-darkBlue opacity-50 max-w-xl mx-auto mb-12 roboto"
+            >
+               We're redefining the future of observability for serverless applications 
+            </p>
+          </div>
         <div class="image-container">
           <img src="@/assets/images/careers.png" alt="" />
         </div>
@@ -57,19 +64,20 @@
             :position="position"
             class="item"
           />
-          <div class="all mt-8">
+          <div class="mt-8 text-xl text-darkBlue font-normal leading-8 mr-4">
             View all
             <a
               href="https://baselime.notion.site/Baselime-Careers-c83ec59a57114a98bee1ae927afad421"
               target="_blank"
+              class="text-green-500 hover:cursor-pointer base-transition"
               >open roles</a
             >
           </div>
         </div>
-        <div class="details">
+        <div class="mt-8 text-darkBlue font-normal leading-8 mr-4">
           No positions available that suit you? Send your expression of interest
           in joining us to
-          <a href="mailto:careers@baselime.io">careers@baselime.io</a>.
+          <a class="text-green-500 hover:cursor-pointer base-transition" href="mailto:careers@baselime.io">careers@baselime.io</a>.
           High-performing teams are made up of people with different
           experiences, characteristics and traits. We welcome everyone to apply.
         </div>
@@ -77,7 +85,7 @@
     </section>
     <section class="values">
       <h2 class="text-4xl">Our Values</h2>
-      <div class="items">
+      <div class="items mt-16">
         <CareersValue
           v-for="(value, index) in values"
           :key="index"
@@ -87,6 +95,15 @@
           {{ value.emoji }}
         </CareersValue>
       </div>
+      <div class="mt-8 text-xl text-darkBlue font-normal leading-8 mr-4">
+            Ream more about
+            <a
+              href="https://baselime.notion.site/Our-values-bf1a950edea24c429d95cf633051d4f2"
+              target="_blank"
+              class="text-green-500 hover:cursor-pointer base-transition"
+              >our values</a
+            >
+          </div>
     </section>
     <section class="stack">
       <div class="inner">
@@ -122,44 +139,24 @@ export default Vue.extend({
     return {
       values: [
         {
-          emoji: '💡',
-          title: `We're Curious`,
-          description: `We are always learning and exploring, asking questions and diving deep to understand things beyond the surface level. We're curious about new possibilities, both in our respective areas of expertise and outside of them.`,
-        },
-        {
-          emoji: '🎯',
-          title: 'Customers are the focus',
-          description: `They are the only ones who know anything about what we are doing. We are helping them solve problems they live through every day. Everything we do should ultimately have a positive impact on our customers.`,
-        },
-        {
-          emoji: '💨',
-          title: 'Speed wins',
-          description: `No matter what we do, we do it fast. Making decisions, responding to customers, building our product, shipping features, etc... And we are always looking at ways to do things even faster.`,
+          emoji: '☄️',
+          title: `Be legendary`,
+          description: `Differentiate yourself and do something out of the ordinary, unconventional and innovative; Express your personality and do things in such a way that only you can do. Leave a sense of amazement in the people you interact with. Be passionate about your work and strive for greatness (not perfection) every day. Legendary status is attained only when we work, learn and play as a team.`,
         },
         {
           emoji: '💯',
-          title: 'Iteration wins',
-          description: `Good now is always better than great or perfect tomorrow. When faced with a challenge, we ideate, build and ship a good solution first, get feedback then iterate over time to improve upon it.`,
+          title: 'Do a few things well',
+          description: `Focus on a small number of things at once and deliver them exceptionally well. Consistently strive to exceed expectations and look for ways to improve. Identify the areas that will have the highest impact on our users and customers and focus on those. Trust your teammates to make the right decisions, as they are doing their “few things” extremely well too.`,
         },
         {
-          emoji: '💬',
-          title: 'No bullshit',
-          description: `We speak our minds in the most straightforward way possible. We avoid assumptions, speculations and exaggerations which make it harder for everyone to understand anything and to collaborate.`,
+          emoji: '🛹',
+          title: 'Ship skateboards',
+          description: `Ship the minimal lovable version of everything, both within our product and our internal processes. Iterate quickly. Communicate thoroughly when things change, both to our users and internally.`,
         },
         {
-          emoji: '🚧',
-          title: `In progress doesn't exist`,
-          description: `It's either done or not done. Once it's done, it should be in the hands of customers. We have the least amount of "work in progress". We split our work into small items and whenever we reach a satisfactory state on an item, it's completed.`,
-        },
-        {
-          emoji: '🎉',
-          title: 'We play together',
-          description: `We are innovators, we must be having fun in the process. We are serious without taking ourselves too seriously. We have interests outside of work that we share and are proud of.`,
-        },
-        {
-          emoji: '💾',
-          title: 'We disagree and commit',
-          description: `We all have strong opinions. Each and every one of us can and should be challenged. We have difficult conversations often, and we do not compromise for social cohesion. However, once a decision is made, we all commit and align behind it.`,
+          emoji: '🧪',
+          title: 'Take initiative',
+          description: `Do things without being told or having a clear path to success. Figure things out independently, and push forward when things get tough to achieve our common goals. Spot opportunities where others don't and make them a reality before the rest of the world realises.`,
         },
       ],
       perks: [
@@ -210,26 +207,14 @@ export default Vue.extend({
         {
           title: 'Software Engineer (Full-stack)',
           location: 'Remote, within the UK',
-          remuneration: '£60k-£80k + equity',
+          remuneration: '£60k-£100k + equity',
           url: 'https://baselime.notion.site/Software-Engineer-Full-stack-c6b937dad7594059a7662dbc45e0f88f',
         },
         {
           title: 'Software Engineer (Front-end)',
           location: 'Remote, within the UK',
-          remuneration: '£60k-£80k + equity',
+          remuneration: '£60k-£100k + equity',
           url: 'https://baselime.notion.site/Software-Engineer-Front-end-7bce84e54e30428dacfad803c2932eec',
-        },
-        {
-          title: 'Product Designer',
-          location: 'Remote, within the UK',
-          remuneration: '£40k-£50k + equity',
-          url: 'https://baselime.notion.site/Product-Designer-728ad45f0cef4c5c9e5aade0d12abed9',
-        },
-        {
-          title: 'Product Manager',
-          location: 'Remote, within the UK',
-          remuneration: '£60k-£70k + equity',
-          url: 'https://baselime.notion.site/Product-Manager-bd4b519e15384f93857e950a6c5e200b',
         },
       ],
     }
@@ -283,33 +268,14 @@ export default Vue.extend({
     &.heading {
       .inner {
         padding-bottom: 90px;
-
-        .details {
-          max-width: 640px;
-          margin: auto;
-
-          h1 {
-            font-size: 4.2rem;
-
-            @media screen and (max-width: 550px) {
-              font-size: 3.2rem;
-            }
-          }
-
-          .sub-header {
-            margin: 30px 0;
-            font-weight: bold;
-            opacity: 0.75;
-          }
-        }
-
         .image-container {
           width: 100%;
           max-width: 990px;
           margin: 45px auto;
 
           img {
-            border-radius: 4px;
+            border-radius: 0.75rem;
+            border-width: 2px;
             width: 100%;
             object-fit: cover;
           }
@@ -320,18 +286,8 @@ export default Vue.extend({
     &.values {
       padding: 90px 0;
 
-      .items {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
         max-width: 1330px;
         margin: auto;
-
-        .item {
-          width: 400px;
-          margin: 15px;
-        }
-      }
     }
 
     &.perks {
@@ -377,31 +333,7 @@ export default Vue.extend({
           }
         }
 
-        .all {
-          a {
-            color: $green;
-            border-bottom: 2px solid transparent;
-            transition: all 0.15s;
-
-            &:hover {
-              border-bottom: 2px $green solid;
-            }
-          }
-        }
-
-        .details {
-          margin: 30px 0 0 0;
-
-          a {
-            color: $green;
-            border-bottom: 2px solid transparent;
-            transition: 0.15s;
-
-            &:hover {
-              border-bottom: 2px solid $green;
-            }
-          }
-        }
+        
       }
     }
 

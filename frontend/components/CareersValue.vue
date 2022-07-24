@@ -4,8 +4,8 @@
       <slot></slot>
     </div>
     <div class="inner">
-      <div class="text-xl text-darkBlue font-bold urbanist">{{ value.title }}</div>
-      <!-- <div>{{ value.description }}</div> -->
+      <div class="text-xl text-darkBlue font-bold urbanist mb-4">{{ value.title }}</div>
+      <div class="opacity-50">{{ value.description }}</div>
     </div>
   </div>
 </template>
@@ -26,16 +26,16 @@ export default Vue.extend({
 @import '@/assets/scss/_variables.scss';
 
 .value {
-  border-radius: 4px;
   padding: 20px 30px 30px 30px;
-  text-align: center;
+  text-align: left;
+  display: flex;
 
   .icon {
-    margin: 30px auto;
+    margin: 0 30px 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 120px;
+    min-width: 120px;
     height: 120px;
     border: 2px solid $green;
     font-size: 45px;

@@ -1,7 +1,7 @@
 <template>
   <div
     class="pt-6"
-    :class="$route.path === '/pricing' ? 'bg-[#F7F6F3]' : 'bg-none'"
+    :class="$route.path === '/pricing' || $route.path === '/careers' ? 'bg-[#F7F6F3]' : 'bg-none'"
   >
     <div>
       <nav
@@ -142,7 +142,7 @@ export default Vue.extend({
         { name: 'About', to: '/about' },
         { name: 'Blog', to: '/blog' },
         { name: 'Pricing', to: '/pricing' },
-        // { name: 'Careers', to: '/careers' },
+        { name: 'Careers', to: '/careers' },
       ],
       openNavbar: false,
     }
