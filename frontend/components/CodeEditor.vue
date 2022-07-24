@@ -1,7 +1,7 @@
 <template>
   <div class="relative overflow-x-hidden">
     <div id="editor" ref="editor" class="pb-4 px-4">
-      <highlight class="bg-[#F7F6F3]" language="yaml">{{ snippet }}</highlight>
+      <!-- <highlight class="bg-[#F7F6F3]" language="yaml">{{ snippet }}</highlight> -->
     </div>
   </div>
 </template>
@@ -12,7 +12,7 @@ import yaml from 'yaml'
 import { applicationObservabilityAsCode } from '../utils/obs-as-code/builders'
 
 // @ts-ignore
-import Highlight from 'vue-highlight-component'
+// import Highlight from 'vue-highlight-component'
 
 export default Vue.extend({
   data() {
@@ -21,7 +21,7 @@ export default Vue.extend({
     }
   },
   components: {
-    Highlight,
+    // Highlight,
   },
   methods: {
     generateYamlString: function (): string {

@@ -14,9 +14,6 @@
           class="px-6 py-3 border-2 border-baseGreen text-base font-medium rounded-xl text-white bg-baseGreen w-full  hover:-translate-y-0.5 base-transition"
         >
           <div class="relative items-center text-center">
-            <Spinner
-              class="absolute top-0 mt-0.5 w-6 h-6 text-white mr-2"
-            />
             <span class="text-center">Learn More</span>
           </div>
         </button>

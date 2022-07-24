@@ -17,13 +17,9 @@
           <button
             @click="doIt"
             type="submit"
-            class="px-6 py-3 border-2 border-baseGreen text-base font-medium rounded-xl text-white bg-baseGreen shadow-md w-full shadow-green-700 hover:-translate-y-0.5 base-transition"
+            class="px-6 py-3 border-2 border-baseGreen text-base font-medium rounded-xl text-white bg-baseGreen w-full shadow-green-700 hover:-translate-y-0.5 base-transition"
           >
             <div class="relative items-center text-center">
-              <Spinner
-                class="absolute top-0 mt-0.5 w-6 h-6 text-white mr-2"
-                v-if="loading"
-              />
               <span class="text-center">Continue</span>
             </div>
           </button>

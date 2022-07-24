@@ -2,19 +2,8 @@
   <div class="modal" @click.prevent.stop="close" id="join-beta">
     <div class="modal-content" @click.stop.prevent="">
       <a @click.stop="close" class="close">
-        <svg
-          class="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M6 18L18 6M6 6l12 12"
-          ></path>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </a>
       <div class="c-container" @click.prevent.stop>
@@ -22,51 +11,21 @@
           <h3 class="text-lg font-bold">Join our Private Beta today</h3>
           <form @submit.prevent class="join-beta">
             <div class="name-container">
-              <input
-                class="input"
-                v-model.trim="forename"
-                type="text"
-                placeholder="First Name*"
-                ref="forename"
-                required
-              />
-              <input
-                class="input"
-                v-model.trim="surname"
-                type="text"
-                placeholder="Last Name*"
-                required
-              />
+              <input class="input" v-model.trim="forename" type="text" placeholder="First Name*" ref="forename"
+                required />
+              <input class="input" v-model.trim="surname" type="text" placeholder="Last Name*" required />
             </div>
             <div class="item">
-              <input
-                class="input"
-                v-model.trim="company"
-                type="text"
-                placeholder="Company Name*"
-                required
-              />
+              <input class="input" v-model.trim="company" type="text" placeholder="Company Name*" required />
             </div>
             <div class="item">
-              <input
-                class="input"
-                v-model.trim="email"
-                type="email"
-                placeholder="Email*"
-                required
-              />
+              <input class="input" v-model.trim="email" type="email" placeholder="Email*" required />
             </div>
             <div class="button-container">
-              <button
-                @click="joinBeta"
-                type="submit"
-                class="px-6 py-3 border-2 border-baseGreen text-base font-medium rounded text-white bg-baseGreen w-full shadow-green-700 hover:-translate-y-0.5 base-transition"
-              >
-                <div class="relative items-center text-center">
-                  <Spinner
-                    class="absolute top-0 mt-0.5 w-6 h-6 text-white mr-2"
-                    v-if="loading"
-                  />
+              <button @click="joinBeta" type="submit"
+                class="px-6 py-3 border-2 border-baseGreen text-base font-medium rounded text-white bg-baseGreen w-full shadow-green-700 hover:-translate-y-0.5 base-transition">
+                <div class="flex justify-center items-center whitespace-nowrap">
+                  <Spinner class="text-white mr-2" :color="'#fcfcfc'" v-if="loading" />
                   <span class="text-center">Join Private Beta</span>
                 </div>
               </button>
@@ -79,10 +38,13 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import axios from 'axios'
-import { isEmail } from '../../utils/utils'
-import { EventBus } from '../../event-bus'
+import Vue from 'vue';
+import axios from 'axios';
+import { isEmail } from '../../utils/utils';
+import { EventBus } from '../../event-bus';
+
+//@ts-ignore
+import Spinner from 'vue-spinner/src/PulseLoader.vue';
 
 export default Vue.extend({
   props: {
@@ -90,6 +52,9 @@ export default Vue.extend({
       type: Number,
       required: false,
     },
+  },
+  components: {
+    Spinner,
   },
   data() {
     return {
@@ -99,7 +64,6 @@ export default Vue.extend({
       email: '',
       loading: false,
       focus: '',
-      tier: '',
     }
   },
   computed: {
@@ -146,10 +110,11 @@ export default Vue.extend({
         title: 'Subscribed!',
         message:
           "Thanks for joining our private beta. We will be in touch shortly to introduce you to what we've been working on.",
-      })
+      });
       this.loading = false
-      this.clearInputs()
-      this.$emit('complete')
+      this.clearInputs();
+      this.$emit('complete');
+      this.close();
     },
     clearInputs() {
       this.forename = ''
@@ -224,6 +189,7 @@ form {
     padding: 10px;
     font-size: 16px;
     background: $white;
+
     &::placeholder {
       color: $grey;
     }
@@ -244,15 +210,19 @@ form {
     align-items: center;
     justify-content: space-between;
     margin: 15px 0 0 0;
+
     @media screen and (max-width: 890px) {
       margin: 5px 5px 0 5px;
     }
+
     input {
       margin: 0px 5px;
+
       @media screen and (max-width: 890px) {
         margin: 5px;
       }
     }
+
     @media screen and (max-width: 890px) {
       flex-direction: column;
     }

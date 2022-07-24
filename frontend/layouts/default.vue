@@ -1,13 +1,10 @@
 <template>
-  <div
-    :class="pages.includes($route.path) ? 'bg-greenSplash' : ''"
-    style="background-repeat: no-repeat; background-size: 100%"
-  >
-    <JoinBetaModal
-      :tier="tier"
-      v-if="showJoinBetaModal"
-      @close="toggleJoinBetaModal(false)"
-    />
+  <div :class="pages.includes($route.path) ? 'bg-greenSplash' : ''"
+    style="background-repeat: no-repeat; background-size: 100%">
+    <dialog-modal v-if="showDialogModal" @close="toggleDialogModal" :title="dialogTitle" :message="dialogMessage"
+      :id="dialogId" :action="dialogAction" />
+    
+    <JoinBetaModal :tier="tier" v-if="showJoinBetaModal" @close="toggleJoinBetaModal(false)" />
 
     <Banner />
 
