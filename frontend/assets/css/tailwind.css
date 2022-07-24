@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .testimonials-slider {
-  animation: cards 40s linear both infinite;
+  animation: cards 90s linear both infinite;
 }
 
 .banner-slider {
@@ -14,10 +14,10 @@
 
 @keyframes cards {
   0% {
-    transform: translateX(80%);
+    transform: translateX(-600%);
   }
   100% {
-    transform: translateX(-400%);
+    transform: translateX(-1200%);
   }
 }
 

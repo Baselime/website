@@ -866,12 +866,12 @@ select{
   margin-top: 0px;
 }
 
-.mt-4{
-  margin-top: 1rem;
+.mb-4{
+  margin-bottom: 1rem;
 }
 
-.mt-12{
-  margin-top: 3rem;
+.mt-4{
+  margin-top: 1rem;
 }
 
 .mt-8{
@@ -904,6 +904,10 @@ select{
 
 .mt-6{
   margin-top: 1.5rem;
+}
+
+.mt-12{
+  margin-top: 3rem;
 }
 
 .mb-12{
@@ -974,10 +978,6 @@ select{
   margin-bottom: 0px;
 }
 
-.mb-4{
-  margin-bottom: 1rem;
-}
-
 .ml-2{
   margin-left: 0.5rem;
 }
@@ -988,6 +988,10 @@ select{
 
 .-mt-40{
   margin-top: -10rem;
+}
+
+.mb-2{
+  margin-bottom: 0.5rem;
 }
 
 .block{
@@ -1138,6 +1142,10 @@ select{
   width: 2.25rem;
 }
 
+.w-32{
+  width: 8rem;
+}
+
 .w-1\/4{
   width: 25%;
 }
@@ -1214,12 +1222,16 @@ select{
   resize: both;
 }
 
-.grid-cols-2{
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-cols-6{
   grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-cols-1{
@@ -1642,6 +1654,10 @@ select{
   padding-top: 1.5rem;
 }
 
+.pb-1{
+  padding-bottom: 0.25rem;
+}
+
 .pt-4{
   padding-top: 1rem;
 }
@@ -1782,12 +1798,12 @@ select{
   line-height: 1.5rem;
 }
 
-.leading-\[1\]{
-  line-height: 1;
-}
-
 .leading-8{
   line-height: 2rem;
+}
+
+.leading-\[1\]{
+  line-height: 1;
 }
 
 .tracking-normal{
@@ -1818,6 +1834,11 @@ select{
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
+.text-green-500{
+  --tw-text-opacity: 1;
+  color: rgb(34 197 94 / var(--tw-text-opacity));
+}
+
 .text-gray-600{
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
@@ -1841,11 +1862,6 @@ select{
 .text-gray-300{
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
-}
-
-.text-green-500{
-  --tw-text-opacity: 1;
-  color: rgb(34 197 94 / var(--tw-text-opacity));
 }
 
 .text-baseGreen{
@@ -1972,8 +1988,8 @@ select{
 }
 
 .testimonials-slider {
-  -webkit-animation: cards 40s linear both infinite;
-          animation: cards 40s linear both infinite;
+  -webkit-animation: cards 90s linear both infinite;
+          animation: cards 90s linear both infinite;
 }
 
 .banner-slider {
@@ -1983,21 +1999,21 @@ select{
 
 @-webkit-keyframes cards {
   0% {
-    transform: translateX(80%);
+    transform: translateX(-600%);
   }
 
   100% {
-    transform: translateX(-400%);
+    transform: translateX(-1200%);
   }
 }
 
 @keyframes cards {
   0% {
-    transform: translateX(80%);
+    transform: translateX(-600%);
   }
 
   100% {
-    transform: translateX(-400%);
+    transform: translateX(-1200%);
   }
 }
 
@@ -2123,6 +2139,10 @@ p{
 
   .sm\:w-auto{
     width: auto;
+  }
+
+  .sm\:w-1\/3{
+    width: 33.333333%;
   }
 
   .sm\:w-32{
@@ -2264,6 +2284,10 @@ p{
     margin-bottom: 3rem;
   }
 
+  .md\:mr-8{
+    margin-right: 2rem;
+  }
+
   .md\:mb-0{
     margin-bottom: 0px;
   }
@@ -2278,6 +2302,10 @@ p{
 
   .md\:inline-flex{
     display: inline-flex;
+  }
+
+  .md\:grid{
+    display: grid;
   }
 
   .md\:hidden{
@@ -2306,10 +2334,6 @@ p{
 
   .md\:w-32{
     width: 8rem;
-  }
-
-  .md\:w-1\/3{
-    width: 33.333333%;
   }
 
   .md\:w-2\/3{
@@ -2555,8 +2579,8 @@ p{
     max-width: none;
   }
 
-  .xl\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .xl\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .xl\:gap-8{

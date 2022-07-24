@@ -304,8 +304,8 @@
       >
         <div
           class="rounded-xl w-full my-3 testimonials"
-          v-for="person in duplicate(testimonials, 3)"
-          :key="person.name"
+          v-for="(person, index) in duplicate(testimonials, 3)"
+          :key="index"
         >
           <div
             class="px-6 bg-[#14234B] rounded-xl border border-gray-200 mx-3 my-3 md:w-96 h-64"
