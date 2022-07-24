@@ -3,7 +3,7 @@
     style="background-repeat: no-repeat; background-size: 100%">
     <dialog-modal v-if="showDialogModal" @close="toggleDialogModal" :title="dialogTitle" :message="dialogMessage"
       :id="dialogId" :action="dialogAction" />
-    
+
     <JoinBetaModal :tier="tier" v-if="showJoinBetaModal" @close="toggleJoinBetaModal(false)" />
 
     <Banner />
@@ -13,6 +13,8 @@
       <Nuxt />
     </div>
     <Footer />
+    <CookieBanner />
+
   </div>
 </template>
 
@@ -23,6 +25,7 @@ import Banner from '../components/Banner.vue'
 import Navigation from '../components/Navigation.vue'
 import DialogModal from '../components/modals/DialogModal.vue'
 import JoinBetaModal from '../components/modals/JoinBetaModal.vue'
+import CookieBanner from '../components/CookieBanner.vue'
 
 export default Vue.extend({
   components: {
@@ -30,6 +33,7 @@ export default Vue.extend({
     DialogModal,
     Navigation,
     Banner,
+    CookieBanner,
   },
   data() {
     return {

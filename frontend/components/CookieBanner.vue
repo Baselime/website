@@ -1,5 +1,5 @@
 <template>
-  <div id="cookieConsent" :class="{ closed }">
+  <div id="cookieConsent" :class="{ closed }" class="rounded-xl">
     <p style="margin: 0 30px 0 0">
       🍪 By browsing this website you are agreeing to our
       <NuxtLink to="/privacy" target="_blank">cookies policy</NuxtLink>.
@@ -8,7 +8,7 @@
       <button
         @click="close"
         type="submit"
-        class="px-6 py-3 border-2 border-baseGreen text-base font-medium rounded-xl text-white bg-baseGreen shadow-md w-full shadow-green-700 hover:-translate-y-0.5 base-transition"
+        class="px-2 py-0 border-2 border-baseGreen text-base font-medium rounded-xl text-baseGreen bg-white w-full  hover:-translate-y-0.5 base-transition"
       >
         <div class="relative items-center text-center">
           <span class="text-center">Close</span>
@@ -50,7 +50,6 @@ export default Vue.extend({
   justify-content: space-between;
   position: fixed;
   padding: 15px;
-  border-radius: 4px;
   bottom: 0;
   margin: 30px;
   opacity: 1;
