@@ -23,7 +23,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Baselime is the Observability as Code platform developers trust to predictably create, change ,and improve their observability at enterprise scale.',
+        content: 'Baselime is the Observability as Code platform developers trust to predictably create, change, and improve their observability at enterprise scale.',
       },
       { property: 'og:image:width', content: '740' },
       { property: 'og:image:height', content: '300' },
