@@ -9,7 +9,7 @@
       >
         <div class="flex items-center flex-1">
           <div class="flex items-center justify-between w-full md:w-auto">
-            <NuxtLink to="/">
+            <NuxtLink to="/" class="pb-1">
               <span class="sr-only">Baselime</span>
               <img
                 class="h-6 w-auto sm:h-8"
