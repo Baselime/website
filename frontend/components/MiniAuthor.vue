@@ -2,7 +2,7 @@
   <div>
     <div class="author" :class="{ light, position }">
       <div
-        class="flex-shrink-0 inline-flex rounded-full border border-white overflow-clip h-10 w-10"
+        class="flex-shrink-0 inline-flex rounded-full overflow-clip h-10 w-10"
       >
         <img
           class="w-full h-full object-cover"
@@ -81,9 +81,9 @@ export default Vue.extend({
     align-items: flex-start;
   }
   &:hover {
-    .name {
-      border-bottom: 2px solid $green;
-    }
+    // .name {
+    //   border-bottom: 2px solid $green;
+    // }
   }
   img {
     width: 32px;

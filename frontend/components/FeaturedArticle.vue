@@ -110,6 +110,7 @@ export default Vue.extend({
 
       .description {
         margin: 1.5rem 0 0 0;
+        font-family: "Montserrat",sans-serif;
       }
 
       .read-now {

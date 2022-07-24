@@ -277,6 +277,10 @@ article {
         object-fit: cover;
       }
       ::v-deep {
+        * {
+
+          font-family: "Montserrat",sans-serif;
+        }
         a {
           text-decoration: none;
           color: $green;
@@ -288,6 +292,11 @@ article {
         }
         h2 {
           margin: 6rem 0 3rem 0;
+          font-size: 1.5rem;
+        }
+        h3 {
+          margin: 3rem 0 1.5rem 0;
+          font-size: 1.2rem;
         }
 
         pre,

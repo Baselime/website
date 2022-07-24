@@ -21,6 +21,7 @@ export default Vue.extend({
 
 .separator {
   background: $darkBlue;
+  font-family: "Urbanist", sans-serif;
   padding: 30px;
   div {
     max-width: 1212px;
