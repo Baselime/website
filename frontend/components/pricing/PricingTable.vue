@@ -8,64 +8,62 @@
           </caption>
           <thead>
             <tr>
-              <th
-                class="px-6 text-sm font-medium text-gray-900 text-left"
-                scope="col"
-              >
+              <th class="px-6 text-sm font-medium text-gray-900 text-left hidden md:block" scope="col">
                 <span class="sr-only">Feature by</span>
               </th>
-              <th
-                class="w-1/4 px-6 text-xl md:text-3xl leading-6 font-medium text-darkBlue text-center"
-                scope="col"
-              >
-                Free
+              <th class="w-1/4 px-6 text-xl md:text-3xl leading-6 font-bold text-darkBlue text-center urbanist"
+                scope="col">
+                <div class="text-darkBlue mb-2 opacity-50 text-sm hidden md:block">
+                  $0/mo
+                </div>
+                <div>
+                  Free
+                </div>
               </th>
-              <th
-                class="w-1/4 px-6 text-xl md:text-3xl leading-6 font-medium text-darkBlue text-center"
-                scope="col"
-              >
-                Team
+              <th class="w-1/4 px-6 text-xl md:text-3xl leading-6 font-bold text-darkBlue text-center urbanist"
+                scope="col">
+                <div class="text-darkBlue mb-2 opacity-50 text-sm hidden md:block">
+                  Starting at $80/mo
+                </div>
+                <div>
+                  Team
+                </div>
               </th>
-              <th
-                class="w-1/4 px-6 text-xl md:text-3xl leading-6 font-medium text-darkBlue text-center"
-                scope="col"
-              >
-                Enterprise
+              <th class="w-1/4 px-6 text-xl md:text-3xl leading-6 font-bold text-darkBlue text-center urbanist"
+                scope="col">
+                <div class="text-darkBlue mb-2 opacity-50 text-sm hidden md:block">
+                  Custom Pricing
+                </div>
+                <div>
+                  Enterprise
+                </div>
               </th>
             </tr>
           </thead>
           <tbody class="">
             <tr class="bg-white">
-              <th
-                class="px-6 text-sm font-medium text-gray-900 text-left align-top"
-                scope="row"
-              ></th>
+              <th class="px-6 text-sm font-medium text-gray-900 text-left align-top hidden md:block" scope="row"></th>
               <td class="h-full px-6 align-top">
                 <div class="relative h-full table mx-auto">
-                  <button
-                    @click="joinBeta"
-                    class="my-6 md:px-6 py-3 text-sm md:text-base whitespace-nowrap font-medium rounded-2xl text-darkBlue bg-white border-2 border-darkBlue shadow-sm w-24 sm:w-32 lg:w-48 hover:-translate-y-0.5 base-transition"
-                  >
+                  <button @click="joinBeta"
+                    class="my-6 md:px-6 py-3 text-sm md:text-base whitespace-nowrap font-medium rounded-2xl text-darkBlue bg-white border-2 border-darkBlue shadow-sm w-24 sm:w-32 lg:w-48 hover:-translate-y-0.5 base-transition">
                     Join Beta
                   </button>
                 </div>
               </td>
               <td class="h-full px-6 align-top">
                 <div class="relative h-full table mx-auto">
-                  <button
-                    @click="joinBeta"
-                    class="my-6 md:px-6 py-3 text-sm md:text-base whitespace-nowrap font-medium rounded-2xl text-white bg-baseGreen border-2 border-baseGreen shadow-sm w-24 sm:w-32 lg:w-48 hover:-translate-y-0.5 base-transition"
-                  >
+                  <button @click="joinBeta" style="
+                  filter: drop-shadow(4px 4px 14px rgba(50, 162, 100, 0.47));
+                " class="my-6 md:px-6 py-3 text-sm md:text-base whitespace-nowrap font-medium rounded-2xl text-white bg-baseGreen border-2 border-baseGreen shadow-sm w-24 sm:w-32 lg:w-48 hover:-translate-y-0.5 base-transition">
                     Join Beta
                   </button>
                 </div>
               </td>
               <td class="h-full px-6 align-top">
                 <div class="relative h-full table mx-auto">
-                  <button
-                    @click="joinBeta"
-                    class="my-6 md:px-6 py-3 text-sm md:text-base whitespace-nowrap font-medium rounded-2xl text-darkBlue bg-white border-2 border-darkBlue shadow-sm w-24 sm:w-32 lg:w-48 hover:-translate-y-0.5 base-transition"
-                  >
+                  <button @click="joinBeta"
+                    class="my-6 md:px-6 py-3 text-sm md:text-base whitespace-nowrap font-medium rounded-2xl text-darkBlue bg-white border-2 border-darkBlue shadow-sm w-24 sm:w-32 lg:w-48 hover:-translate-y-0.5 base-transition">
                     Contact Us
                   </button>
                 </div>
@@ -73,61 +71,28 @@
             </tr>
             <template v-for="section in sections">
               <tr class="">
-                <th
-                  class="bg-white pl-6 text-xl md:text-3xl font-medium text-darkBlue text-left pt-4 pb-8"
-                  colspan="4"
-                  scope="colgroup"
-                >
+                <th class="bg-white pl-6 text-xl md:text-3xl text-darkBlue text-left pt-4 pb-8 urbanist font-bold"
+                  colspan="4" scope="colgroup">
                   {{ section.name }}
                 </th>
               </tr>
-              <tr
-                v-for="feature in section.features"
-                :key="feature.name"
-                class="odd:bg-[#F7F6F3] text-center"
-              >
-                <th
-                  class="py-5 px-6 text-sm md:text-base font-semibold leading-6 text-darkBlue text-left rounded-l-lg"
-                  scope="row"
-                >
+              <tr v-for="feature in section.features" :key="feature.name" class="odd:bg-[#F7F6F3] text-center">
+                <th class="py-5 px-6 text-sm md:text-base font-semibold leading-6 text-darkBlue text-left rounded-l-lg"
+                  scope="row">
                   {{ feature.name }}
                 </th>
                 <td v-for="tier in tiers" :key="tier.name" class="py-5 px-6">
-                  <span
-                    v-if="typeof feature.tiers[tier.name] === 'string'"
-                    class="block text-sm text-darkBlue opacity-80"
-                    >{{ feature.tiers[tier.name] }}</span
-                  >
+                  <span v-if="typeof feature.tiers[tier.name] === 'string'"
+                    class="block text-sm text-darkBlue opacity-80">{{ feature.tiers[tier.name] }}</span>
                   <div>
-                    <svg
-                      v-if="feature.tiers[tier.name] === true"
-                      class="h-5 w-5 text-baseGreen mx-auto"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 13l4 4L19 7"
-                      ></path>
+                    <svg v-if="feature.tiers[tier.name] === true" class="h-5 w-5 text-baseGreen mx-auto" fill="none"
+                      stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                     </svg>
-                    <svg
-                      v-if="feature.tiers[tier.name] === false"
-                      class="h-5 w-5 text-darkBlue opacity-30 mx-auto"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M6 18L18 6M6 6l12 12"
-                      ></path>
+                    <svg v-if="feature.tiers[tier.name] === false" class="h-5 w-5 text-darkBlue opacity-30 mx-auto"
+                      fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                      </path>
                     </svg>
                   </div>
                 </td>

@@ -61,12 +61,12 @@
           class="mt-12 grid grid-cols-2 gap-0.5 md:grid-cols-5 lg:mt-16 mb-20"
         >
           <div
-            class="col-span-1 flex justify-center py-8 px-4 bg-white items-center"
+            class="col-span-1 flex justify-center py-8 px-4 items-center"
           >
             <img src="@/assets/images/logos/seatfrog.png" alt="Seatfrog" />
           </div>
           <div
-            class="col-span-1 flex justify-center py-8 px-8 bg-white items-center"
+            class="col-span-1 flex justify-center py-8 px-8  items-center"
           >
             <img
               class="max-h-6"
@@ -76,7 +76,7 @@
             />
           </div>
           <div
-            class="col-span-1 flex justify-center py-8 px-8 bg-white items-center"
+            class="col-span-1 flex justify-center py-8 px-8 items-center"
           >
             <img
               class="max-h-12"
@@ -86,7 +86,7 @@
             />
           </div>
           <div
-            class="col-span-1 flex justify-center py-8 px-8 bg-white items-center"
+            class="col-span-1 flex justify-center py-8 px-8  items-center"
           >
             <img
               class="max-h-6"
@@ -95,7 +95,7 @@
             />
           </div>
           <div
-            class="col-span-1 flex justify-center py-8 px-8 bg-white items-center"
+            class="col-span-1 flex justify-center py-8 px-8 items-center"
           >
             <img
               class="max-h-4"
