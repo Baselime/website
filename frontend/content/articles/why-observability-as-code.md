@@ -1,6 +1,6 @@
 ---
 title: Why Observability as Code?
-description: Modern software architectures introduce the need for observability, the ability to reliably know how systems and code behave in production. Teams adopting observability should to store and control their observability configurations in code.
+description: Modern software architectures introduce the need for observability, the ability to reliably know how systems and code behave in production. Teams adopting observability should be able to store and control their observability configurations in code.
 cover: why-observability-as-code.jpg
 alt: Why Observability as Code
 featured: true
