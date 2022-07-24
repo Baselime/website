@@ -854,24 +854,16 @@ select{
   margin-bottom: 1.5rem;
 }
 
-.mt-0\.5{
-  margin-top: 0.125rem;
-}
-
-.mr-2{
-  margin-right: 0.5rem;
-}
-
-.mt-0{
-  margin-top: 0px;
-}
-
 .mb-4{
   margin-bottom: 1rem;
 }
 
 .mt-4{
   margin-top: 1rem;
+}
+
+.mr-2{
+  margin-right: 0.5rem;
 }
 
 .mt-8{
@@ -888,6 +880,14 @@ select{
 
 .mt-1{
   margin-top: 0.25rem;
+}
+
+.mt-0\.5{
+  margin-top: 0.125rem;
+}
+
+.mt-0{
+  margin-top: 0px;
 }
 
 .-mr-2{
@@ -974,6 +974,10 @@ select{
   margin-left: 3rem;
 }
 
+.mt-48{
+  margin-top: 12rem;
+}
+
 .mb-0{
   margin-bottom: 0px;
 }
@@ -1046,10 +1050,6 @@ select{
   height: 2rem;
 }
 
-.h-4{
-  height: 1rem;
-}
-
 .h-5{
   height: 1.25rem;
 }
@@ -1060,6 +1060,10 @@ select{
 
 .h-16{
   height: 4rem;
+}
+
+.h-4{
+  height: 1rem;
 }
 
 .h-64{
@@ -1090,12 +1094,12 @@ select{
   width: 100%;
 }
 
-.w-6{
-  width: 1.5rem;
-}
-
 .w-48{
   width: 12rem;
+}
+
+.w-6{
+  width: 1.5rem;
 }
 
 .w-10{
@@ -1104,10 +1108,6 @@ select{
 
 .w-auto{
   width: auto;
-}
-
-.w-4{
-  width: 1rem;
 }
 
 .w-5{
@@ -1128,6 +1128,10 @@ select{
 
 .w-\[75\%\]{
   width: 75%;
+}
+
+.w-4{
+  width: 1rem;
 }
 
 .w-\[95\%\]{
@@ -1350,12 +1354,20 @@ select{
   overflow-x: hidden;
 }
 
+.overflow-x-scroll{
+  overflow-x: scroll;
+}
+
 .whitespace-nowrap{
   white-space: nowrap;
 }
 
 .rounded-xl{
   border-radius: 0.75rem;
+}
+
+.rounded-3xl{
+  border-radius: 1.5rem;
 }
 
 .rounded-full{
@@ -1372,10 +1384,6 @@ select{
 
 .rounded-2xl{
   border-radius: 1rem;
-}
-
-.rounded-3xl{
-  border-radius: 1.5rem;
 }
 
 .rounded-\[31px\]{
@@ -1455,9 +1463,9 @@ select{
   background-color: rgb(11 184 89 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#F7F6F3\]{
+.bg-white{
   --tw-bg-opacity: 1;
-  background-color: rgb(247 246 243 / var(--tw-bg-opacity));
+  background-color: rgb(252 252 252 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#040906\]{
@@ -1465,9 +1473,9 @@ select{
   background-color: rgb(4 9 6 / var(--tw-bg-opacity));
 }
 
-.bg-white{
+.bg-\[\#F7F6F3\]{
   --tw-bg-opacity: 1;
-  background-color: rgb(252 252 252 / var(--tw-bg-opacity));
+  background-color: rgb(247 246 243 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#0A1233\]{
@@ -1551,6 +1559,10 @@ select{
      object-fit: cover;
 }
 
+.p-8{
+  padding: 2rem;
+}
+
 .p-2{
   padding: 0.5rem;
 }
@@ -1561,10 +1573,6 @@ select{
 
 .p-4{
   padding: 1rem;
-}
-
-.p-8{
-  padding: 2rem;
 }
 
 .py-2{
@@ -1644,6 +1652,10 @@ select{
 
 .pb-4{
   padding-bottom: 1rem;
+}
+
+.pl-4{
+  padding-left: 1rem;
 }
 
 .pt-8{

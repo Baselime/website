@@ -7,7 +7,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "tailwind": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tailwind.min.css --watch"
+    "tailwind": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tailwind.min.css",
+    "tailwind:watch": "npm run tailwind -- --watch"
   },
   "dependencies": {
     "@nuxt/content": "^1.14.0",
