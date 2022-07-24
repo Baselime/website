@@ -1,7 +1,7 @@
 <template>
   <div class="relative overflow-x-hidden">
     <div id="editor" ref="editor" class="pb-4 px-4">
-      <!-- <highlight class="bg-[#F7F6F3]" language="yaml">{{ snippet }}</highlight> -->
+      <div v-html="snippet" class="p-8 pl-4 bg-white rounded-3xl overflow-x-scroll"></div>
     </div>
   </div>
 </template>
@@ -10,9 +10,8 @@
 import Vue from 'vue'
 import yaml from 'yaml'
 import { applicationObservabilityAsCode } from '../utils/obs-as-code/builders'
+import { getHighlighter } from 'shiki';
 
-// @ts-ignore
-// import Highlight from 'vue-highlight-component'
 
 export default Vue.extend({
   data() {
@@ -21,7 +20,6 @@ export default Vue.extend({
     }
   },
   components: {
-    // Highlight,
   },
   methods: {
     generateYamlString: function (): string {
@@ -32,31 +30,38 @@ export default Vue.extend({
     },
   },
   async mounted() {
-    this.snippet = await this.generateYamlString()
+    const s = await this.generateYamlString();
+    const highlighter = await getHighlighter({
+      theme: 'vitesse-light',
+      langs: ["yaml"],
+    });
+
+    this.snippet = highlighter.codeToHtml(s, { lang: "yaml" })
   },
 })
 </script>
 
-<style src="highlight.js/styles/googlecode.css"></style>
+<style src="highlight.js/styles/googlecode.css">
+</style>
 
 <style lang="scss" scoped>
 @import '@/assets/scss/_variables.scss';
-/* required class */
-.my-editor {
-  /* we dont use `language-` classes anymore so thats why we need to add background and text color manually */
-  color: $darkBlue;
-  /* you must provide font-family font-size line-height. Example: */
-  font-family: Monaco, Menlo, Consolas, Bitstream Vera Sans Mono, monospace;
-  font-size: 14px;
-  line-height: 1.5;
-  padding: 5px;
-  border-radius: 4px;
-}
 
-.hljs {
-  background: #f7f6f3;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 16px;
-  line-height: 24px;
+::v-deep {
+
+  code {
+    counter-reset: step;
+    counter-increment: step 0;
+  }
+  
+  code .line::before {
+    content: counter(step);
+    counter-increment: step;
+    width: 1rem;
+    margin-right: 1.5rem;
+    display: inline-block;
+    text-align: right;
+    color: rgba(115,138,148,.4)
+  }
 }
 </style>

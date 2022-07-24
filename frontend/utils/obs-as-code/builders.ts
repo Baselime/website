@@ -18,14 +18,18 @@ export function applicationObservabilityAsCode(): Record<string, any> {
             "P99(@initDuration)",
             "COUNT",
           ],
-          filters: ["@type := REPORT"],
+          filters: ["@type := REPORT", "@memorySize :> 256"],
           filterCombination: "AND",
+          groupBy: {
+            type: "number",
+            value: "@memorySize"
+          }
         },
       },
     },
     alerts: {
       "critical-cold-start-duration": {
-        name: "Lambda cold-starts take more than 2 seconds on the API",
+        name: "Lambda cold starts take more than 2 seconds on the API",
         parameters: {
           query: "lambda-cold-start-durations",
           frequency: 30,
