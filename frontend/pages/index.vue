@@ -532,6 +532,15 @@ export default {
           image: 'images/alex-bilbie.jpg',
         },
         {
+          name: 'Tamara Dottin',
+          company: 'Acre Homes',
+          position: 'Founding Engineer',
+          quote:
+            'Observability as Code is a huge advantage. It helps our team bake insights and inspection into the application stack as early as possible.',
+          logo: 'acre.svg',
+          image: 'images/tamara.jpeg',
+        },
+        {
           name: 'Matt Holland',
           company: 'Seedata.io',
           position: 'CTO',
