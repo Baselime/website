@@ -10,7 +10,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Baselime - Observability for Serverless',
+    title: 'Baselime - Observability as Code for Serverless',
     htmlAttrs: {
       lang: 'en',
     },
@@ -23,11 +23,11 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Observability solution for serverless applications.',
+        content: 'Baselime is the Observability as Code platform developers trust to predictably create, change ,and improve their observability at enterprise scale.',
       },
       { property: 'og:image:width', content: '740' },
       { property: 'og:image:height', content: '300' },
-      { name: 'twitter:site', content: '@boristane' },
+      { name: 'twitter:site', content: '@baselimeHQ' },
       { name: 'twitter:card', content: 'summary_large_image' },
     ],
     link: [

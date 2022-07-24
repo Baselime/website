@@ -1,7 +1,7 @@
 const type = "website";
 const url = `https://baselime.io`;
-const title = "Baselime - Observability for Serverless";
-const description = "Observability solution for serverless.";
+const title = "Baselime - Observability as Code for Serverless";
+const description = "Baselime is the Observability as Code platform developers trust to predictably create, change ,and improve their observability at enterprise scale.";
 const mainImage = "/images/og.png";
 
 
