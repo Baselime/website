@@ -1,36 +1,31 @@
 {
   "name": "website",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "test": "sst test",
+    "start": "sst start",
+    "build": "sst build",
+    "deploy:dev": "sst deploy --stage dev",
+    "deploy:uat": "sst deploy --stage uat",
+    "deploy:prod": "sst deploy --stage prod",
+    "diagram": "npx cdk-dia --tree ./.build/cdk.out/tree.json",
+    "remove": "sst remove",
+    "prepare": "husky install"
   },
-  "dependencies": {
-    "@nuxt/content": "^1.14.0",
-    "@nuxtjs/axios": "^5.13.6",
-    "@nuxtjs/sitemap": "^2.4.0",
-    "core-js": "^3.15.1",
-    "dayjs": "^1.10.6",
-    "mixpanel-browser": "^2.41.0",
-    "nuxt": "^2.15.7",
-    "prism-themes": "^1.8.0",
-    "vue-material-design-icons": "^4.12.1",
-    "vue-spinner": "^1.0.4"
+  "eslintConfig": {
+    "extends": [
+      "serverless-stack"
+    ]
   },
   "devDependencies": {
-    "@nuxt/types": "^2.15.7",
-    "@nuxt/typescript-build": "^2.1.0",
-    "@nuxtjs/tailwindcss": "^4.2.0",
-    "@types/mixpanel-browser": "^2.35.7",
-    "concurrent-transform": "^1.0.0",
-    "eslint-config-prettier": "^8.3.0",
-    "fibers": "^5.0.0",
-    "postcss": "^8.3.5",
-    "prettier": "^2.3.2",
-    "sass": "^1.39.0",
-    "sass-loader": "^10.1.1"
+    "@serverless-stack/cli": "1.0.11",
+    "@serverless-stack/resources": "1.0.11",
+    "@tsconfig/node14": "^1.0.1",
+    "@types/aws-lambda": "^8.10.70",
+    "@types/node": "<15.0.0",
+    "aws-cdk-lib": "2.22.0",
+    "cdk-dia": "^0.7.0",
+    "husky": "^7.0.4"
   }
 }
