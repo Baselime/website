@@ -34,6 +34,12 @@
 
     <!-- Team -->
     <div class="bg-[#F7F6F3] pt-16 pb-40">
+       <div class="relative  mx-auto">
+          <div class="absolute left-0 top-0 -mt-32 invisible lg:visible">
+            <img src="@/assets/vectors/blue-full.png" class="max-w-4xl mx-auto -ml-4" />
+            <img src="@/assets/vectors/green-full.png" class="max-w-4xl mx-auto -mt-32" />
+          </div>
+        </div>
       <div class="mx-auto px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
         <div class="space-y-12">
           <div class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none text-center mx-auto">
@@ -109,6 +115,12 @@
 
     <!-- Investors -->
     <div class="py-32">
+             <div class="relative  mx-auto">
+          <div class="absolute right-0 top-0 -mt-32 invisible lg:visible">
+            <img src="@/assets/vectors/yellow.png" class="max-w-4xl mx-auto -ml-4 mb-0" />
+            <img src="@/assets/vectors/orange.png" class="max-w-4xl mx-auto -mt-32 -mr-0" />
+          </div>
+        </div>
       <div class="mx-auto px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
         <div>
           <div class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none text-center mx-auto">
