@@ -1,6 +1,6 @@
 <template>
   <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-    <section class="article-card">
+    <section class="article-card rounded-xl">
       <object>
         <img :src="`/images/blog-covers/${article.cover}`" :alt="article.alt" />
       </object>
@@ -57,13 +57,11 @@ export default Vue.extend({
   transition: 0.15s;
   background: $white;
   box-sizing: border-box;
-  border-radius: 4px;
 
   height: 100%;
   width: 100%;
 
   border: 1px solid $e4;
-  border-radius: 4px;
   overflow: hidden;
 
   object {

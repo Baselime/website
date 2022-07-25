@@ -36,7 +36,7 @@
         </div>
       </div>
       <section class="inner">
-        <img class="cover" :src="`/images/blog-covers/${article.cover}`" :alt="article.alt" />
+        <img class="cover rounded-xl" :src="`/images/blog-covers/${article.cover}`" :alt="article.alt" />
         <nuxt-content :document="article" />
       </section>
     </div>
@@ -270,7 +270,6 @@ article {
     .inner {
       width: 100%;
       img {
-        border-radius: 4px;
         margin: 0 0 60px 0;
         width: 100%;
         max-height: 580px;

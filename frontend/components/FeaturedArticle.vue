@@ -20,7 +20,7 @@
           </div>
         </NuxtLink>
       </div>
-      <img :src="`/images/blog-covers/${article.cover}`" :alt="article.alt" />
+      <img :src="`/images/blog-covers/${article.cover}`" :alt="article.alt" class="rounded-xl" />
     </div>
   </section>
 </template>
@@ -79,7 +79,6 @@ export default Vue.extend({
       width: 100%;
       max-height: 400px;
       object-fit: cover;
-      border-radius: 4px;
     }
 
     .details {
