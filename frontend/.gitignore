@@ -89,3 +89,5 @@ sw.*
 
 !nuxt.config.js
 !tailwind.config.js
+
+.tailwind.min.css

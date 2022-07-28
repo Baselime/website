@@ -179,9 +179,9 @@ export default Vue.extend({
   },
   head() {
     const metaData = {
-      title: `Baselime - Privacy Policy`,
-      description: `Privacy Policy Baselime`,
-      url: `https://baselime.io/privacy/`,
+      title: `Baselime - Terms of Service`,
+      description: `Terms of Service Baselime`,
+      url: `https://baselime.io/terms/`,
     }
     const meta = getSiteMetadata(metaData)
     return {
