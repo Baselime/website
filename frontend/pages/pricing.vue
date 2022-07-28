@@ -54,10 +54,10 @@
                     ? 'text-white bg-baseBlue border-baseBlue'
                     : 'bg-white text-darkBlue border-darkBlue'
                 " :style="
-                  tier.text === 'white'
-                    ? 'filter: drop-shadow(4px 4px 14px rgba(4, 104, 255, 0.47));'
-                    : ''
-                " class="px-6 py-4 text-base font-medium rounded-2xl border-2 shadow-sm w-full md:w-32 hover:-translate-y-0.5 base-transition">
+  tier.text === 'white'
+    ? 'filter: drop-shadow(4px 4px 14px rgba(4, 104, 255, 0.47));'
+    : ''
+" class="px-6 py-4 text-base font-medium rounded-2xl border-2 shadow-sm w-full md:w-32 hover:-translate-y-0.5 base-transition">
                   Join Beta
                 </button>
 
@@ -117,6 +117,13 @@
 
     <div class="bg-white">
       <PricingTable />
+    </div >
+    <p class="text-xl text-darkBlue opacity-50 max-w-xl mx-auto mb-12 roboto text-center">If, for any reason, you are not completely
+      satisfied with your purchase we invite you to review our <NuxtLink to="/refunds" class="text-baseGreen base-transition">
+        refund policy
+      </NuxtLink> .</p>
+    <div>
+
     </div>
   </div>
 </template>
