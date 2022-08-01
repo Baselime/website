@@ -3,7 +3,7 @@
     <label for="email-address" class="sr-only">Email address</label>
     <input type="email" name="email-address" id="email-address" autocomplete="email" required v-model="email"
       class="block w-full shadow-sm sm:text-sm bg-white bg-opacity-10 rounded-2xl py-4 px-4 border-none placeholder-white text-white"
-      placeholder="Email" />
+      placeholder="Get the newsletter" />
     <div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
       <button type="submit"
         class="w-full bg-baseGreen border border-transparent rounded-xl py-3 md:py-2 px-6 h-full flex items-center justify-center text-base font-medium text-white hover:-translate-y-0.5 base-transition"
