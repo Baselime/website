@@ -105,7 +105,7 @@
       </div>
       <div class="sm:text-center lg:text-left md:space-x-4 justify-center flex mt-8">
         <a href="https://baselime.notion.site/baselime/Baselime-Careers-c83ec59a57114a98bee1ae927afad421"
-          style="filter: drop-shadow(4px 4px 14px rgba(50, 162, 100, 0.47))""
+          style="filter: drop-shadow(4px 4px 14px rgba(50, 162, 100, 0.47))"
           class=" mt-3 px-6 py-3 border-2 border-baseGreen text-base font-medium rounded-xl text-white bg-baseGreen
           shadow-sm w-full text-center mx-6 md:w-auto hover:-translate-y-0.5 base-transition">
           See all open positions
@@ -192,19 +192,7 @@
       </div>
     </div>
 
-    <!-- Form -->
-    <div class="bg-[#040906]" aria-labelledby="footer-heading">
-      <div class="max-w-7xl border-b border-gray-700 py-16 mx-auto">
-        <div class="max-w-xl mx-6 md:mx-auto border-2 border-dashed border-gray-700 rounded-xl py-8">
-          <div class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none text-center">
-            <h2 class="text-3xl font-extrabold tracking-tight sm:text-3xl mb-12 text-white px-4 md:px-12">
-              Help us build the future of observability for serverless
-            </h2>
-          </div>
-          <JoinBeta />
-        </div>
-      </div>
-    </div>
+  
   </div>
 </template>
 

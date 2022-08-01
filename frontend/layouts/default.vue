@@ -12,6 +12,7 @@
     <div>
       <Nuxt />
     </div>
+    <PreFooter />
     <Footer />
     <CookieBanner />
 
