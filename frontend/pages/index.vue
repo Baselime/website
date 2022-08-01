@@ -173,7 +173,7 @@
                 <div class="bg-[#585251] opacity-10 rounded-full w-4 h-4"></div>
               </div>
               <div class="py-4 text-center text-darkBlue opacity-50 ml-56">
-                .baselime.yaml
+                .baselime/api.yml
               </div>
             </div>
             <CodeEditor />
@@ -195,7 +195,7 @@
             <div class="bg-[#585251] opacity-10 rounded-full w-4 h-4"></div>
           </div>
           <div class="py-4 text-center text-darkBlue opacity-50 ml-12">
-            .baselime.yaml
+            .baselime/api.yml
           </div>
         </div>
         <CodeEditor />

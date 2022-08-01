@@ -1,10 +1,8 @@
 export function applicationObservabilityAsCode(): Record<string, any> {
   const obj = {
-    version: '0.0.4',
-    application: "API",
-    description: "The back end API",
-    queries: {
-      "lambda-cold-start-duration": {
+    "lambda-cold-start-duration": {
+      type: "query",
+      properties: {
         name: "Duration of Lambda cold-starts",
         description: "How long do cold starts take?",
         parameters: {
@@ -25,25 +23,27 @@ export function applicationObservabilityAsCode(): Record<string, any> {
             value: "@memorySize"
           }
         },
-      },
+      }
     },
-    alerts: {
-      "critical-cold-start-duration": {
+    "critical-cold-start-duration": {
+      type: "alert",
+      properties: {
         name: "Lambda cold starts take more than 2 seconds on the API",
         parameters: {
           query: "lambda-cold-start-durations",
           frequency: 30,
           duration: 30,
-          threshold: "> 2000",
+          threshold: ":> 2000",
         },
         channels: ["developers"],
-      },
+      }
     },
-    channels: {
-      developers: {
+    developers: {
+      type: "channel",
+      properties: {
         type: "email",
         targets: ["developers@baselime.io"],
-      },
+      }
     },
   };
   return obj;
